@@ -1,0 +1,36 @@
+{
+    "build": {
+        "@saveall": true
+    },
+    "language": {
+        "tern_defs": {
+            "json()": {
+                "browser": {
+                    "enabled": true
+                },
+                "ecma5": {
+                    "enabled": true
+                },
+                "jQuery": {
+                    "enabled": true
+                }
+            }
+        }
+    },
+    "run": {
+        "configs": {
+            "@inited": "true",
+            "json()": {
+                "demesvar.com": {
+                    "command": "rails s",
+                    "name": "demesvar.com",
+                    "runner": "Shell command",
+                    "toolbar": true
+                }
+            }
+        }
+    },
+    "welcome": {
+        "@first": true
+    }
+}
