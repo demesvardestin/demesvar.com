@@ -1,0 +1,9 @@
+<% posts.each do |poste| %>
+    <h5>
+        <%= link_to poste.title, article_path(poste), class:"" %>
+    </h5>
+    <p>
+        <%= poste.content.truncate(200) %>
+    </p>
+    <hr>
+<% end %>

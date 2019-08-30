@@ -1,0 +1,77 @@
+<%= form_for(@article, :html => { :id => "article-form", :multipart => true }) do |f| %>
+    <div class="field">
+        <div class="row">
+            <div class="col-md-2">
+                <h5><%= f.label :title %></h5>
+            </div>
+            <div class="col-md-10">
+                <%= f.text_field :title, class:"form-control", placeholder: "article title", value: "#{@article.fake_title}" %>
+            </div>
+        </div>
+    </div>
+    
+    <div class="field">
+        <div class="row">
+            <div class="col-md-2">
+                <h5><%= f.label :content %></h5>
+            </div>
+            <div class="col-md-10">
+                <%= f.text_area :content, class:"form-control tinymce", placeholder: "article body", value: "#{@article.fake_body}" %>
+            </div>
+        </div>
+    </div>
+    
+    <div class="field">
+        <div class="row">
+            <div class="col-md-2">
+                <h5><%= f.label :tags %></h5>
+            </div>
+            <div class="col-md-10">
+                <%= f.text_field :tags, class:"form-control", placeholder: "add tags, separated by a comma" %>
+            </div>
+        </div>
+    </div>
+    
+    <div class="field">
+        <div class="row">
+            <div class="col-md-2">
+                <h5><%= f.label :category %></h5>
+            </div>
+            <div class="col-md-10">
+                <div class="dropdown">
+                    <button class="btn btn-secondary btn-transparent btn-block" type="button"
+                        id="category-button" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        Select a category
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="category-button">
+                        <% all_categories.each do |cat| %>
+                            <a class="dropdown-item"
+                                onclick="$('#category-button').text('<%= cat.name %>');
+                                        document.querySelector('#category-name').value = '<%= cat.name %>';">
+                                <%= cat.name %>
+                            </a>
+                        <% end %>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%= f.hidden_field :category, value: "", id: "category-name" %>
+    </div>
+    
+    <hr>
+    
+    <div class="actions">
+        <div class="row">
+            <div class="col-md-6">
+                <button class="btn btn-info btn-block" onclick="previewPost()">
+                    preview post
+                </button>
+            </div>
+            <div class="col-md-6">
+                <%= f.submit "publish article", class:"btn btn-success btn-block" %>
+            </div>
+        </div>
+    </div>
+<% end %>
+<%= tinymce %>

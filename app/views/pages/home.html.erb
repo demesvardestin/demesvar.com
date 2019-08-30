@@ -1,7 +1,33 @@
 <section id="articles">
     <div class="row">
-        <div class="col-lg-8 offset-md-2">
-            <h1>Latest Posts</h1>
+        <div class="col-lg-8">
+            <div class="row">
+                <div class="col-md-12">
+                    <h4>Featured</h4>
+                    
+                    <div id="featured-post">
+                        <%= render "articles/featured_post" %>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Latest Projects</h2>
+                    
+                    <div id="latest-projects">
+                        <%= render "articles/latest_projects" %>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4">
+            <h4>Latest Shorts</h4>
+            
+            <div id="latest-posts">
+                <%= render partial: "articles/latest_posts", locals: { posts: @latest_posts } %>
+            </div>
         </div>
     </div>
 </section>

@@ -14,9 +14,13 @@
  *= require_self
  */
 
+html, body {
+    overflow-x: hidden !important;
+}
+
 nav {
     background-color: #e7e7e9;
-    height: 60px;
+    // height: 60px;
     
     .nav-link {
         color: #000;
@@ -26,4 +30,43 @@ nav {
 
 #main-body {
     padding-top: 85px;
+    padding-bottom: 85px;
+}
+
+#article-form textarea {
+    min-height: 500px;
+}
+
+.article-banner img {
+    width: 100%;
+    height: auto;
+}
+
+form .field:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.btn, input.form-control {
+    height: 55px;
+    border-radius: 0;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.dropdown-menu {
+    width: 100%;
+    padding: 0;
+    border-radius: 0;
+    
+    .dropdown-item {
+        padding: 15px;
+        cursor: pointer;
+        border-bottom: 0.5px solid #e7e7e9;
+    }
+}
+
+.btn-transparent {
+    border-color: 1px solid #e7e7e9;
+    color: #6c757d;
+    background-color: transparent;
 }
