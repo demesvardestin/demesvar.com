@@ -1,0 +1,14 @@
+<% if posts.present? %>
+    <h6><%= pluralize(posts.count, "post") %></h6>
+    <% posts.each do |poste| %>
+        <h5>
+            <%= link_to poste.title, blog_article_path(poste), class:"" %>
+        </h5>
+        <p>
+            <%= poste.content.truncate(200) %>
+        </p>
+        <hr>
+    <% end %>
+<% else %>
+    <h5 align="center">no posts available in that category</h5>
+<% end %>

@@ -1,0 +1,48 @@
+<section id="article">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="row">
+                <div class="col-md-12">
+                    <article>
+                        <h5>
+                            <a href="/category/<%= @article.category.name %>">
+                                <span class="badge badge-primary">
+                                    <%= @article.category.name %>
+                                </span>
+                            </a>
+                        </h5>
+                        <h4><%= @article.title %></h4>
+                        <figure class="article-banner">
+                            <img src="https://image.businessinsider.com/5d692c692e22af0d94484477?width=600&format=jpeg&auto=webp"
+                                alt="<%= @article.slug %>">
+                            <figcaption>
+                                <p class="text-muted text-center"><%= "Courtesy John P. Doe" %></p>
+                            </figcaption>
+                        </figure>
+                        <p><%= @article.content %></p>
+                        <% @article.tags.split(",").each do |t| %>
+                            <h6 class="text-center">
+                                <a href="/tags/<%= t %>"><%= t %></a>
+                            </h6>
+                        <% end %>
+                        <hr>
+                    </article>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-12">
+                    <h4>conversation</h4>
+                    <section id="comments">
+                        <%= render partial: "blog/comments/comments", locals: { comments: @article.comments } %>
+                    </section>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <h4>related</h4>
+            <hr>
+        </div>
+    </div>
+</section>

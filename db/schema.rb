@@ -10,21 +10,58 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190830191941) do
+ActiveRecord::Schema.define(version: 20190905203113) do
+
+  create_table "admins", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.text     "bio"
+    t.string   "facebook"
+    t.string   "twitter"
+    t.string   "linkedin"
+    t.string   "instagram"
+    t.string   "email"
+    t.string   "github"
+    t.string   "website"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "articles", force: :cascade do |t|
     t.text     "content"
     t.string   "title"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
     t.integer  "category_id"
-    t.string   "tags"
+    t.string   "tags",        default: ""
+    t.integer  "project_id"
   end
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.text     "content"
+    t.boolean  "flagged"
+    t.integer  "article_id"
+    t.string   "image"
+    t.string   "commenter_name"
+    t.string   "commenter_email"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.string   "name"
+    t.string   "tags"
+    t.string   "category"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "github"
+    t.string   "website"
   end
 
 end

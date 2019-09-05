@@ -16,3 +16,23 @@
 //= require tinymce
 //= require tinymce-jquery
 //= require_tree .
+
+$(document).ready(function() {
+    
+    previewPost = () => {
+        let data = {
+            title: document.querySelector('#article-title').value,
+            content: document.querySelector('#article-content').value,
+            tags: document.querySelector('#article-tags').value,
+            category: document.querySelector('#category-name').value
+        };
+        
+        $.get('/preview_post', { article: data });
+    };
+    
+    loadCategory = (element, category) => {
+        $.get("/blog/filter_by_category", { category: category });
+        $('.active').toggleClass('active');
+        element.classList.add('active');
+    };
+});

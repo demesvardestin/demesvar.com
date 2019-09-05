@@ -1,0 +1,25 @@
+<section id="projects">
+    <div class="row">
+        <div class="col-md-3">
+            <ul class="nav flex-column">
+                <% all_categories.each do |cat| %>
+                    <li class="nav-item">
+                        <a class="nav-link cat-link <%= "active" if cat == all_categories.first %>"
+                            onclick="loadCategory(this, '<%= cat.name %>')">
+                            <span style="float: left;"><%= cat.name %></span>
+                            <span style="float: right;">
+                                <i class="fas fa-angle-right"></i>
+                            </span>
+                        </a>
+                    </li>
+                <% end %>
+            </ul>
+        </div>
+        
+        <div class="col-md-9">
+            <section id="articles">
+                <%= render partial: "blog/articles/articles", locals: { posts: @articles } %>
+            </section>
+        </div>
+    </div>
+</section>

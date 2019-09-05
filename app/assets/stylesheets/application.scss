@@ -19,22 +19,36 @@ html, body {
 }
 
 nav {
-    background-color: #e7e7e9;
-    // height: 60px;
+    background-color: #47475e;
+    height: 60px;
     
     .nav-link {
-        color: #000;
+        color: #c7c7ce !important;
         cursor: pointer;
+    }
+    
+    .nav-item:not(:last-child) {
+        margin-right: 10px;
     }
 }
 
 #main-body {
     padding-top: 85px;
     padding-bottom: 85px;
+    min-height: calc(100vh - 188px) !important;
+    
+    a {
+        color: #3f3f54;
+    }
 }
 
 #article-form textarea {
     min-height: 500px;
+}
+
+textarea {
+    outline: none !important;
+    box-shadow: none !important;
 }
 
 .article-banner img {
@@ -46,11 +60,22 @@ form .field:not(:last-child) {
     margin-bottom: 15px;
 }
 
-.btn, input.form-control {
+.btn:not(.nav-link), input.form-control {
     height: 55px;
     border-radius: 0;
     outline: none !important;
     box-shadow: none !important;
+}
+
+.badge {
+    border-radius: 0;
+    font-weight: normal !important;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.modal-content {
+    border-radius: 0;
 }
 
 .dropdown-menu {
@@ -69,4 +94,91 @@ form .field:not(:last-child) {
     border-color: 1px solid #e7e7e9;
     color: #6c757d;
     background-color: transparent;
+}
+
+footer {
+    background-color: #47475e;
+    bottom: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: #90909e !important;
+    text-align: center;
+    
+    a {
+        color: #90909e;
+    }
+    
+    a:hover {
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    a:not(:last-child) {
+        margin-right: 20px;
+    }
+}
+
+#request-quote {
+    border-radius: 0;
+    border-width: 1.5px;
+    border-color: #fff;
+}
+
+#request-quote:hover {
+    background-color: #fff;
+    color: #47475e !important;
+}
+
+article {
+    padding-bottom: 15px;
+}
+
+#comments {
+    background-color: #90909e;
+    padding: 15px;
+    color: #c7c7ce !important;
+    
+    #no-comments-notice {
+        text-align: center;
+        margin: 0;
+    }
+    
+    #comment-content {
+        min-height: 500px !important;
+    }
+}
+
+#postPreviewModal {
+    .modal-dialog {
+        margin: 0;
+        max-width: 100%;
+        padding: 15px 30px;
+        align-content: center;
+    }
+    
+    .modal-content {
+        width: 100%;
+    }
+}
+
+a.btn {
+    padding-top: 14px;
+    color: #fff !important;
+    cursor: pointer;
+}
+
+#projects {
+    .nav-link {
+        height: 55px;
+        padding-top: 14px;
+    }
+    
+    .nav-link:hover, .nav-link.active {
+        background-color: #90909e;
+        color: #fff;
+    }
+}
+
+.cat-link {
+    cursor: pointer;
 }

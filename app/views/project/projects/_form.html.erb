@@ -1,0 +1,46 @@
+<%= form_for @project do |f| %>
+    <div class="field">
+        <%= f.label :name %>
+        <%= f.text_field :name, class:"form-control", placeholder: "project name", id:"project-name" %>
+    </div>
+    
+    <div class="field">
+        <%= f.label :github %>
+        <%= f.text_field :github, class:"form-control", placeholder: "project github", id:"project-github" %>
+    </div>
+    
+    <div class="field">
+        <%= f.label :website %>
+        <%= f.text_field :website, class:"form-control", placeholder: "project website", id:"project-website" %>
+    </div>
+    
+    <div class="field">
+        <%= f.label :tags %>
+        <%= f.text_field :tags, class:"form-control", placeholder: "project tags", id:"project-tags" %>
+    </div>
+    
+    <div class="field">
+        <%= f.label :select_a_category %>
+        <%= f.hidden_field :category, id:"category-name" %>
+        <div class="dropdown">
+            <button class="btn btn-secondary btn-transparent btn-block" type="button"
+                id="category-button" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                Select a category <i class="fas fa-angle-down"></i>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="category-button">
+                <% project_categories.each do |cat| %>
+                    <a class="dropdown-item"
+                        onclick="$('#category-button').text('<%= cat %>');
+                                document.querySelector('#category-name').value = '<%= cat %>';">
+                        <%= cat %>
+                    </a>
+                <% end %>
+            </div>
+        </div>
+    </div>
+    
+    <div class="actions">
+        <%= f.submit "add project", class:"btn btn-primary btn-block", data: { :disable_with => "adding..." }  %>
+    </div>
+<% end %>

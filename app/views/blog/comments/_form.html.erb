@@ -1,0 +1,30 @@
+<%= form_for(@comment) do |f| %>
+    <div class="field">
+        <div class="row">
+            <div class="col-md-6">
+                <%= f.text_field :commenter_name, class:"form-control", placeholder: "your name" %>
+            </div>
+            
+            <div class="col-md-6">
+                <%= f.text_field :commenter_email, class:"form-control", placeholder: "your email" %>
+            </div>
+        </div>
+    </div>
+    
+    <div class="field">
+        <%= f.text_area :content, class:"form-control tinymce", id: "comment-content", placeholder: "your comment" %>
+    </div>
+    
+    <div class="field">
+        <%= f.hidden_field :article_id, value: "#{params[:id]}", disabled: true %>
+    </div>
+    
+    <div>
+        <hr>
+    </div>
+    
+    <div class="actions">
+        <%= f.submit "post comment", class:"btn btn-primary btn-block" %>
+    </div>
+<% end %>
+<%= tinymce %>
