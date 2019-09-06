@@ -7,7 +7,7 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="/">
+                    <a class="nav-link" href="/home">
                         Home
                     </a>
                 </li>
@@ -29,6 +29,14 @@
                         About
                     </a>
                 </li>
+                <% if current_admin %>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">
+                            <i class="fas fa-user-circle"></i>
+                            <%= current_admin.first_name %>
+                        </a>
+                    </li>
+                <% end %>
             </ul>
         </div>
     </div>

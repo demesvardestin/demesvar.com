@@ -1,4 +1,6 @@
 class Blog::ArticlesController < ApplicationController
+    before_action :authenticate_admin!, only: [:new, :create, :preview_post]
+    
     def index
         @articles = Article.all
     end
@@ -16,9 +18,10 @@ class Blog::ArticlesController < ApplicationController
         @article = Article.new(article_params)
         @category = Category.find_by(name: params[:article][:category])
         @article.category = @category
+        @article.admin = current_admin
         @article.save!
         
-        redirect_to @article, notice: "Article saved!"
+        redirect_to blog_article_path(@article), notice: "Article saved!"
     end
     
     def preview_post

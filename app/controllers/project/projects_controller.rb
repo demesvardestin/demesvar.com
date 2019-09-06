@@ -1,4 +1,6 @@
 class Project::ProjectsController < ApplicationController
+  before_action :authenticate_admin!, only: [:new, :create]
+  
   def index
     @projects = Project.all
   end
@@ -12,16 +14,10 @@ class Project::ProjectsController < ApplicationController
   
   def create
     @project = Project.new(project_params)
-    @project.admin = Admin.first
-    
-    respond_to do |format|
-      if @project.save
-        format.html { redirect_to add_project_article_path(:project_id => @project.id),
-                      notice: "Project added! Time to describe it at a high level." }
-      else
-        render :new
-      end
-    end
+    @project.admin = current_admin
+    @project.save!
+    redirect_to add_project_article_path(:project_id => @project.id),
+                notice: "Project added! Time to describe it at a high level."
   end
   
   private

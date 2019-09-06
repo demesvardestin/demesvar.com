@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190906142405) do
+ActiveRecord::Schema.define(version: 20190906172200) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "first_name"
@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 20190906142405) do
     t.integer  "category_id"
     t.string   "tags",        default: ""
     t.integer  "project_id"
+    t.integer  "admin_id"
   end
 
   create_table "categories", force: :cascade do |t|
@@ -68,6 +69,7 @@ ActiveRecord::Schema.define(version: 20190906142405) do
     t.datetime "updated_at", null: false
     t.string   "github"
     t.string   "website"
+    t.integer  "admin_id"
   end
 
 end

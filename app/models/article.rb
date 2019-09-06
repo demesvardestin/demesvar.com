@@ -1,6 +1,6 @@
 class Article < ApplicationRecord
     belongs_to :category
-    belongs_to :project
+    belongs_to :admin
     has_many :comments
     
     def slug

@@ -1,0 +1,60 @@
+<section id="projects">
+    <div class="row">
+        <div class="col-md-3">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active cursor-pointer">
+                        <span style="float: left;">My articles</span>
+                        <span style="float: right;">
+                            <i class="fas fa-angle-right"></i>
+                        </span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link cursor-pointer">
+                        <span style="float: left;">My projects</span>
+                        <span style="float: right;">
+                            <i class="fas fa-angle-right"></i>
+                        </span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link cursor-pointer" id="nav-link-profile"
+                        onclick="showContent(this)">
+                        <span style="float: left;">My profile</span>
+                        <span style="float: right;">
+                            <i class="fas fa-angle-right"></i>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="col-md-9">
+            <section id="articles-tab" class="content-tab active">
+                <%= render partial: "/blog/articles/articles",
+                    locals: { posts: current_admin.articles } %>
+            </section>
+            
+            <section id="profile-tab" class="content-tab">
+                <h5>Edit profile</h5>
+            </section>
+        </div>
+    </div>
+</section>
+
+<script type="text/javascript">
+    showContent = (elem) => {
+        elem.classList.add('active')
+        $('.active').toggleClass('active');
+        
+        let id = elem.id.split('nav-link-')[1];
+        $(`#${id}-tab`).toggleClass('active');
+    }
+</script>
+
+<style type="text/css">
+    .content-tab:not(.active) {
+        display: none;
+    }
+</style>
