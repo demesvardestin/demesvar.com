@@ -8,7 +8,6 @@ class CreateAdmins < ActiveRecord::Migration[5.0]
       t.string :twitter
       t.string :linkedin
       t.string :instagram
-      t.string :email
       t.string :github
       t.string :website
 

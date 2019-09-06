@@ -1,0 +1,200 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+/* line 18, /home/ubuntu/environment/app/assets/stylesheets/application.scss */
+html, body {
+  overflow-x: hidden !important;
+}
+
+/* line 22, /home/ubuntu/environment/app/assets/stylesheets/application.scss */
+nav {
+  background-color: #47475e;
+  height: 60px;
+}
+/* line 26, /home/ubuntu/environment/app/assets/stylesheets/application.scss */
+nav .nav-link {
+  color: #c7c7ce !important;
+  cursor: pointer;
+}
+/* line 31, /home/ubuntu/environment/app/assets/stylesheets/application.scss */
+nav .nav-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+/* line 36, /home/ubuntu/environment/app/assets/stylesheets/application.scss */
+#main-body {
+  padding-top: 85px;
+  padding-bottom: 85px;
+  min-height: calc(100vh - 188px) !important;
+}
+/* line 41, /home/ubuntu/environment/app/assets/stylesheets/application.scss */
+#main-body a {
+  color: #3f3f54;
+}
+
+/* line 46, /home/ubuntu/environment/app/assets/stylesheets/application.scss */
+#article-form textarea {
+  min-height: 500px;
+}
+
+/* line 50, /home/ubuntu/environment/app/assets/stylesheets/application.scss */
+textarea {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* line 55, /home/ubuntu/environment/app/assets/stylesheets/application.scss */
+.article-banner img {
+  width: 100%;
+  height: auto;
+}
+
+/* line 60, /home/ubuntu/environment/app/assets/stylesheets/application.scss */
+form .field:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+/* line 64, /home/ubuntu/environment/app/assets/stylesheets/application.scss */
+.btn:not(.nav-link), input.form-control {
+  height: 55px;
+  border-radius: 0;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* line 71, /home/ubuntu/environment/app/assets/stylesheets/application.scss */
+.badge {
+  border-radius: 0;
+  font-weight: normal !important;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* line 78, /home/ubuntu/environment/app/assets/stylesheets/application.scss */
+.modal-content {
+  border-radius: 0;
+}
+
+/* line 82, /home/ubuntu/environment/app/assets/stylesheets/application.scss */
+.dropdown-menu {
+  width: 100%;
+  padding: 0;
+  border-radius: 0;
+}
+/* line 87, /home/ubuntu/environment/app/assets/stylesheets/application.scss */
+.dropdown-menu .dropdown-item {
+  padding: 15px;
+  cursor: pointer;
+  border-bottom: 0.5px solid #e7e7e9;
+}
+
+/* line 94, /home/ubuntu/environment/app/assets/stylesheets/application.scss */
+.btn-transparent {
+  border-color: 1px solid #e7e7e9;
+  color: #6c757d;
+  background-color: transparent;
+}
+
+/* line 100, /home/ubuntu/environment/app/assets/stylesheets/application.scss */
+footer {
+  background-color: #47475e;
+  bottom: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: #90909e !important;
+  text-align: center;
+}
+/* line 108, /home/ubuntu/environment/app/assets/stylesheets/application.scss */
+footer a {
+  color: #90909e;
+}
+/* line 112, /home/ubuntu/environment/app/assets/stylesheets/application.scss */
+footer a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+/* line 117, /home/ubuntu/environment/app/assets/stylesheets/application.scss */
+footer a:not(:last-child) {
+  margin-right: 20px;
+}
+
+/* line 122, /home/ubuntu/environment/app/assets/stylesheets/application.scss */
+#request-quote {
+  border-radius: 0;
+  border-width: 1.5px;
+  border-color: #fff;
+}
+
+/* line 128, /home/ubuntu/environment/app/assets/stylesheets/application.scss */
+#request-quote:hover {
+  background-color: #fff;
+  color: #47475e !important;
+}
+
+/* line 133, /home/ubuntu/environment/app/assets/stylesheets/application.scss */
+article {
+  padding-bottom: 15px;
+}
+
+/* line 137, /home/ubuntu/environment/app/assets/stylesheets/application.scss */
+#comments {
+  background-color: #90909e;
+  padding: 15px;
+  color: #c7c7ce !important;
+}
+/* line 142, /home/ubuntu/environment/app/assets/stylesheets/application.scss */
+#comments #no-comments-notice {
+  text-align: center;
+  margin: 0;
+}
+/* line 147, /home/ubuntu/environment/app/assets/stylesheets/application.scss */
+#comments #comment-content {
+  min-height: 500px !important;
+}
+
+/* line 153, /home/ubuntu/environment/app/assets/stylesheets/application.scss */
+#postPreviewModal .modal-dialog {
+  margin: 0;
+  max-width: 100%;
+  padding: 15px 30px;
+  align-content: center;
+}
+/* line 160, /home/ubuntu/environment/app/assets/stylesheets/application.scss */
+#postPreviewModal .modal-content {
+  width: 100%;
+}
+
+/* line 165, /home/ubuntu/environment/app/assets/stylesheets/application.scss */
+a.btn {
+  padding-top: 14px;
+  color: #fff !important;
+  cursor: pointer;
+}
+
+/* line 172, /home/ubuntu/environment/app/assets/stylesheets/application.scss */
+#projects .nav-link {
+  height: 55px;
+  padding-top: 14px;
+}
+/* line 177, /home/ubuntu/environment/app/assets/stylesheets/application.scss */
+#projects .nav-link:hover, #projects .nav-link.active {
+  background-color: #90909e;
+  color: #fff;
+}
+
+/* line 183, /home/ubuntu/environment/app/assets/stylesheets/application.scss */
+.cat-link {
+  cursor: pointer;
+}

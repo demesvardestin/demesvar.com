@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :admins
     namespace :blog do
         get '/filter_by_category', to: 'articles#filter_by_category'
         get '/', to: 'articles#index'
