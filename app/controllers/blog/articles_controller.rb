@@ -19,6 +19,7 @@ class Blog::ArticlesController < ApplicationController
         @category = Category.find_by(name: params[:article][:category])
         @article.category = @category
         @article.admin = current_admin
+        @article.project = Project.find_by(id: params[:project_id]) if params[:project_id]
         @article.save!
         
         redirect_to blog_article_path(@article), notice: "Article saved!"

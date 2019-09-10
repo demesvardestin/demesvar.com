@@ -42,6 +42,10 @@ nav {
     }
 }
 
+form {
+    font-size: 15px !important;
+}
+
 #article-form textarea {
     min-height: 500px;
 }
@@ -49,6 +53,7 @@ nav {
 textarea {
     outline: none !important;
     box-shadow: none !important;
+    border-radius: 0 !important;
 }
 
 .article-banner img {

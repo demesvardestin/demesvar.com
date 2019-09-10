@@ -4,7 +4,7 @@
             <ul class="nav flex-column">
                 <li class="nav-item">
                     <a class="nav-link active cursor-pointer">
-                        <span style="float: left;">My articles</span>
+                        <span style="float: left;">my articles</span>
                         <span style="float: right;">
                             <i class="fas fa-angle-right"></i>
                         </span>
@@ -12,7 +12,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link cursor-pointer">
-                        <span style="float: left;">My projects</span>
+                        <span style="float: left;">my projects</span>
                         <span style="float: right;">
                             <i class="fas fa-angle-right"></i>
                         </span>
@@ -21,11 +21,26 @@
                 <li class="nav-item">
                     <a class="nav-link cursor-pointer" id="nav-link-profile"
                         onclick="showContent(this)">
-                        <span style="float: left;">My profile</span>
+                        <span style="float: left;">my profile</span>
                         <span style="float: right;">
                             <i class="fas fa-angle-right"></i>
                         </span>
                     </a>
+                </li>
+                <li class="nav-item">
+                    <div class="dropdown">
+                        <a class="nav-link cursor-pointer" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span style="float: left;">new</span>
+                            <span style="float: right;">
+                                <i class="fas fa-angle-down"></i>
+                            </span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="/blog/create">article</a>
+                            <a class="dropdown-item" href="/project/new">project</a>
+                        </div>
+                    </div>
                 </li>
             </ul>
         </div>

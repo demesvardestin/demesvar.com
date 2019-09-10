@@ -1,2 +1,37 @@
-<h1>Project#show</h1>
-<p>Find me in app/views/project/show.html.erb</p>
+<section id="<%= @project.slug %>" class="project-section">
+    <div class="row">
+        <div class="col-md-8">
+            <h5><%= @project.name %></h5>
+            <p>
+                <%= @project.summary %>
+            </p>
+            <p>
+                <a href="<%= @project.github %>">
+                    <i class="fab fa-github"></i> github
+                </a>
+            </p>
+            <p>
+                <a href="<%= @project.website %>">
+                    <i class="fas fa-link"></i> website
+                </a>
+            </p>
+            
+            <article>
+                <h6>walkthrough:</h6>
+                <div>
+                    <%= @project.featured_article.content %>
+                </div>
+            </article>
+        </div>
+        
+        <div class="col-md-4">
+            <h5>other posts for this project</h5>
+            <hr>
+            <% @project.related_posts.each do |poste| %>
+                <p>
+                    <%= link_to poste.title, blog_show_article_path(:slug => poste.slug) %>
+                </p>
+            <% end %>
+        </div>
+    </div>
+</section>

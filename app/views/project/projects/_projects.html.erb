@@ -1,0 +1,21 @@
+<% if projects.present? %>
+    <h6><%= pluralize(projects.count, "project") %></h6>
+    <% projects.each do |project| %>
+        <h5>
+            <%= link_to project.name, project_show_project_path(:slug => project.slug), class:"" %>
+        </h5>
+        <p>
+            <%= project.summary.truncate(200) %>
+        </p>
+        <p>
+            <% project.each_tag do |tag| %>
+                <a href="/project/tagged/<%= tag %>">
+                    <span class="badge badge-info"><%= tag %></span>
+                </a>
+            <% end %>
+        </p>
+        <hr>
+    <% end %>
+<% else %>
+    <h5 align="center">no projects available in that category</h5>
+<% end %>

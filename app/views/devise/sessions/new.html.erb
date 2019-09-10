@@ -1,26 +1,31 @@
-<h2>Log in</h2>
-
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
-
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+<section id="login">
+  <div class="row">
+    <div class="col-md-4 offset-md-4">
+      <h5>log in</h5>
+      <hr>
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="field">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control" %>
+        </div>
+      
+        <div class="field">
+          <%= f.label :password %><br />
+          <%= f.password_field :password, autocomplete: "current-password", class:"form-control" %>
+        </div>
+      
+        <div class="actions">
+          <%= f.submit "log in", class:"btn btn-primary btn-block", data: { :disable_with => "logging you in..." } %>
+        </div>
+      <% end %>
+      
+      <section id="shared-devise-links">
+        <p>
+          <a href="/register">request an account</a>
+          <br />
+          <a href="/retrieve/password">reset password</a>
+        </p>
+      </section>
     </div>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
   </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</section>

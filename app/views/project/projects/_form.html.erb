@@ -1,7 +1,13 @@
-<%= form_for @project do |f| %>
+<%= form_for [:project, @project] do |f| %>
     <div class="field">
         <%= f.label :name %>
         <%= f.text_field :name, class:"form-control", placeholder: "project name", id:"project-name" %>
+    </div>
+    
+    <div class="field">
+        <%= f.label :summary %>
+        <%= f.text_area :summary, class:"form-control", placeholder: "write a quick summary about this project",
+            id:"project-summary" %>
     </div>
     
     <div class="field">
@@ -26,7 +32,7 @@
             <button class="btn btn-secondary btn-transparent btn-block" type="button"
                 id="category-button" data-toggle="dropdown" aria-haspopup="true"
                 aria-expanded="false">
-                Select a category <i class="fas fa-angle-down"></i>
+                <%= @project.category || "Select a category" %> <i class="fas fa-angle-down"></i>
             </button>
             <div class="dropdown-menu" aria-labelledby="category-button">
                 <% project_categories.each do |cat| %>
@@ -41,6 +47,10 @@
     </div>
     
     <div class="actions">
-        <%= f.submit "add project", class:"btn btn-primary btn-block", data: { :disable_with => "adding..." }  %>
+        <% if @project.new_record? %>
+            <%= f.submit "add project", class:"btn btn-primary btn-block", data: { :disable_with => "adding..." }  %>
+        <% else %>
+            <%= f.submit "update project", class:"btn btn-primary btn-block", data: { :disable_with => "updating..." }  %>
+        <% end %>
     </div>
 <% end %>
