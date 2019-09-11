@@ -11,20 +11,51 @@
                                 </span>
                             </a>
                         </h5>
-                        <h4><%= @article.title %></h4>
+                        
+                        <h4>
+                            <%= @article.title %>
+                        </h4>
+                        
+                        <hr>
+                        
+                        <section class="article-metadata">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        <span style="float: left;">
+                                            by <%= @article.admin.full_name %>
+                                        </span>
+                                        
+                                        <span style="float: right;">
+                                            <%= render "shared/share_buttons" %>
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                        
                         <figure class="article-banner">
                             <img src="https://image.businessinsider.com/5d692c692e22af0d94484477?width=600&format=jpeg&auto=webp"
                                 alt="<%= @article.slug %>">
                             <figcaption>
-                                <p class="text-muted text-center"><%= "Courtesy John P. Doe" %></p>
+                                <p class="text-muted">
+                                    <%= "Courtesy John P. Doe" %>
+                                </p>
                             </figcaption>
                         </figure>
-                        <p><%= @article.content %></p>
-                        <% @article.tags.split(",").each do |t| %>
-                            <h6 class="text-center">
-                                <a href="/tags/<%= t %>"><%= t %></a>
-                            </h6>
-                        <% end %>
+                        
+                        <section class="article-content">
+                            <%= @article.content %>
+                        </section>
+                        
+                        <section class="article-tags">
+                            <% @article.tags.split(",").each do |t| %>
+                                <h6 class="text-center">
+                                    <a href="/tags/<%= t %>"><%= t %></a>
+                                </h6>
+                            <% end %>
+                        </section>
+                        
                         <hr>
                     </article>
                 </div>

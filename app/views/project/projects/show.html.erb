@@ -1,19 +1,42 @@
 <section id="<%= @project.slug %>" class="project-section">
     <div class="row">
         <div class="col-md-8">
-            <h5><%= @project.name %></h5>
+            <h5>
+                <b><%= @project.name %></b>
+                <span class="badge badge-primary">
+                    <%= @project.category %>
+                </span>
+            </h5>
+            
+            <hr>
+            
+            <section class="project-metadata">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>
+                            <span style="float: left;">
+                                by <%= @project.admin.full_name %>
+                            </span>
+                            
+                            <span style="float: right;">
+                                <a href="https://<%= @project.github %>" target="_blank">
+                                    <i class="fab fa-github"></i> github
+                                </a>
+                                |
+                                <a href="https://<%= @project.website %>" target="_blank">
+                                    <i class="fas fa-link"></i> website
+                                </a>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <hr>
+            
             <p>
-                <%= @project.summary %>
-            </p>
-            <p>
-                <a href="<%= @project.github %>">
-                    <i class="fab fa-github"></i> github
-                </a>
-            </p>
-            <p>
-                <a href="<%= @project.website %>">
-                    <i class="fas fa-link"></i> website
-                </a>
+                <h6>snapshot:</h6>
+                <em><%= @project.summary %></em>
             </p>
             
             <article>
@@ -22,6 +45,17 @@
                     <%= @project.featured_article.content %>
                 </div>
             </article>
+            
+            <hr>
+            
+            <div id="project-tags">
+                tagged in:
+                <% @project.each_tag do |tag| %>
+                    <a href="/project/tagged/<%= tag %>">
+                        <%= tag %>
+                    </a>
+                <% end %>
+            </div>
         </div>
         
         <div class="col-md-4">

@@ -1,5 +1,6 @@
 class Blog::ArticlesController < ApplicationController
     before_action :authenticate_admin!, only: [:new, :create, :preview_post]
+    before_action :set_article
     
     def index
         @articles = Article.all
@@ -12,6 +13,21 @@ class Blog::ArticlesController < ApplicationController
     
     def new
         @article = Article.new 
+    end
+    
+    def edit
+        @article = Article.find_by(id: params[:id])
+    end
+    
+    def update
+        @article.update(article_params)
+        
+        respond_to do |format|
+            if @article.save
+                format.html { redirect_to blog_show_article_path(:slug => @article.slug),
+                            notice: "article updated!" }
+            end
+        end
     end
     
     def create

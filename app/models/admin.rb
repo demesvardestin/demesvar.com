@@ -5,4 +5,8 @@ class Admin < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :articles
   has_many :projects
+  
+  def full_name
+    first_name << " " << last_name
+  end
 end

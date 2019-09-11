@@ -19,11 +19,11 @@ html, body {
 }
 
 nav {
-    background-color: #47475e;
+    background-color: #e5f1ff;
     height: 60px;
     
     .nav-link {
-        color: #c7c7ce !important;
+        color: #8e9fb2 !important;
         cursor: pointer;
     }
     
@@ -36,9 +36,10 @@ nav {
     padding-top: 85px;
     padding-bottom: 85px;
     min-height: calc(100vh - 188px) !important;
+    color: #737374;
     
     a {
-        color: #3f3f54;
+        color: #007bff;
     }
 }
 
@@ -50,15 +51,25 @@ form {
     min-height: 500px;
 }
 
+#article {
+    .article-content {
+        color: #282d33;
+    }
+}
+
 textarea {
     outline: none !important;
     box-shadow: none !important;
     border-radius: 0 !important;
 }
 
-.article-banner img {
-    width: 100%;
-    height: auto;
+.article-banner {
+    margin: 15px 0;
+    
+    img {
+        width: 100%;
+        height: auto;
+    }
 }
 
 form .field:not(:last-child) {
@@ -75,8 +86,8 @@ form .field:not(:last-child) {
 .badge {
     border-radius: 0;
     font-weight: normal !important;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .modal-content {
@@ -102,7 +113,7 @@ form .field:not(:last-child) {
 }
 
 footer {
-    background-color: #47475e;
+    background-color: #cce4ff;
     bottom: 0;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -110,7 +121,7 @@ footer {
     text-align: center;
     
     a {
-        color: #90909e;
+        color: #8e9fb2;
     }
     
     a:hover {
@@ -139,9 +150,9 @@ article {
 }
 
 #comments {
-    background-color: #90909e;
+    background-color: #b7cde5;
     padding: 15px;
-    color: #c7c7ce !important;
+    color: #fff !important;
     
     #no-comments-notice {
         text-align: center;
@@ -179,7 +190,7 @@ a.btn {
     }
     
     .nav-link:hover, .nav-link.active {
-        background-color: #90909e;
+        background-color: #007bff;
         color: #fff;
     }
 }
@@ -190,4 +201,8 @@ a.btn {
 
 .cursor-pointer {
     cursor: pointer;
+}
+
+.no-underline {
+    text-decoration: none !important;
 }
