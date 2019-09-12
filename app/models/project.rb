@@ -2,6 +2,8 @@ class Project < ApplicationRecord
     belongs_to :admin
     has_many :articles
     
+    after_create { Commentable.create(object_id: id, object_type: self.class.name) }
+    
     def slug
         name.split(' ').join('-')
     end
@@ -31,5 +33,13 @@ class Project < ApplicationRecord
     def self.find_by_slug(slug)
         _name_ = slug.split('-').join(' ')
         return self.find_by(name: _name_)
+    end
+    
+    def commentable
+        Commentable.find_by(object_id: id, object_type: self.class.name)
+    end
+    
+    def comments
+        commentable.comments
     end
 end

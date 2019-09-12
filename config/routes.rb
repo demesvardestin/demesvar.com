@@ -14,10 +14,9 @@ Rails.application.routes.draw do
         get '/filter_by_category', to: 'articles#filter_by_category'
         get '/', to: 'articles#index'
         get '/create', to: 'articles#new'
-        get '/:slug', to: 'articles#show', as: "show_article"
+        get '/:slug/:id', to: 'articles#show', as: "show_article"
         
         resources :articles
-        resources :comments, except: [:show, :index, :edit]
     end
     
     namespace :project do
@@ -28,6 +27,8 @@ Rails.application.routes.draw do
         get '/:project_id/add-article', to: 'projects#add_article', as: "add_article"
         resources :projects
     end
+    
+    resources :comments, except: [:show, :index, :edit]
     
     get '/preview_post', to: 'blog/articles#preview_post'
     get '/about', to: 'pages#about'

@@ -1,0 +1,46 @@
+<div class="modal fade" id="addNewComment" tabindex="-1" role="dialog"
+    aria-labelledby="addNewCommentLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">new comment</h5>
+                <button type="button" class="close" data-dismiss="modal"
+                    aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <%= render "comments/form" %>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% if comments.present? %>
+    <p>
+        <a href="#" data-toggle="modal" data-target="#addNewComment">
+            + share your thoughts
+        </a>
+    </p>
+    
+    <hr>
+    
+    <% comments.each do |comment| %>
+        <h6>
+            <%= comment.commenter_name %>
+        </h6>
+        <p>
+            <%= sanitize comment.content %>
+        </p>
+        <hr>
+    <% end %>
+<% else %>
+    <p id="no-comments-notice">
+        <em>
+            no comments on this post yet.
+            <a href="#" data-toggle="modal" data-target="#addNewComment">
+                start a conversation
+            </a>
+        </em>
+    </p>
+<% end %>

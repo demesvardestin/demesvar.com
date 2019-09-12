@@ -7,13 +7,6 @@
         <p>
             <%= project.summary.truncate(200) %>
         </p>
-        <p>
-            <% project.each_tag do |tag| %>
-                <a href="/project/tagged/<%= tag %>" class="no-underline">
-                    <span class="badge badge-primary"><%= tag %></span>
-                </a>
-            <% end %>
-        </p>
         <hr>
     <% end %>
 <% else %>

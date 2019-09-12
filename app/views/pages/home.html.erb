@@ -3,7 +3,7 @@
         <div class="col-lg-8">
             <div class="row">
                 <div class="col-md-12">
-                    <h4>Featured</h4>
+                    <h5>Featured</h5>
                     
                     <div id="featured-post">
                         <%= render "blog/articles/featured_post" %>
@@ -13,7 +13,7 @@
             
             <div class="row">
                 <div class="col-md-12">
-                    <h2>Latest Projects</h2>
+                    <h5>Latest Projects</h5>
                     
                     <div id="latest-projects">
                         <%= render "blog/articles/latest_projects" %>
@@ -23,7 +23,7 @@
         </div>
         
         <div class="col-lg-4">
-            <h4>Latest Shorts</h4>
+            <h5>Latest Shorts</h5>
             
             <div id="latest-posts">
                 <%= render partial: "blog/articles/articles", locals: { posts: @latest_posts } %>

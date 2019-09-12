@@ -9,6 +9,11 @@ class Project::ProjectsController < ApplicationController
   end
 
   def show
+    @comment = Comment.new
+    @commentable = Commentable.find_by(
+            object_id: @project.id,
+            object_type: Comment.get_model(request.env["REQUEST_PATH"])
+            )
   end
   
   def edit

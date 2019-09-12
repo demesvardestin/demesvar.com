@@ -42,7 +42,11 @@
             <article>
                 <h6>walkthrough:</h6>
                 <div>
-                    <%= @project.featured_article.content %>
+                    <% if @project.featured_article.present? %>
+                        <%= sanitize @project.featured_article.content %>
+                    <% else %>
+                        <p>the author hasn't added a walkthrough yet</p>
+                    <% end %>
                 </div>
             </article>
             
@@ -56,10 +60,26 @@
                     </a>
                 <% end %>
             </div>
+            
+            <div id="project-tags">
+                share:
+                <%= render partial: "shared/share_buttons", locals: { object: @project } %>
+            </div>
+            
+            <hr>
+            
+            <div class="row">
+                <div class="col-md-12">
+                    <h4>thoughts on this (<%= @project.comments.count %>)</h4>
+                    <section id="comments">
+                        <%= render partial: "comments/comments", locals: { comments: @project.comments } %>
+                    </section>
+                </div>
+            </div>
         </div>
         
         <div class="col-md-4">
-            <h5>other posts for this project</h5>
+            <h5>other posts for this project:</h5>
             <hr>
             <% @project.related_posts.each do |poste| %>
                 <p>

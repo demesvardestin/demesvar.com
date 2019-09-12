@@ -1,6 +1,6 @@
 class Blog::ArticlesController < ApplicationController
     before_action :authenticate_admin!, only: [:new, :create, :preview_post]
-    before_action :set_article
+    before_action :set_article, only: :update 
     
     def index
         @articles = Article.all
@@ -8,6 +8,10 @@ class Blog::ArticlesController < ApplicationController
     
     def show
         @article = Article.find_by(id: params[:id])
+        @commentable = Commentable.find_by(
+            object_id: params[:id],
+            object_type: Comment.get_model(request.env["REQUEST_PATH"])
+            )
         @comment = Comment.new
     end
     

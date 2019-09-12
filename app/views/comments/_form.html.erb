@@ -1,4 +1,4 @@
-<%= form_for [:blog, @comment] do |f| %>
+<%= form_for @comment do |f| %>
     <div class="field">
         <div class="row">
             <div class="col-md-6">
@@ -16,7 +16,7 @@
     </div>
     
     <div class="field">
-        <%= f.hidden_field :article_id, value: "#{params[:id]}", disabled: true %>
+        <%= f.hidden_field :commentable_id, value: "#{@commentable.id}" %>
     </div>
     
     <div>
@@ -24,7 +24,8 @@
     </div>
     
     <div class="actions">
-        <%= f.submit "post comment", class:"btn btn-primary btn-block" %>
+        <%= f.submit "post comment", class:"btn btn-primary btn-block",
+            data: { :disable_with => "posting..."} %>
     </div>
 <% end %>
 <%= tinymce %>
