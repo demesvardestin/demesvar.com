@@ -29,6 +29,7 @@ Rails.application.routes.draw do
     end
     
     resources :comments, except: [:show, :index, :edit]
+    resources :admins, only: [:create, :update]
     
     get '/preview_post', to: 'blog/articles#preview_post'
     get '/about', to: 'pages#about'

@@ -1,6 +1,6 @@
 class Project < ApplicationRecord
     belongs_to :admin
-    has_many :articles
+    validates_uniqueness_of :name
     
     after_create { Commentable.create(object_id: id, object_type: self.class.name) }
     
@@ -41,5 +41,9 @@ class Project < ApplicationRecord
     
     def comments
         commentable.comments
+    end
+    
+    def articles
+        Article.where(project_id: id)
     end
 end

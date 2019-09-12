@@ -80,18 +80,18 @@
     
     <div class="actions">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-5 offset-md-2">
                 <a class="btn btn-secondary btn-block" href="/blog">
                     cancel
                 </a>
             </div>
-            <div class="col-md-4">
-                <a class="btn btn-info btn-block" onclick="previewPost()"
-                    data-toggle="modal" data-target="#postPreviewModal">
-                    preview post
-                </a>
-            </div>
-            <div class="col-md-4">
+            <!--<div class="col-md-4">-->
+            <!--    <a class="btn btn-info btn-block" onclick="previewPost()"-->
+            <!--        data-toggle="modal" data-target="#postPreviewModal">-->
+            <!--        preview post-->
+            <!--    </a>-->
+            <!--</div>-->
+            <div class="col-md-5">
                 <%= f.submit "publish article", class:"btn btn-success btn-block", data: { :disable_with => "publishing..." }  %>
             </div>
         </div>

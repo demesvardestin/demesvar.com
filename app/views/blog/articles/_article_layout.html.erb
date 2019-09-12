@@ -64,7 +64,7 @@
             
             <div class="row">
                 <div class="col-md-12">
-                    <h4>thoughts on this (<%= @article.comments.count %>)</h4>
+                    <h5>thoughts on this (<%= @article.comments.count %>)</h5>
                     <section id="comments">
                         <%= render partial: "comments/comments", locals: { comments: @article.comments } %>
                     </section>

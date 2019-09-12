@@ -1,7 +1,7 @@
 class Article < ApplicationRecord
     belongs_to :category
     belongs_to :admin
-    belongs_to :project
+    validates_uniqueness_of :title
     
     after_create { Commentable.create(object_id: id, object_type: self.class.name) }
     

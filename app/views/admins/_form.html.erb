@@ -1,0 +1,63 @@
+<%= form_for @admin do |f| %>
+    <div class="field">
+        <div class="row">
+            <div class="col-md-6">
+                <%= f.label :first_name %>
+                <%= f.text_field :first_name, class:"form-control", placeholder: "first name",
+                    value: "#{current_admin.first_name}" %>
+            </div>
+            <div class="col-md-6">
+                <%= f.label :last_name %>
+                <%= f.text_field :last_name, class:"form-control", placeholder: "last name",
+                    value: "#{current_admin.last_name}" %>
+            </div>
+        </div>
+    </div>
+    
+    <div class="field">
+        <%= f.label :bio %>
+        <%= f.text_area :bio, class:"form-control", placeholder:"write a short bio about yourself",
+            value: "#{current_admin.bio}" %>
+    </div>
+    
+    <div class="field">
+        <%= f.label :facebook %>
+        <%= f.text_field :facebook, class:"form-control", placeholder:"your facebook url",
+            value: "#{current_admin.facebook}" %>
+    </div>
+    
+    <div class="field">
+        <%= f.label :twitter %>
+        <%= f.text_field :twitter, class:"form-control", placeholder:"your twitter url",
+            value: "#{current_admin.twitter}" %>
+    </div>
+    
+    <div class="field">
+        <%= f.label :linkedin %>
+        <%= f.text_field :linkedin, class:"form-control", placeholder:"your linkedin url",
+            value: "#{current_admin.linkedin}" %>
+    </div>
+    
+    <div class="field">
+        <%= f.label :instagram %>
+        <%= f.text_field :instagram, class:"form-control", placeholder:"your instagram url",
+            value: "#{current_admin.github}" %>
+    </div>
+    
+    <div class="field">
+        <%= f.label :github %>
+        <%= f.text_field :github, class:"form-control", placeholder:"your github url",
+            value: "#{current_admin.github}" %>
+    </div>
+    
+    <div class="field">
+        <%= f.label :website %>
+        <%= f.text_field :website, class:"form-control", placeholder:"your website url",
+            value: "#{current_admin.website}" %>
+    </div>
+    
+    <div class="actions">
+        <%= f.submit "update profile info", class:"btn btn-primary btn-block",
+            data: { :disable_with => "updating..." } %>
+    </div>
+<% end %>

@@ -20,7 +20,7 @@ html, body {
 
 nav {
     background-color: #e7e7e9;
-    height: 60px;
+    // height: 60px;
     
     .nav-link {
         color: #8e9fb2 !important;
@@ -33,7 +33,7 @@ nav {
 }
 
 #main-body {
-    padding-top: 85px;
+    padding-top: 35px;
     padding-bottom: 85px;
     min-height: calc(100vh - 188px) !important;
     color: #737374;
@@ -60,7 +60,7 @@ form {
 textarea {
     outline: none !important;
     box-shadow: none !important;
-    border-radius: 0 !important;
+    border-radius: 4px !important;
 }
 
 .article-banner {
@@ -78,26 +78,26 @@ form .field:not(:last-child) {
 
 .btn:not(.nav-link), input.form-control {
     height: 55px;
-    border-radius: 0;
+    border-radius: 4px;
     outline: none !important;
     box-shadow: none !important;
 }
 
 .badge {
-    border-radius: 0;
+    border-radius: 4px;
     font-weight: normal !important;
     padding-left: 10px;
     padding-right: 10px;
 }
 
 .modal-content {
-    border-radius: 0;
+    border-radius: 4px;
 }
 
 .dropdown-menu {
     width: 100%;
     padding: 0;
-    border-radius: 0;
+    border-radius: 4px;
     
     .dropdown-item {
         padding: 15px;
@@ -135,7 +135,7 @@ footer {
 }
 
 #request-quote {
-    border-radius: 0;
+    border-radius: 4px;
     border-width: 1.5px;
     border-color: #fff;
 }
@@ -151,8 +151,9 @@ article {
 
 #comments {
     background-color: #b7cde5;
+    border-radius: 4px;
     padding: 15px;
-    color: #fff !important;
+    color: #f0f5f9 !important;
     
     #no-comments-notice {
         text-align: center;

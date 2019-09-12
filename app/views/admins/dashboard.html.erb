@@ -3,15 +3,17 @@
         <div class="col-md-3">
             <ul class="nav flex-column">
                 <li class="nav-item">
-                    <a class="nav-link active cursor-pointer">
-                        <span style="float: left;">my articles</span>
+                    <a class="dashboard-nav-link nav-link active cursor-pointer"
+                        id="nav-link-articles" onclick="showContent(this)">
+                        <span style="float: left;">my posts</span>
                         <span style="float: right;">
                             <i class="fas fa-angle-right"></i>
                         </span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link cursor-pointer">
+                    <a class="dashboard-nav-link nav-link cursor-pointer"
+                        id="nav-link-projects" onclick="showContent(this)">
                         <span style="float: left;">my projects</span>
                         <span style="float: right;">
                             <i class="fas fa-angle-right"></i>
@@ -19,8 +21,8 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link cursor-pointer" id="nav-link-profile"
-                        onclick="showContent(this)">
+                    <a class="dashboard-nav-link nav-link cursor-pointer"
+                        id="nav-link-profile" onclick="showContent(this)">
                         <span style="float: left;">my profile</span>
                         <span style="float: right;">
                             <i class="fas fa-angle-right"></i>
@@ -42,6 +44,18 @@
                         </div>
                     </div>
                 </li>
+                <li class="nav-item">
+                    <%= link_to destroy_admin_session_path,
+                        class:"dashboard-nav-link nav-link cursor-pointer",
+                        method: :destroy do %>
+                        <span style="float: left;">
+                            log out
+                        </span>
+                        <span style="float: right;">
+                            <i class="fas fa-angle-right"></i>
+                        </span>
+                    <% end %>
+                </li>
             </ul>
         </div>
         
@@ -51,8 +65,16 @@
                     locals: { posts: current_admin.articles } %>
             </section>
             
+            <section id="projects-tab" class="content-tab">
+                <%= render partial: "/project/projects/projects",
+                    locals: { projects: current_admin.projects } %>
+            </section>
+            
             <section id="profile-tab" class="content-tab">
                 <h5>Edit profile</h5>
+                <div id="profile-form">
+                    <%= render "form" %>
+                </div>
             </section>
         </div>
     </div>
@@ -60,10 +82,11 @@
 
 <script type="text/javascript">
     showContent = (elem) => {
-        elem.classList.add('active')
-        $('.active').toggleClass('active');
+        $('.dashboard-nav-link.active').toggleClass('active');
+        elem.classList.add('active');
         
         let id = elem.id.split('nav-link-')[1];
+        $('.content-tab.active').toggleClass('active');
         $(`#${id}-tab`).toggleClass('active');
     }
 </script>

@@ -1,9 +1,9 @@
 <section id="articles">
     <div class="row">
-        <div class="col-lg-8">
+        <div class="col-lg-7">
             <div class="row">
                 <div class="col-md-12">
-                    <h5>Featured</h5>
+                    <h6>[Featured]</h6>
                     
                     <div id="featured-post">
                         <%= render "blog/articles/featured_post" %>
@@ -13,20 +13,22 @@
             
             <div class="row">
                 <div class="col-md-12">
-                    <h5>Latest Projects</h5>
+                    <h6>[Latest Projects]</h6>
                     
                     <div id="latest-projects">
-                        <%= render "blog/articles/latest_projects" %>
+                        <%= render partial: "project/projects/projects",
+                            locals: { projects: @latest_projects } %>
                     </div>
                 </div>
             </div>
         </div>
         
-        <div class="col-lg-4">
-            <h5>Latest Shorts</h5>
+        <div class="col-lg-5">
+            <h6>[Latest Shorts]</h6>
             
             <div id="latest-posts">
-                <%= render partial: "blog/articles/articles", locals: { posts: @latest_posts } %>
+                <%= render partial: "blog/articles/articles",
+                    locals: { posts: @latest_posts } %>
             </div>
         </div>
     </div>

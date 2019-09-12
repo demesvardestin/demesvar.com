@@ -39,19 +39,10 @@ class Blog::ArticlesController < ApplicationController
         @category = Category.find_by(name: params[:article][:category])
         @article.category = @category
         @article.admin = current_admin
-        @article.project = Project.find_by(id: params[:project_id]) if params[:project_id]
+        @article.project_id = params[:project_id] if params[:project_id]
         @article.save!
         
         redirect_to blog_article_path(@article), notice: "Article saved!"
-    end
-    
-    def preview_post
-        @article = Article.new(article_params)
-        @category = Category.find_by(name: params[:article][:category])
-        @article.category = @category
-        @comment = Comment.new
-        
-        render :layout => false
     end
     
     def filter_by_category
