@@ -5,7 +5,7 @@
                 <h5><%= f.label :title %></h5>
             </div>
             <div class="col-md-10">
-                <%= f.text_field :title, id:"article-title", class:"form-control", placeholder: "article title", value: "#{@article.fake_title}" %>
+                <%= f.text_field :title, id:"article-title", class:"form-control", placeholder: "article title" %>
             </div>
         </div>
     </div>
@@ -16,7 +16,7 @@
                 <h5><%= f.label :content %></h5>
             </div>
             <div class="col-md-10">
-                <%= f.text_area :content, id:"article-content", class:"form-control tinymce", placeholder: "article body", value: "#{@article.fake_body}" %>
+                <%= f.text_area :content, id:"article-content", class:"form-control tinymce", placeholder: "article body" %>
             </div>
         </div>
     </div>
