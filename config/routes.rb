@@ -14,6 +14,8 @@ Rails.application.routes.draw do
         get '/filter_by_category', to: 'articles#filter_by_category'
         get '/', to: 'articles#index'
         get '/create', to: 'articles#new'
+        get '/category/:category', to: 'articles#show_category', as: 'show_category'
+        get '/tagged/:tag', to: 'articles#show_tag', as: 'show_tag'
         get '/:slug/:id', to: 'articles#show', as: "show_article"
         
         resources :articles
@@ -22,6 +24,7 @@ Rails.application.routes.draw do
     namespace :project do
         get '/list', to: 'projects#index'
         get '/new', to: 'projects#new'
+        get '/tagged/:tag', to: 'projects#show_tag', as: 'show_tag'
         get '/:slug', to: 'projects#show', as: "show_project"
         get '/:slug/edit', to: 'projects#edit'
         get '/:project_id/add-article', to: 'projects#add_article', as: "add_article"

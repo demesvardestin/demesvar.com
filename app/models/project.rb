@@ -35,6 +35,10 @@ class Project < ApplicationRecord
         return self.find_by(name: _name_)
     end
     
+    def self.categorized_by(category)
+        where("category LIKE '%#{category}%'")
+    end
+    
     def commentable
         Commentable.find_by(object_id: id, object_type: self.class.name)
     end

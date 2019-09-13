@@ -9,11 +9,16 @@ class Project::ProjectsController < ApplicationController
   end
 
   def show
+    @related = Project.categorized_by(@project.category).where.not(id: @project.id)
     @comment = Comment.new
     @commentable = Commentable.find_by(
             object_id: @project.id,
             object_type: Comment.get_model(request.env["REQUEST_PATH"])
             )
+  end
+  
+  def show_tag
+    @projects = Project.where("tags LIKE '%#{params[:tag]}%'")
   end
   
   def edit

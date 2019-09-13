@@ -1,18 +1,27 @@
 class Blog::ArticlesController < ApplicationController
     before_action :authenticate_admin!, only: [:new, :create, :preview_post]
-    before_action :set_article, only: :update 
+    before_action :set_article, only: [:update, :destroy]
     
     def index
-        @articles = Article.all
+        @articles = Article.all.order("created_at DESC")
     end
     
     def show
         @article = Article.find_by(id: params[:id])
+        @related = Article.categorized_by(@article.category_name).where.not(id: @article.id)
         @commentable = Commentable.find_by(
             object_id: params[:id],
             object_type: Comment.get_model(request.env["REQUEST_PATH"])
             )
         @comment = Comment.new
+    end
+    
+    def show_category
+        @articles = Article.where(category_name: params[:category])
+    end
+    
+    def show_tag
+        @articles = Article.where("tags LIKE '%#{params[:tag]}%'")
     end
     
     def new
@@ -34,10 +43,14 @@ class Blog::ArticlesController < ApplicationController
         end
     end
     
+    def destroy
+        @article.delete
+        
+        redirect_to :back, notice: "article deleted!"
+    end
+    
     def create
         @article = Article.new(article_params)
-        @category = Category.find_by(name: params[:article][:category])
-        @article.category = @category
         @article.admin = current_admin
         @article.project_id = params[:project_id] if params[:project_id]
         @article.save!
@@ -47,9 +60,9 @@ class Blog::ArticlesController < ApplicationController
     
     def filter_by_category
         if params[:category] == 'all'
-            @articles = Article.all
+            @articles = Article.all.order("created_at DESC")
         else
-            @articles = Article.filter_by_category(params[:category])
+            @articles = Article.where(category_name: params[:category]).order("created_at DESC")
         end
         
         render :layout => false
@@ -62,6 +75,6 @@ class Blog::ArticlesController < ApplicationController
     end
     
     def article_params
-        params.require(:article).permit(:title, :content, :tags)
+        params.require(:article).permit(:title, :content, :tags, :category_name)
     end
 end

@@ -1,0 +1,13 @@
+<section id="articles-category-<%= params[:tag] %>">
+    <div class="row">
+        <div class="col-md-8">
+            <h6>
+                [tagged: <%= params[:tag] %>]
+            </h6>
+            
+            <div>
+                <%= render partial: "project/projects/projects", locals: { projects: @projects } %>
+            </div>
+        </div>
+    </div>
+</section>

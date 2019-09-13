@@ -10,17 +10,20 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require social-share-button
  *= require_tree .
  *= require_self
  */
 
 html, body {
     overflow-x: hidden !important;
+    font-family: 'Manjari', sans-serif;
 }
 
 nav {
     background-color: #e7e7e9;
-    // height: 60px;
+    text-transform: lowercase;
+    min-height: 60px;
     
     .nav-link {
         color: #8e9fb2 !important;
@@ -30,11 +33,22 @@ nav {
     .nav-item:not(:last-child) {
         margin-right: 10px;
     }
+    
+    .navbar-brand {
+        font-family: 'Pacifico', cursive;
+    }
+    
+    .navbar-toggler {
+        border: none;
+        outline: none !important;
+        box-shadow: none !important;
+        font-size: 24px;
+    }
 }
 
 #main-body {
-    padding-top: 35px;
-    padding-bottom: 85px;
+    margin-top: 85px;
+    margin-bottom: 85px;
     min-height: calc(100vh - 188px) !important;
     color: #737374;
     
@@ -184,6 +198,11 @@ a.btn {
     cursor: pointer;
 }
 
+.not-thick {
+    height: 30px !important;
+    padding-top: 3px !important;
+}
+
 #projects {
     .nav-link {
         height: 55px;
@@ -206,4 +225,29 @@ a.btn {
 
 .no-underline {
     text-decoration: none !important;
+}
+
+.font-sm {
+    font-size: 12px;
+}
+
+#about-avatar {
+    margin-bottom: 15px;
+}
+
+@media only screen and (max-device-width: 1024px) {
+    .related-posts-col {
+        padding-top: 25px;
+    }
+    
+    nav {
+        .nav-item:not(:last-child) {
+            border-bottom: 1px solid #fafafa;
+        }
+        
+        .nav-item {
+            text-align: center;
+            margin-right: 0 !important;
+        }
+    }
 }

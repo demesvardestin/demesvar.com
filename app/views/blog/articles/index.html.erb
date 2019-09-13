@@ -5,8 +5,8 @@
                 <% all_categories.each do |cat| %>
                     <li class="nav-item">
                         <a class="nav-link cat-link <%= "active" if cat == all_categories.first %>"
-                            onclick="loadCategory(this, '<%= cat.name %>')">
-                            <span style="float: left;"><%= cat.name %></span>
+                            onclick="loadCategory(this, '<%= cat %>')">
+                            <span style="float: left;"><%= cat %></span>
                             <span style="float: right;">
                                 <i class="fas fa-angle-right"></i>
                             </span>

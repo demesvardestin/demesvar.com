@@ -1,0 +1,13 @@
+<section id="articles-category-<%= params[:category] %>">
+    <div class="row">
+        <div class="col-md-8">
+            <h6>
+                [category: <%= params[:category] %>]
+            </h6>
+            
+            <div>
+                <%= render partial: "blog/articles/articles", locals: { posts: @articles } %>
+            </div>
+        </div>
+    </div>
+</section>

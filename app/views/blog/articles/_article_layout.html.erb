@@ -5,16 +5,16 @@
                 <div class="col-md-12">
                     <article>
                         <h5>
-                            <a href="/category/<%= @article.category.name %>">
+                            <a href="/blog/category/<%= @article.category_name %>">
                                 <span class="badge badge-primary">
-                                    <%= @article.category.name %>
+                                    <%= @article.category_name %>
                                 </span>
                             </a>
                         </h5>
                         
-                        <h4>
+                        <h5>
                             <%= @article.title %>
-                        </h4>
+                        </h5>
                         
                         <hr>
                         
@@ -26,10 +26,6 @@
                                             <%= @article.admin.full_name %>,
                                             <%= @article.created_at.strftime('%-m/%d/%Y') %>
                                         </span>
-                                        
-                                        <span style="float: right;">
-                                            <%= render partial: "shared/share_buttons", locals: { object: @article } %>
-                                        </span>
                                     </p>
                                 </div>
                             </div>
@@ -39,7 +35,7 @@
                             <img src="https://image.businessinsider.com/5d692c692e22af0d94484477?width=600&format=jpeg&auto=webp"
                                 alt="<%= @article.slug %>">
                             <figcaption>
-                                <p class="text-muted">
+                                <p class="text-muted font-sm">
                                     <%= "Courtesy John P. Doe" %>
                                 </p>
                             </figcaption>
@@ -53,8 +49,14 @@
                         
                         <section class="article-tags">
                             tagged: <% @article.each_tag do |t| %>
-                                <a href="/tags/<%= t %>"><%= t %></a>
+                                <a href="/blog/tagged/<%= t %>">
+                                    <%= t %>
+                                </a>
                             <% end %>
+                        </section>
+                        
+                        <section id="article-share-buttons">
+                            <%= render partial: "shared/share_buttons", locals: { object: @article.title } %>
                         </section>
                         
                         <hr>
@@ -72,9 +74,12 @@
             </div>
         </div>
         
-        <div class="col-md-4">
+        <div class="col-md-4 related-posts-col">
             <h4>related</h4>
             <hr>
+            <div>
+                <%= render partial: "blog/articles/articles", locals: { posts: @related } %>
+            </div>
         </div>
     </div>
 </section>

@@ -1,6 +1,7 @@
 module ApplicationHelper
     def all_categories
-        Category.all.order('name ASC')
+        ["sports", "religion", "politics", "philosophy", "technology",
+            "economics", "all"].sort
     end
     
     def project_categories

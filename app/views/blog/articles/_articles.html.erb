@@ -1,14 +1,22 @@
 <% if posts.present? %>
-    <h6><%= pluralize(posts.count, "post") %></h6>
+    <p style="margin-bottom: 0; color: green;">
+        <%= pluralize(posts.count, "post") %>
+    </p>
     <% posts.each do |poste| %>
-        <h5>
+        <h6>
             <%= link_to poste.title, blog_article_path(poste), class:"" %>
-        </h5>
-        <div>
+        </h6>
+        <div style="font-size: 15px;">
             <%= sanitize poste.content.truncate(200) %>
         </div>
+        
+        <% if current_admin && poste.admin == current_admin %>
+            <%= link_to "edit", edit_blog_article_path(poste), class:"btn btn-secondary btn-sm not-thick" %> |
+            <%= link_to "delete", blog_article_path(poste), class:"btn btn-danger btn-sm not-thick",
+                method: :delete, data: { alert: "are you sure?" } %>
+        <% end %>
         <hr>
     <% end %>
 <% else %>
-    <h5 align="center">no posts available in that category</h5>
+    <h6>no results found</h6>
 <% end %>

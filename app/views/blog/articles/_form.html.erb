@@ -44,9 +44,9 @@
                     <div class="dropdown-menu" aria-labelledby="category-button">
                         <% all_categories.each do |cat| %>
                             <a class="dropdown-item"
-                                onclick="$('#category-button').text('<%= cat.name %>');
-                                        document.querySelector('#category-name').value = '<%= cat.name %>';">
-                                <%= cat.name %>
+                                onclick="$('#category-button').text('<%= cat %>');
+                                        document.querySelector('#category-name').value = '<%= cat %>';">
+                                <%= cat %>
                             </a>
                         <% end %>
                     </div>
@@ -73,7 +73,7 @@
             </div>
         </div>
         <%= f.hidden_field :project_id, value: "", id: "project-id" %>
-        <%= f.hidden_field :category, value: "", id: "category-name" %>
+        <%= f.hidden_field :category_name, value: "", id: "category-name" %>
     </div>
     
     <hr>

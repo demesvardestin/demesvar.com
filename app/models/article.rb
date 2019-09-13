@@ -1,5 +1,4 @@
 class Article < ApplicationRecord
-    belongs_to :category
     belongs_to :admin
     validates_uniqueness_of :title
     
@@ -27,15 +26,13 @@ class Article < ApplicationRecord
         end
     end
     
-    def self.filter_by_category(category)
-        Article.all.select do |a|
-            a.category.name == category
-        end
-    end
-    
     def self.find_by_slug(slug)
         _name_ = slug.split('-').join(' ')
         return self.find_by(name: _name_)
+    end
+    
+    def self.categorized_by(category)
+        where("category_name LIKE '%#{category}%'")
     end
     
     def commentable

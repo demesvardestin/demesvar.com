@@ -61,9 +61,8 @@
                 <% end %>
             </div>
             
-            <div id="project-tags">
-                share:
-                <%= render partial: "shared/share_buttons", locals: { object: @project } %>
+            <div id="project-share-buttons">
+                <%= render partial: "shared/share_buttons", locals: { object: @project.name } %>
             </div>
             
             <hr>
@@ -78,14 +77,12 @@
             </div>
         </div>
         
-        <div class="col-md-4">
-            <h5>other posts for this project:</h5>
+        <div class="col-md-4 related-posts-col">
+            <h5>related projects:</h5>
             <hr>
-            <% @project.related_posts.each do |poste| %>
-                <p>
-                    <%= link_to poste.title, blog_show_article_path(:slug => poste.slug) %>
-                </p>
-            <% end %>
+            <div>
+                <%= render partial: "project/projects/projects", locals: { projects: @related } %>
+            </div>
         </div>
     </div>
 </section>
