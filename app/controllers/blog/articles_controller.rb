@@ -75,6 +75,6 @@ class Blog::ArticlesController < ApplicationController
     end
     
     def article_params
-        params.require(:article).permit(:title, :content, :tags, :category_name)
+        params.require(:article).permit(:title, :content, :tags, :category_name, :project_id)
     end
 end
