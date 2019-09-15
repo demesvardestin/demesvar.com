@@ -31,15 +31,7 @@
                             </div>
                         </section>
                         
-                        <figure class="article-banner">
-                            <img src="https://image.businessinsider.com/5d692c692e22af0d94484477?width=600&format=jpeg&auto=webp"
-                                alt="<%= @article.slug %>">
-                            <figcaption>
-                                <p class="text-muted font-sm">
-                                    <%= "Courtesy John P. Doe" %>
-                                </p>
-                            </figcaption>
-                        </figure>
+                        <hr>
                         
                         <section class="article-content">
                             <%= sanitize @article.content %>
@@ -50,7 +42,7 @@
                         <section class="article-tags">
                             tagged: <% @article.each_tag do |t| %>
                                 <a href="/blog/tagged/<%= t %>">
-                                    <%= t %>
+                                    <span class="badge badge-info"><%= t %></span>
                                 </a>
                             <% end %>
                         </section>
@@ -83,3 +75,16 @@
         </div>
     </div>
 </section>
+
+<script type="text/javascript">
+    let preBlocks = document.getElementsByTagName("pre");
+    
+    for (i in preBlocks) {
+        pre = preBlocks[i];
+        text = pre.innerHTML;
+        code = document.createElement("code");
+        code.innerHTML = text;
+        pre.innerHTML = '';
+        pre.appendChild(code);
+    }
+</script>

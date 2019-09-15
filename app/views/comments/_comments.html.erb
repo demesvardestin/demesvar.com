@@ -27,7 +27,7 @@
     
     <% comments.each do |comment| %>
         <h6>
-            <%= comment.commenter_name %>
+            <strong><%= comment.commenter_name %></strong>
         </h6>
         <p>
             <%= sanitize comment.content %>
