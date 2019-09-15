@@ -33,6 +33,7 @@ class Blog::ArticlesController < ApplicationController
     end
     
     def update
+        @article.project_id = params[:article][:project_id]
         @article.update(article_params)
         
         respond_to do |format|

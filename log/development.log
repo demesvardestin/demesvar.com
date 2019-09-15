@@ -26627,3 +26627,285 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 50ms (Views: 45.6ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/blog/create" for 68.197.253.161 at 2019-09-15 16:28:41 +0000
+Cannot render console from 68.197.253.161! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#new as HTML
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/sign_in" for 68.197.253.161 at 2019-09-15 16:28:42 +0000
+Cannot render console from 68.197.253.161! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (14.1ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_body.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 91ms (Views: 73.4ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/admins/sign_in" for 68.197.253.161 at 2019-09-15 16:28:50 +0000
+Cannot render console from 68.197.253.161! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RbC/IIH6I7wyZ/ZkRQPjU1rWKVR+YUT5Mcur4h7U0fmb7a8WqlvQdtyTEhtH/SWpNchKxaZhgYv8mccuYRYmXg==", "admin"=>{"email"=>"dddemesvar07@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"log in"}
+  [1m[36mAdmin Load (1.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "dddemesvar07@gmail.com"], ["LIMIT", 1]]
+Redirected to https://1583d37cfe4440188960baf27b08ffef.vfs.cloud9.us-east-1.amazonaws.com/blog/create
+Completed 302 Found in 181ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/blog/create" for 68.197.253.161 at 2019-09-15 16:28:50 +0000
+Cannot render console from 68.197.253.161! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#new as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering blog/articles/new.html.erb within layouts/application
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered blog/articles/_form.html.erb (15.8ms)
+  Rendered blog/articles/new.html.erb within layouts/application (17.2ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_body.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 69ms (Views: 55.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/blog" for 68.197.253.161 at 2019-09-15 16:29:02 +0000
+Cannot render console from 68.197.253.161! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#index as HTML
+  Rendering blog/articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (2.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY created_at DESC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered blog/articles/_articles.html.erb (22.6ms)
+  Rendered blog/articles/index.html.erb within layouts/application (24.1ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+  Rendered layouts/_body.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 63ms (Views: 58.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/blog/articles/9" for 68.197.253.161 at 2019-09-15 16:29:03 +0000
+Cannot render console from 68.197.253.161! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCommentable Load (0.9ms)[0m  [1m[34mSELECT  "commentables".* FROM "commentables" WHERE "commentables"."object_id" = ? AND "commentables"."object_type" = ? LIMIT ?[0m  [["object_id", 9], ["object_type", "Article"], ["LIMIT", 1]]
+  Rendering blog/articles/show.html.erb within layouts/application
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered shared/_share_buttons.html.erb (0.8ms)
+  [1m[36mCommentable Load (0.1ms)[0m  [1m[34mSELECT  "commentables".* FROM "commentables" WHERE "commentables"."object_id" = ? AND "commentables"."object_type" = ? LIMIT ?[0m  [["object_id", 9], ["object_type", "Article"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ?[0m  [["commentable_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "commentables".* FROM "commentables" WHERE "commentables"."object_id" = ? AND "commentables"."object_type" = ? LIMIT ?[0m  [["object_id", 9], ["object_type", "Article"], ["LIMIT", 1]]
+  Rendered comments/_form.html.erb (1.6ms)
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."commentable_id" = ?[0m  [["commentable_id", 3]]
+  Rendered comments/_comments.html.erb (16.0ms)
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE (category_name LIKE '%%') AND ("articles"."id" != ?)[0m  [["id", 9]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles" WHERE (category_name LIKE '%%') AND ("articles"."id" != ?)[0m  [["id", 9]]
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered blog/articles/_articles.html.erb (5.4ms)
+  Rendered blog/articles/_article_layout.html.erb (43.1ms)
+  Rendered blog/articles/show.html.erb within layouts/application (44.3ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_body.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 121ms (Views: 100.7ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/blog/articles/9/edit" for 68.197.253.161 at 2019-09-15 16:29:10 +0000
+Cannot render console from 68.197.253.161! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering blog/articles/edit.html.erb within layouts/application
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered blog/articles/_form.html.erb (3.6ms)
+  Rendered blog/articles/edit.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_body.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 48ms (Views: 43.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/project/list" for 68.197.253.161 at 2019-09-15 16:29:24 +0000
+Cannot render console from 68.197.253.161! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Project::ProjectsController#index as HTML
+  Rendering project/projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."category" = ?[0m  [["category", "coding"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects" WHERE "projects"."category" = ?[0m  [["category", "coding"]]
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered project/projects/_projects.html.erb (6.4ms)
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."category" = ?[0m  [["category", "research"]]
+  Rendered project/projects/_projects.html.erb (0.9ms)
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."category" = ?[0m  [["category", "misc"]]
+  Rendered project/projects/_projects.html.erb (0.9ms)
+  Rendered project/projects/index.html.erb within layouts/application (12.7ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_body.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 54ms (Views: 51.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/project/myrates" for 68.197.253.161 at 2019-09-15 16:29:25 +0000
+Cannot render console from 68.197.253.161! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Project::ProjectsController#show as HTML
+  Parameters: {"slug"=>"myrates"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."name" = ? LIMIT ?[0m  [["name", "myrates"], ["LIMIT", 1]]
+  [1m[36mCommentable Load (0.1ms)[0m  [1m[34mSELECT  "commentables".* FROM "commentables" WHERE "commentables"."object_id" = ? AND "commentables"."object_type" = ? LIMIT ?[0m  [["object_id", 1], ["object_type", "Project"], ["LIMIT", 1]]
+  Rendering project/projects/show.html.erb within layouts/application
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."project_id" = ? ORDER BY "articles"."id" ASC LIMIT ?[0m  [["project_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."project_id" = ? ORDER BY "articles"."id" ASC LIMIT ?[0m  [["project_id", 1], ["LIMIT", 1]]
+  Rendered shared/_share_buttons.html.erb (0.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "commentables".* FROM "commentables" WHERE "commentables"."object_id" = ? AND "commentables"."object_type" = ? LIMIT ?[0m  [["object_id", 1], ["object_type", "Project"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ?[0m  [["commentable_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "commentables".* FROM "commentables" WHERE "commentables"."object_id" = ? AND "commentables"."object_type" = ? LIMIT ?[0m  [["object_id", 1], ["object_type", "Project"], ["LIMIT", 1]]
+  Rendered comments/_form.html.erb (1.3ms)
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."commentable_id" = ?[0m  [["commentable_id", 2]]
+  Rendered comments/_comments.html.erb (4.4ms)
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE (category LIKE '%coding%') AND ("projects"."id" != ?)[0m  [["id", 1]]
+  Rendered project/projects/_projects.html.erb (1.5ms)
+  Rendered project/projects/show.html.erb within layouts/application (17.2ms)
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (2.0ms)
+  Rendered layouts/_body.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 79ms (Views: 72.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/blog" for 68.197.253.161 at 2019-09-15 16:29:34 +0000
+Cannot render console from 68.197.253.161! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#index as HTML
+  Rendering blog/articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY created_at DESC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered blog/articles/_articles.html.erb (9.5ms)
+  Rendered blog/articles/index.html.erb within layouts/application (10.9ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+  Rendered layouts/_body.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 50ms (Views: 48.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/blog/filter_by_category?category=technology" for 68.197.253.161 at 2019-09-15 16:29:37 +0000
+Cannot render console from 68.197.253.161! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#filter_by_category as */*
+  Parameters: {"category"=>"technology"}
+  Rendering blog/articles/filter_by_category.js.erb
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."category_name" = ? ORDER BY created_at DESC[0m  [["category_name", "technology"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles" WHERE "articles"."category_name" = ?[0m  [["category_name", "technology"]]
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered blog/articles/_articles.html.erb (6.0ms)
+  Rendered blog/articles/filter_by_category.js.erb (8.8ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/blog/filter_by_category?category=all" for 68.197.253.161 at 2019-09-15 16:29:42 +0000
+Cannot render console from 68.197.253.161! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#filter_by_category as */*
+  Parameters: {"category"=>"all"}
+  Rendering blog/articles/filter_by_category.js.erb
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY created_at DESC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered blog/articles/_articles.html.erb (9.8ms)
+  Rendered blog/articles/filter_by_category.js.erb (12.3ms)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/blog/articles/1" for 68.197.253.161 at 2019-09-15 16:29:48 +0000
+Cannot render console from 68.197.253.161! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCommentable Load (0.1ms)[0m  [1m[34mSELECT  "commentables".* FROM "commentables" WHERE "commentables"."object_id" = ? AND "commentables"."object_type" = ? LIMIT ?[0m  [["object_id", 1], ["object_type", "Article"], ["LIMIT", 1]]
+  Rendering blog/articles/show.html.erb within layouts/application
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered shared/_share_buttons.html.erb (0.7ms)
+  [1m[36mCommentable Load (0.1ms)[0m  [1m[34mSELECT  "commentables".* FROM "commentables" WHERE "commentables"."object_id" = ? AND "commentables"."object_type" = ? LIMIT ?[0m  [["object_id", 1], ["object_type", "Article"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ?[0m  [["commentable_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "commentables".* FROM "commentables" WHERE "commentables"."object_id" = ? AND "commentables"."object_type" = ? LIMIT ?[0m  [["object_id", 1], ["object_type", "Article"], ["LIMIT", 1]]
+  Rendered comments/_form.html.erb (1.3ms)
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."commentable_id" = ?[0m  [["commentable_id", 1]]
+  Rendered comments/_comments.html.erb (4.3ms)
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE (category_name LIKE '%technology%') AND ("articles"."id" != ?)[0m  [["id", 1]]
+  Rendered blog/articles/_articles.html.erb (1.5ms)
+  Rendered blog/articles/_article_layout.html.erb (14.8ms)
+  Rendered blog/articles/show.html.erb within layouts/application (16.0ms)
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (1.8ms)
+  Rendered layouts/_body.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 58ms (Views: 53.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/blog/articles/1/edit" for 68.197.253.161 at 2019-09-15 16:30:33 +0000
+Cannot render console from 68.197.253.161! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blog/articles/edit.html.erb within layouts/application
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered blog/articles/_form.html.erb (18.4ms)
+  Rendered blog/articles/edit.html.erb within layouts/application (19.8ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_body.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 63ms (Views: 59.5ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" ORDER BY "articles"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started PATCH "/blog/articles/1" for 68.197.253.161 at 2019-09-15 16:31:03 +0000
+Cannot render console from 68.197.253.161! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2x8eZJEEbbylg++dwFn0l9Se5QcMM4BMqKOb+vsKaWRI1Nli7CFJ5CKwOacj7I8wnciPct7A2mC1CmZPnaoFmw==", "article"=>{"title"=>"Dolores bestia admitto dolorum aegre ustulo quis vallum.", "content"=>"<pre>def something(something)<br />    print something<br />end</pre>\r\n<p>Perferendis velit asperiores. Excepturi magni in. Voluptatem numquam dolore. Dolorem aperiam corrupti. Sit quia id. Voluptas est facere. Iure animi laboriosam. Eius in consectetur. Et nemo iure. Aut neque cupiditate. Labore laboriosam praesentium. Illo qui ab. Voluptates officiis eveniet. Libero temporibus voluptatem. Qui et dolorem. Porro et dignissimos. Et maxime sed. Dignissimos consequatur necessitatibus. Sit aut numquam. Natus ratione aut. Repellendus et quasi. Molestiae necessitatibus corrupti. Aut magni non. Necessitatibus voluptatem odio. Culpa odit beatae. Vitae perspiciatis et. Veritatis fugit explicabo. Incidunt quos aut. Autem molestiae numquam. Est est ullam. Alias odio similique. Dolorem placeat dicta. Et voluptas aperiam. Labore enim rem. Fugiat alias laudantium. Quidem sed et. Ut optio et. Eum laborum quis.</p>\r\n<p>&nbsp;</p>\r\n<pre>import numpy from numpy<br />def something-python(self, something):<br />    self.something = something    <br />    print something</pre>", "tags"=>"ruby,rails,other,stuff,here", "project_id"=>"1", "category_name"=>"technology"}, "commit"=>"publish article", "id"=>"1"}
+  [1m[36mAdmin Load (1.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArticle Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "articles" WHERE "articles"."title" = ? AND ("articles"."id" != ?) LIMIT ?[0m  [["title", "Dolores bestia admitto dolorum aegre ustulo quis vallum."], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mArticle Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "articles" WHERE "articles"."title" = ? AND ("articles"."id" != ?) LIMIT ?[0m  [["title", "Dolores bestia admitto dolorum aegre ustulo quis vallum."], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://1583d37cfe4440188960baf27b08ffef.vfs.cloud9.us-east-1.amazonaws.com/blog/article/Dolores-bestia-admitto-dolorum-aegre-ustulo-quis-vallum/1
+Completed 302 Found in 21ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/blog/article/Dolores-bestia-admitto-dolorum-aegre-ustulo-quis-vallum/1" for 68.197.253.161 at 2019-09-15 16:31:03 +0000
+Cannot render console from 68.197.253.161! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#show as HTML
+  Parameters: {"slug"=>"Dolores-bestia-admitto-dolorum-aegre-ustulo-quis-vallum", "id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCommentable Load (0.1ms)[0m  [1m[34mSELECT  "commentables".* FROM "commentables" WHERE "commentables"."object_id" = ? AND "commentables"."object_type" = ? LIMIT ?[0m  [["object_id", 1], ["object_type", "Article"], ["LIMIT", 1]]
+  Rendering blog/articles/show.html.erb within layouts/application
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered shared/_share_buttons.html.erb (0.8ms)
+  [1m[36mCommentable Load (0.1ms)[0m  [1m[34mSELECT  "commentables".* FROM "commentables" WHERE "commentables"."object_id" = ? AND "commentables"."object_type" = ? LIMIT ?[0m  [["object_id", 1], ["object_type", "Article"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ?[0m  [["commentable_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "commentables".* FROM "commentables" WHERE "commentables"."object_id" = ? AND "commentables"."object_type" = ? LIMIT ?[0m  [["object_id", 1], ["object_type", "Article"], ["LIMIT", 1]]
+  Rendered comments/_form.html.erb (1.5ms)
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."commentable_id" = ?[0m  [["commentable_id", 1]]
+  Rendered comments/_comments.html.erb (5.0ms)
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE (category_name LIKE '%technology%') AND ("articles"."id" != ?)[0m  [["id", 1]]
+  Rendered blog/articles/_articles.html.erb (1.3ms)
+  Rendered blog/articles/_article_layout.html.erb (21.0ms)
+  Rendered blog/articles/show.html.erb within layouts/application (21.9ms)
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (1.8ms)
+  Rendered layouts/_body.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 80ms (Views: 75.4ms | ActiveRecord: 1.1ms)
+
+
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" ORDER BY "articles"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
