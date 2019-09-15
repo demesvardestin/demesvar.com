@@ -4,6 +4,9 @@
             <%= link_to @featured_post.title,
                 blog_show_article_path(:slug => @featured_post.slug, :id => @featured_post.id) %>
         </h5>
+        <p>
+            <%= sanitize @featured_post.content.truncate(300) %>
+        </p>
     </article>
 <% else %>
     <h6>no featured post to display yet</h6>
