@@ -4,13 +4,6 @@
             <%= link_to @featured_post.title,
                 blog_show_article_path(:slug => @featured_post.slug, :id => @featured_post.id) %>
         </h5>
-        <figure class="article-banner">
-            <img src="https://image.businessinsider.com/5d692c692e22af0d94484477?width=600&format=jpeg&auto=webp"
-                alt="<%= @featured_post.slug %>">
-            <figcaption>
-                <p><%= "Courtesy John P. Doe" %></p>
-            </figcaption>
-        </figure>
     </article>
 <% else %>
     <h6>no featured post to display yet</h6>
