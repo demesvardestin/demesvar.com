@@ -17,7 +17,7 @@ Rails.application.routes.draw do
         get '/category/:category', to: 'articles#show_category', as: 'show_category'
         get '/tagged/:tag', to: 'articles#show_tag', as: 'show_tag'
         get '/article/:slug/:id', to: 'articles#show', as: "show_article"
-        get '/article/:slug/:id/edit', to 'articles#edit'
+        get '/article/:slug/:id/edit', to: 'articles#edit'
         
         resources :articles
     end
