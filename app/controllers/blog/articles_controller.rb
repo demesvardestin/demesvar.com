@@ -3,7 +3,7 @@ class Blog::ArticlesController < ApplicationController
     before_action :set_article, only: [:update, :destroy]
     
     def index
-        @articles = Article.all.order("created_at DESC")
+        @articles = Article.all.published.order("created_at DESC")
     end
     
     def show
@@ -17,11 +17,11 @@ class Blog::ArticlesController < ApplicationController
     end
     
     def show_category
-        @articles = Article.where(category_name: params[:category])
+        @articles = Article.published.where(category_name: params[:category])
     end
     
     def show_tag
-        @articles = Article.where("tags LIKE '%#{params[:tag]}%'")
+        @articles = Article.published.where("tags LIKE '%#{params[:tag]}%'")
     end
     
     def new
@@ -61,9 +61,9 @@ class Blog::ArticlesController < ApplicationController
     
     def filter_by_category
         if params[:category] == 'all'
-            @articles = Article.all.order("created_at DESC")
+            @articles = Article.published.all.order("created_at DESC")
         else
-            @articles = Article.where(category_name: params[:category]).order("created_at DESC")
+            @articles = Article.published.where(category_name: params[:category]).order("created_at DESC")
         end
         
         render :layout => false
@@ -73,9 +73,19 @@ class Blog::ArticlesController < ApplicationController
     
     def set_article
         @article = Article.find(params[:id])
+        if @article.published == false
+            redirect_to "/", notice: "post not found"
+        end
     end
     
     def article_params
-        params.require(:article).permit(:title, :content, :tags, :category_name, :project_id)
+        params.require(:article)
+        .permit(
+            :title,
+            :content,
+            :tags,
+            :category_name,
+            :project_id,
+            :published)
     end
 end

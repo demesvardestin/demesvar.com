@@ -5,7 +5,7 @@
                 blog_show_article_path(:slug => @featured_post.slug, :id => @featured_post.id) %>
         </h5>
         <p>
-            <%= sanitize @featured_post.content.truncate(300) %>
+            <%= pluralize(@featured_post.comments.count, "comment") %>
         </p>
     </article>
 <% else %>

@@ -1,6 +1,8 @@
 class Article < ApplicationRecord
     belongs_to :admin
     validates_uniqueness_of :title
+    scope :published, -> { where(published: true) }
+    scope :unpublished, -> { where.not(published: true) }
     
     after_create { Commentable.create(object_id: id, object_type: self.class.name) }
     
@@ -41,5 +43,9 @@ class Article < ApplicationRecord
     
     def comments
         commentable.comments
+    end
+    
+    def project
+        Project.find_by(id: project_id)
     end
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190913140334) do
+ActiveRecord::Schema.define(version: 20190915210443) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "first_name"
@@ -36,12 +36,13 @@ ActiveRecord::Schema.define(version: 20190913140334) do
   create_table "articles", force: :cascade do |t|
     t.text     "content"
     t.string   "title"
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
     t.string   "tags",          default: ""
     t.integer  "project_id"
     t.integer  "admin_id"
     t.string   "category_name"
+    t.boolean  "published",     default: true
   end
 
   create_table "categories", force: :cascade do |t|

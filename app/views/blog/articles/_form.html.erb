@@ -42,7 +42,7 @@
                         <% if @article.category_name %>
                             <%= @article.category_name %> <i class="fas fa-angle-down"></i>
                         <% else %>
-                            Select a category <i class="fas fa-angle-down"></i>
+                            select a category <i class="fas fa-angle-down"></i>
                         <% end %>
                     </button>
                     <div class="dropdown-menu" aria-labelledby="category-button">
@@ -62,7 +62,11 @@
                     <button class="btn btn-secondary btn-transparent btn-block" type="button"
                         id="project-button" data-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">
-                        select a project <i class="fas fa-angle-down"></i>
+                        <% if @article.project %>
+                            <%= @article.project.name %> <i class="fas fa-angle-down"></i>
+                        <% else %>
+                            select a project <i class="fas fa-angle-down"></i>
+                        <% end %>
                     </button>
                     <div class="dropdown-menu" aria-labelledby="project-button">
                         <% all_projects.each do |pro| %>
@@ -78,27 +82,35 @@
         </div>
         <%= f.hidden_field :project_id, value: "#{@article.project_id}", id: "project-id" %>
         <%= f.hidden_field :category_name, value: "#{@article.category_name}", id: "category-name" %>
+        <%= f.hidden_field :published, id: "published" %>
     </div>
     
     <hr>
     
     <div class="actions">
         <div class="row">
-            <div class="col-md-5 offset-md-2">
+            <div class="col-md-4">
                 <a class="btn btn-secondary btn-block" href="/blog">
                     cancel
                 </a>
             </div>
-            <!--<div class="col-md-4">-->
-            <!--    <a class="btn btn-info btn-block" onclick="previewPost()"-->
-            <!--        data-toggle="modal" data-target="#postPreviewModal">-->
-            <!--        preview post-->
-            <!--    </a>-->
-            <!--</div>-->
-            <div class="col-md-5">
+            <div class="col-md-4">
+                <a class="btn btn-info btn-block" onclick="saveAsDraft()">
+                    save as draft
+                </a>
+            </div>
+            <div class="col-md-4">
                 <%= f.submit "publish article", class:"btn btn-success btn-block", data: { :disable_with => "publishing..." }  %>
             </div>
         </div>
     </div>
 <% end %>
 <%= tinymce %>
+
+<script type="text/javascript">
+    saveAsDraft = () => {
+        document.querySelector("#published").value = false;
+        let form = document.querySelector("#article-form");
+        form.submit();
+    }
+</script>
