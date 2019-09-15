@@ -1,5 +1,5 @@
 class Blog::ArticlesController < ApplicationController
-    before_action :authenticate_admin!, only: [:new, :create, :preview_post]
+    before_action :authenticate_admin!, only: [:new, :create, :preview_post, :edit, :update, :destroy]
     before_action :set_article, only: [:update, :destroy]
     
     def index
