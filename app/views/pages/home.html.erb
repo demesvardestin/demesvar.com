@@ -1,34 +1,20 @@
 <section id="articles">
     <div class="row">
-        <div class="col-lg-7">
-            <div class="row">
-                <div class="col-md-12">
-                    <h6>[featured post]</h6>
-                    
-                    <div id="featured-post">
-                        <%= render "blog/articles/featured_post" %>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="row">
-                <div class="col-md-12">
-                    <h6>[latest projects]</h6>
-                    
-                    <div id="latest-projects">
-                        <%= render partial: "project/projects/projects",
-                            locals: { projects: @latest_projects } %>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-lg-5">
-            <h6>[latest shorts]</h6>
+        <div class="col-lg-6">
+            <h6>[latest posts]</h6>
             
             <div id="latest-posts">
                 <%= render partial: "blog/articles/articles",
                     locals: { posts: @latest_posts } %>
+            </div>
+        </div>
+        
+        <div class="col-lg-6">
+            <h6>[latest projects]</h6>
+            
+            <div id="latest-projects">
+                <%= render partial: "project/projects/projects",
+                    locals: { projects: @latest_projects } %>
             </div>
         </div>
     </div>
