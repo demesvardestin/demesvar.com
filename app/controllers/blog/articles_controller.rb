@@ -17,11 +17,11 @@ class Blog::ArticlesController < ApplicationController
     end
     
     def show_category
-        @articles = Article.published.where(category_name: params[:category])
+        @articles = Article.published.where(category_name: params[:category]).order("created_at DESC")
     end
     
     def show_tag
-        @articles = Article.published.where("tags LIKE '%#{params[:tag]}%'")
+        @articles = Article.published.where("tags LIKE '%#{params[:tag]}%'").order("created_at DESC")
     end
     
     def new
