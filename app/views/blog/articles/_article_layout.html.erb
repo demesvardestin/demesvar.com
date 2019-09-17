@@ -83,8 +83,11 @@
 </section>
 
 <script type="text/javascript">
-    let preBlocks = document.getElementsByTagName("pre");
+    let img = document.querySelector("img");
+    img.setAttribute("width", "100%");
+    img.setAttribute("height", "auto");
     
+    let preBlocks = document.getElementsByTagName("pre");
     for (i in preBlocks) {
         pre = preBlocks[i];
         text = pre.innerHTML;
