@@ -13,11 +13,13 @@ module ApplicationHelper
     end
     
     def page_title(path)
-        path_map = if path.include?("article")
-            [] << path.split("blog/article/")[1].split("-").join(" ")
+        path_map = if path.length < 2
+            [""]
+        elsif path.include?("article")
+            [] << path.split("blog/article/")[1].split("-").join(" ") <<  " - "
         else
-            path.split("/")
-        end.map(&:downcase).join(" ") << " - demesvar destin"
+            path.split("/") << " - "
+        end.map(&:downcase).join(" ") << "demesvar.com"
         
         return path_map
     end
