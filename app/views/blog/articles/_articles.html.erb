@@ -4,7 +4,7 @@
     </p>
     <% posts.each do |poste| %>
         <h6>
-            <%= link_to poste.title, blog_article_path(poste), class:"" %>
+            <%= link_to poste.title, blog_show_article_path(:slug => poste.slug, :id => poste.id), class:"" %>
         </h6>
         <div style="font-size: 15px;">
             <%= pluralize(poste.comments.count, "comment") %>

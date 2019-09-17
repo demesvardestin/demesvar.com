@@ -11,4 +11,14 @@ module ApplicationHelper
     def all_projects
         Project.all
     end
+    
+    def page_title(path)
+        path_map = if path.include?("article")
+            [] << path.split("blog/article/")[1].split("-").join(" ")
+        else
+            path.split("/")
+        end.map(&:downcase).join(" ") << " - demesvar destin"
+        
+        return path_map
+    end
 end
