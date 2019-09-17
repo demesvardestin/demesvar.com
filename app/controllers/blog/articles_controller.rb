@@ -3,11 +3,15 @@ class Blog::ArticlesController < ApplicationController
     before_action :set_article, only: [:update, :destroy]
     
     def index
-        @articles = Article.all.published.order("created_at DESC")
+        @articles = Article.published.order("created_at DESC")
     end
     
     def show
         @article = Article.find_by(id: params[:id])
+        if !@article.published
+            redirect_to "/blog", notice: "this article was not found"
+            return
+        end
         @related = Article.categorized_by(@article.category_name).where.not(id: @article.id)
         @commentable = Commentable.find_by(
             object_id: params[:id],
