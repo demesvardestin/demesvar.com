@@ -73,9 +73,6 @@ class Blog::ArticlesController < ApplicationController
     
     def set_article
         @article = Article.find(params[:id])
-        if @article.published == false
-            redirect_to "/", notice: "post not found"
-        end
     end
     
     def article_params
