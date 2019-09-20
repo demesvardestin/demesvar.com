@@ -13,7 +13,9 @@ class Blog::ArticlesController < ApplicationController
             redirect_to "/blog", notice: "this article was not found"
             return
         end
-        @related = Article.categorized_by(@article.category_name).where.not(id: @article.id)
+        @related = Article.published.not_associated_with_project
+                            .categorized_by(@article.category_name)
+                            .where.not(id: @article.id)
         @commentable = Commentable.find_by(
             object_id: params[:id],
             object_type: Comment.get_model(request.env["REQUEST_PATH"])
