@@ -3,7 +3,8 @@ class Blog::ArticlesController < ApplicationController
     before_action :set_article, only: [:update, :destroy]
     
     def index
-        @articles = Article.published.order("created_at DESC")
+        @articles = Article.published.not_associated_with_project
+                            .order("created_at DESC")
     end
     
     def show
@@ -21,11 +22,15 @@ class Blog::ArticlesController < ApplicationController
     end
     
     def show_category
-        @articles = Article.published.where(category_name: params[:category]).order("created_at DESC")
+        @articles = Article.published.not_associated_with_project
+                            .where(category_name: params[:category])
+                            .order("created_at DESC")
     end
     
     def show_tag
-        @articles = Article.published.where("tags LIKE '%#{params[:tag]}%'").order("created_at DESC")
+        @articles = Article.published.not_associated_with_project
+                            .where("tags LIKE '%#{params[:tag]}%'")
+                            .order("created_at DESC")
     end
     
     def new
@@ -65,9 +70,12 @@ class Blog::ArticlesController < ApplicationController
     
     def filter_by_category
         if params[:category] == 'all'
-            @articles = Article.published.all.order("created_at DESC")
+            @articles = Article.published.not_associated_with_project
+                                .all.order("created_at DESC")
         else
-            @articles = Article.published.where(category_name: params[:category]).order("created_at DESC")
+            @articles = Article.published.not_associated_with_project
+                                .where(category_name: params[:category])
+                                .order("created_at DESC")
         end
         
         render :layout => false

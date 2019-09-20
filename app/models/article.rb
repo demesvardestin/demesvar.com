@@ -3,6 +3,7 @@ class Article < ApplicationRecord
     validates_uniqueness_of :title
     scope :published, -> { where(published: true) }
     scope :unpublished, -> { where.not(published: true) }
+    scope :not_associated_with_project, -> { where(project_id: nil) }
     
     after_create { Commentable.create(object_id: id, object_type: self.class.name) }
     
