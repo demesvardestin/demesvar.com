@@ -1,0 +1,47 @@
+<style type="text/css">
+    #main-body.container {
+        padding: 0;
+        margin: 0;
+        max-width: 100%;
+    }
+</style>
+
+<section id="project-<%= params[:name] %>" class="freelance-project">
+    <section class="jumbotron">
+        
+    </section>
+    
+    <section class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="row">
+                    <div class="col-md-12">
+                        <%= sanitize @project_article.content %>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-12">
+                        <hr>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-12">
+                        <h5>Other projects</h5>
+                        
+                        <% ["senzzu", "driprent", "dinnerhost", "myrates"].each do |f| %>
+                            <% if f != params[:name] %>
+                                <p>
+                                    <a href="/freelance/<%= f %>">
+                                        <%= f %>
+                                    </a>
+                                </p>
+                            <% end %>
+                        <% end %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>

@@ -32,6 +32,11 @@ Rails.application.routes.draw do
         resources :projects
     end
     
+    namespace :freelance do
+        get '/', to: 'freelance#index'
+        get '/:name', to: 'freelance#show'
+    end
+    
     resources :comments, except: [:show, :index, :edit]
     resources :admins, only: [:create, :update]
     
