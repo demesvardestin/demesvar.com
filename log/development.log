@@ -32647,3 +32647,63 @@ Processing by AdminsController#dashboard as HTML
 Completed 200 OK in 105ms (Views: 101.5ms | ActiveRecord: 3.3ms)
 
 
+Started GET "/freelance" for 74.117.136.100 at 2019-10-11 16:50:05 +0000
+Cannot render console from 74.117.136.100! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Freelance::FreelanceController#index as HTML
+  Rendering freelance/freelance/index.html.erb within layouts/application
+  Rendered freelance/freelance/index.html.erb within layouts/application (0.5ms)
+  [1m[36mAdmin Load (8.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (10.9ms)
+  Rendered layouts/_body.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 73ms (Views: 59.2ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/freelance" for 74.117.136.100 at 2019-10-11 16:57:21 +0000
+Cannot render console from 74.117.136.100! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Freelance::FreelanceController#index as HTML
+  Rendering freelance/freelance/index.html.erb within layouts/application
+  Rendered freelance/freelance/index.html.erb within layouts/application (0.4ms)
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (2.5ms)
+  Rendered layouts/_body.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 190ms (Views: 189.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/freelance" for 74.117.136.100 at 2019-10-11 16:57:29 +0000
+Cannot render console from 74.117.136.100! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Freelance::FreelanceController#index as HTML
+  Rendering freelance/freelance/index.html.erb within layouts/application
+  Rendered freelance/freelance/index.html.erb within layouts/application (0.5ms)
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (2.2ms)
+  Rendered layouts/_body.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 157ms (Views: 156.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/freelance" for 74.117.136.100 at 2019-10-11 16:57:40 +0000
+Cannot render console from 74.117.136.100! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Freelance::FreelanceController#index as HTML
+  Rendering freelance/freelance/index.html.erb within layouts/application
+  Rendered freelance/freelance/index.html.erb within layouts/application (0.4ms)
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (2.1ms)
+  Rendered layouts/_body.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 163ms (Views: 161.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/freelance" for 74.117.136.100 at 2019-10-11 16:58:14 +0000
+Cannot render console from 74.117.136.100! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Freelance::FreelanceController#index as HTML
+  Rendering freelance/freelance/index.html.erb within layouts/application
+  Rendered freelance/freelance/index.html.erb within layouts/application (0.4ms)
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (2.1ms)
+  Rendered layouts/_body.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 182ms (Views: 181.1ms | ActiveRecord: 0.2ms)
+
+
