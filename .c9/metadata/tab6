@@ -1,1 +1,0 @@
-{"changed":false,"filter":false,"title":"demesvar.com - Stopped","tooltip":"demesvar.com - Stopped","value":"","undoManager":{"mark":-1,"position":-1,"stack":[]},"output":{"id":"output170312","width":1120,"height":212,"scrollTop":-1,"config":{"command":"rails s","name":"demesvar.com","runner":"Shell command","toolbar":true}},"timestamp":1566611434615}

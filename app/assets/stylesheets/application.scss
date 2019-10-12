@@ -545,6 +545,8 @@ a.btn {
     width: 0;
     transition: all 0.50s;
     text-transform: lowercase;
+    border-left: 1px solid #e7e7e9;
+    box-shadow: 0 26px 54px -10px rgba(50,50,93,.25);
     
     i {
         font-size: 25px;
