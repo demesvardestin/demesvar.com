@@ -23,4 +23,15 @@ module ApplicationHelper
         
         return path_map
     end
+    
+    def external_prototype_url(name)
+        case name
+        when 'dinnerhost'
+            'dinner-host'
+        when 'driprent'
+            'rentmydrip'
+        else
+            name
+        end
+    end
 end
