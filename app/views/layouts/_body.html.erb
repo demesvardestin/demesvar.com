@@ -9,3 +9,62 @@
     <% end %>
     <%= yield %>
 </main>
+
+<section id="side-panel">
+    <header align="right">
+      <span class="float-left">
+        Menu
+      </span>
+      
+      <a class="cursor-pointer float-right" onclick="$('#side-panel').toggleClass('active');">
+        <i class="fas fa-times"></i>
+      </a>
+    </header>
+    
+    <div class="row">
+      <div class="col-md-12">
+        <hr>
+      </div>
+    </div>
+    
+    <section>
+      <p>
+        <a href="/home">
+          Home
+        </a>
+      </p>
+      
+      <p>
+        <a href="/blog">
+          Blog
+        </a>
+      </p>
+      
+      <p>
+        <a href="/project/list">
+          CodeBits
+        </a>
+      </p>
+      
+      <p>
+        <a href="/freelance">
+          Freelance
+        </a>
+      </p>
+      
+      <p>
+        <a href="/about">
+          About
+        </a>
+      </p>
+      
+      <% if current_admin %>
+        <p>
+          <a class="nav-link" href="/">
+              <i class="fas fa-user-circle"></i>
+              <%= current_admin.first_name %>
+          </a>
+        </p>
+      <% end %>
+    </section>
+</section>
