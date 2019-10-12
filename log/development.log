@@ -34427,3 +34427,296 @@ Processing by Freelance::FreelanceController#index as HTML
 Completed 200 OK in 41ms (Views: 40.2ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/freelance" for 68.197.253.161 at 2019-10-12 13:57:02 +0000
+Cannot render console from 68.197.253.161! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Freelance::FreelanceController#index as HTML
+  Rendering freelance/freelance/index.html.erb within layouts/application
+  Rendered freelance/freelance/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 173ms (Views: 168.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/freelance" for 68.197.253.161 at 2019-10-12 13:57:56 +0000
+Cannot render console from 68.197.253.161! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Freelance::FreelanceController#index as HTML
+  Rendering freelance/freelance/index.html.erb within layouts/application
+  Rendered freelance/freelance/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 156ms (Views: 154.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/freelance" for 68.197.253.161 at 2019-10-12 13:58:28 +0000
+Cannot render console from 68.197.253.161! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Freelance::FreelanceController#index as HTML
+  Rendering freelance/freelance/index.html.erb within layouts/application
+  Rendered freelance/freelance/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 172ms (Views: 170.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/freelance" for 68.197.253.161 at 2019-10-12 13:58:41 +0000
+Cannot render console from 68.197.253.161! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Freelance::FreelanceController#index as HTML
+  Rendering freelance/freelance/index.html.erb within layouts/application
+  Rendered freelance/freelance/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 153ms (Views: 152.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/freelance" for 68.197.253.161 at 2019-10-12 13:59:35 +0000
+Cannot render console from 68.197.253.161! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Freelance::FreelanceController#index as HTML
+  Rendering freelance/freelance/index.html.erb within layouts/application
+  Rendered freelance/freelance/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 172ms (Views: 170.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/freelance" for 68.197.253.161 at 2019-10-12 14:00:24 +0000
+Cannot render console from 68.197.253.161! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Freelance::FreelanceController#index as HTML
+  Rendering freelance/freelance/index.html.erb within layouts/application
+  Rendered freelance/freelance/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 165ms (Views: 164.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/freelance" for 68.197.253.161 at 2019-10-12 14:00:56 +0000
+Cannot render console from 68.197.253.161! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Freelance::FreelanceController#index as HTML
+  Rendering freelance/freelance/index.html.erb within layouts/application
+  Rendered freelance/freelance/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 149ms (Views: 148.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/freelance" for 68.197.253.161 at 2019-10-12 14:01:16 +0000
+Cannot render console from 68.197.253.161! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Freelance::FreelanceController#index as HTML
+  Rendering freelance/freelance/index.html.erb within layouts/application
+  Rendered freelance/freelance/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 171ms (Views: 169.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/freelance" for 68.197.253.161 at 2019-10-12 14:01:40 +0000
+Cannot render console from 68.197.253.161! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Freelance::FreelanceController#index as HTML
+  Rendering freelance/freelance/index.html.erb within layouts/application
+  Rendered freelance/freelance/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 150ms (Views: 149.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/freelance" for 68.197.253.161 at 2019-10-12 14:02:55 +0000
+Cannot render console from 68.197.253.161! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Freelance::FreelanceController#index as HTML
+  Rendering freelance/freelance/index.html.erb within layouts/application
+  Rendered freelance/freelance/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 170ms (Views: 169.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/freelance" for 68.197.253.161 at 2019-10-12 14:03:09 +0000
+Cannot render console from 68.197.253.161! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Freelance::FreelanceController#index as HTML
+  Rendering freelance/freelance/index.html.erb within layouts/application
+  Rendered freelance/freelance/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 171ms (Views: 170.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/freelance" for 68.197.253.161 at 2019-10-12 14:04:11 +0000
+Cannot render console from 68.197.253.161! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Freelance::FreelanceController#index as HTML
+  Rendering freelance/freelance/index.html.erb within layouts/application
+  Rendered freelance/freelance/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 151ms (Views: 150.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/freelance" for 68.197.253.161 at 2019-10-12 14:04:32 +0000
+Cannot render console from 68.197.253.161! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Freelance::FreelanceController#index as HTML
+  Rendering freelance/freelance/index.html.erb within layouts/application
+  Rendered freelance/freelance/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_body.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 167ms (Views: 166.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/freelance" for 68.197.253.161 at 2019-10-12 14:04:40 +0000
+Cannot render console from 68.197.253.161! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Freelance::FreelanceController#index as HTML
+  Rendering freelance/freelance/index.html.erb within layouts/application
+  Rendered freelance/freelance/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 151ms (Views: 150.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/freelance" for 68.197.253.161 at 2019-10-12 14:06:30 +0000
+Cannot render console from 68.197.253.161! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Freelance::FreelanceController#index as HTML
+  Rendering freelance/freelance/index.html.erb within layouts/application
+  Rendered freelance/freelance/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 59ms (Views: 57.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/freelance" for 68.197.253.161 at 2019-10-12 14:06:50 +0000
+Cannot render console from 68.197.253.161! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Freelance::FreelanceController#index as HTML
+  Rendering freelance/freelance/index.html.erb within layouts/application
+  Rendered freelance/freelance/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 154ms (Views: 153.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/freelance/senzzu" for 68.197.253.161 at 2019-10-12 14:08:20 +0000
+Cannot render console from 68.197.253.161! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Freelance::FreelanceController#show as HTML
+  Parameters: {"name"=>"senzzu"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "senzzu"], ["LIMIT", 1]]
+  Rendering freelance/freelance/show.html.erb within layouts/application
+  Rendered freelance/freelance/show.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 43ms (Views: 41.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/freelance/senzzu" for 68.197.253.161 at 2019-10-12 14:10:40 +0000
+Cannot render console from 68.197.253.161! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Freelance::FreelanceController#show as HTML
+  Parameters: {"name"=>"senzzu"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "senzzu"], ["LIMIT", 1]]
+  Rendering freelance/freelance/show.html.erb within layouts/application
+  Rendered freelance/freelance/show.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 45ms (Views: 43.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/freelance/senzzu" for 68.197.253.161 at 2019-10-12 14:10:55 +0000
+Cannot render console from 68.197.253.161! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Freelance::FreelanceController#show as HTML
+  Parameters: {"name"=>"senzzu"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "senzzu"], ["LIMIT", 1]]
+  Rendering freelance/freelance/show.html.erb within layouts/application
+  Rendered freelance/freelance/show.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 43ms (Views: 40.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/freelance/senzzu" for 68.197.253.161 at 2019-10-12 14:11:03 +0000
+Cannot render console from 68.197.253.161! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Freelance::FreelanceController#show as HTML
+  Parameters: {"name"=>"senzzu"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "senzzu"], ["LIMIT", 1]]
+  Rendering freelance/freelance/show.html.erb within layouts/application
+  Rendered freelance/freelance/show.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 43ms (Views: 40.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/freelance/senzzu" for 68.197.253.161 at 2019-10-12 14:11:20 +0000
+Cannot render console from 68.197.253.161! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Freelance::FreelanceController#show as HTML
+  Parameters: {"name"=>"senzzu"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "senzzu"], ["LIMIT", 1]]
+  Rendering freelance/freelance/show.html.erb within layouts/application
+  Rendered freelance/freelance/show.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 43ms (Views: 40.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/freelance/senzzu" for 68.197.253.161 at 2019-10-12 14:11:29 +0000
+Cannot render console from 68.197.253.161! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Freelance::FreelanceController#show as HTML
+  Parameters: {"name"=>"senzzu"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "senzzu"], ["LIMIT", 1]]
+  Rendering freelance/freelance/show.html.erb within layouts/application
+  Rendered freelance/freelance/show.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 63ms (Views: 61.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/freelance/senzzu" for 68.197.253.161 at 2019-10-12 14:11:47 +0000
+Cannot render console from 68.197.253.161! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Freelance::FreelanceController#show as HTML
+  Parameters: {"name"=>"senzzu"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "senzzu"], ["LIMIT", 1]]
+  Rendering freelance/freelance/show.html.erb within layouts/application
+  Rendered freelance/freelance/show.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 44ms (Views: 42.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/freelance/senzzu" for 68.197.253.161 at 2019-10-12 14:13:34 +0000
+Cannot render console from 68.197.253.161! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Freelance::FreelanceController#show as HTML
+  Parameters: {"name"=>"senzzu"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "senzzu"], ["LIMIT", 1]]
+  Rendering freelance/freelance/show.html.erb within layouts/application
+  Rendered freelance/freelance/show.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 43ms (Views: 41.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/freelance/senzzu" for 68.197.253.161 at 2019-10-12 14:13:50 +0000
+Cannot render console from 68.197.253.161! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Freelance::FreelanceController#show as HTML
+  Parameters: {"name"=>"senzzu"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "senzzu"], ["LIMIT", 1]]
+  Rendering freelance/freelance/show.html.erb within layouts/application
+  Rendered freelance/freelance/show.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 43ms (Views: 41.4ms | ActiveRecord: 0.1ms)
+
+

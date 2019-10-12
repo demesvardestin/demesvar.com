@@ -526,7 +526,7 @@ a.btn {
 }
 
 #side-panel.active {
-    display: block;
+    display: table;
     height: 100vh;
     width: 30%;
     right: 0;
@@ -563,6 +563,20 @@ a.btn {
         .float-right {
             width: 50%;
             text-align: right;
+        }
+    }
+    
+    footer {
+        background-color: transparent;
+        vertical-align: text-bottom;
+        width: 100%;
+        
+        p {
+            font-size: 14px !important;
+            
+            a {
+                text-decoration: underline !important;
+            }
         }
     }
     
