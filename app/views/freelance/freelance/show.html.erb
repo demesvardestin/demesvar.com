@@ -14,7 +14,7 @@
                 background-position: center center; filter: brightness(30%);">
         </div>
         
-        <a href="https://<%= params[:name] == "dinnerhost" ? "dinner-host" : params[:name] %>.herokuapp.com"
+        <a href="https://<%= external_prototype_url params[:name] %>.herokuapp.com"
             target="_blank">
             <button class="btn btn-light btn-lg"
                 style="position: absolute; margin-top: -300px; z-index: 5; right: 45px;
