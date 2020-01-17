@@ -13,7 +13,7 @@ module ApplicationHelper
     end
     
     def page_title(path)
-        path_map = if path.length < 2
+        path_map = if path.length < 2 || path.nil?
             [""]
         elsif path.include?("article")
             [] << path.split("blog/article/")[1].split("-").join(" ") <<  " - "
