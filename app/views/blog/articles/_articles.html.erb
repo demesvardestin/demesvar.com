@@ -11,7 +11,7 @@
         </div>
         
         <% if current_admin && poste.admin == current_admin %>
-            <%= link_to "edit", edit_blog_article_path(poste), class:"btn btn-secondary btn-sm not-thick" %> |
+            <%= link_to "edit", "/blog/article/#{poste.slug}/#{poste.id}/edit", class:"btn btn-secondary btn-sm not-thick" %> |
             <%= link_to "delete", blog_article_path(poste), class:"btn btn-danger btn-sm not-thick",
                 method: :delete, data: { alert: "are you sure?" } %>
         <% end %>
