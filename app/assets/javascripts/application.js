@@ -33,7 +33,9 @@ $(document).ready(function() {
     
     loadCategory = (element, category) => {
         $.get("/blog/filter_by_category", { category: category });
-        $('.active').toggleClass('active');
-        element.classList.add('active');
+        
+        $('#categoryMenuButton').html(`
+            ${category} <i class="fas fa-angle-down"></i>
+        `);
     };
 });
