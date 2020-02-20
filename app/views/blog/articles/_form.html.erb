@@ -82,7 +82,7 @@
         </div>
         <%= f.hidden_field :project_id, value: "#{@article.project_id}", id: "project-id" %>
         <%= f.hidden_field :category_name, value: "#{@article.category_name}", id: "category-name" %>
-        <%= f.hidden_field :published, id: "published" %>
+        <%= f.hidden_field :published, id: "published", value: true %>
     </div>
     
     <hr>
