@@ -1,6 +1,6 @@
 <section id="articles">
     <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-6 offset-md-3">
             <h6>
                 <strong>latest posts</strong>
             </h6>
@@ -8,17 +8,6 @@
             <div id="latest-posts">
                 <%= render partial: "blog/articles/articles",
                     locals: { posts: @latest_posts } %>
-            </div>
-        </div>
-        
-        <div class="col-lg-6">
-            <h6>
-                <strong>latest codebits</strong>
-            </h6>
-            
-            <div id="latest-projects">
-                <%= render partial: "project/projects/projects",
-                    locals: { projects: @latest_projects } %>
             </div>
         </div>
     </div>
