@@ -10,8 +10,10 @@ class Blog::ArticlesController < ApplicationController
     def show
         @article = Article.find_by(id: params[:id])
         if !@article.published
-            redirect_to "/blog", notice: "this article was not found"
-            return
+            if !current_admin || (current_admin != @article.admin)
+                redirect_to "/blog", notice: "this article was not found"
+                return
+            end
         end
         @related = Article.published.not_associated_with_project
                             .categorized_by(@article.category_name)

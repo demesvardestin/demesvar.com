@@ -60,10 +60,11 @@
       
       <% if current_admin %>
         <p>
-          <a class="nav-link" href="/">
-              <i class="fas fa-user-circle"></i>
-              <%= current_admin.first_name %>
-          </a>
+          <strong>
+            <a class="nav-link" href="/">
+                <%= current_admin.first_name %>
+            </a>
+          </strong>
         </p>
       <% end %>
     </section>
