@@ -7,6 +7,11 @@ class Blog::ArticlesController < ApplicationController
                             .order("created_at DESC")
     end
     
+    def article_redirect_from_short_url
+        @article = Article.find_by(id: params[:id])
+        redirect_to blog_show_article_path(:id => @article.id, :slug => @article.slug)
+    end
+    
     def show
         @article = Article.find_by(id: params[:id])
         if !@article.published

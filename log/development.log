@@ -37042,3 +37042,294 @@ Processing by Blog::ArticlesController#edit as HTML
 Completed 200 OK in 53ms (Views: 49.3ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/" for 68.197.253.161 at 2020-04-18 20:44:06 +0000
+Cannot render console from 68.197.253.161! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+  [1m[36mArticle Load (1.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL ORDER BY created_at ASC LIMIT ?[0m  [["published", "t"], ["LIMIT", 10]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at ASC LIMIT ?[0m  [["LIMIT", 5]]
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mCommentable Load (0.6ms)[0m  [1m[34mSELECT  "commentables".* FROM "commentables" WHERE "commentables"."object_id" = ? AND "commentables"."object_type" = ? LIMIT ?[0m  [["object_id", 11], ["object_type", "Article"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ?[0m  [["commentable_id", 14]]
+  [1m[36mCommentable Load (0.1ms)[0m  [1m[34mSELECT  "commentables".* FROM "commentables" WHERE "commentables"."object_id" = ? AND "commentables"."object_type" = ? LIMIT ?[0m  [["object_id", 9], ["object_type", "Article"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ?[0m  [["commentable_id", 3]]
+  [1m[36mCommentable Load (0.1ms)[0m  [1m[34mSELECT  "commentables".* FROM "commentables" WHERE "commentables"."object_id" = ? AND "commentables"."object_type" = ? LIMIT ?[0m  [["object_id", 8], ["object_type", "Article"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ?[0m  [["commentable_id", 11]]
+  [1m[36mCommentable Load (0.1ms)[0m  [1m[34mSELECT  "commentables".* FROM "commentables" WHERE "commentables"."object_id" = ? AND "commentables"."object_type" = ? LIMIT ?[0m  [["object_id", 7], ["object_type", "Article"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ?[0m  [["commentable_id", 10]]
+  [1m[36mCommentable Load (0.1ms)[0m  [1m[34mSELECT  "commentables".* FROM "commentables" WHERE "commentables"."object_id" = ? AND "commentables"."object_type" = ? LIMIT ?[0m  [["object_id", 6], ["object_type", "Article"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ?[0m  [["commentable_id", 9]]
+  [1m[36mCommentable Load (0.1ms)[0m  [1m[34mSELECT  "commentables".* FROM "commentables" WHERE "commentables"."object_id" = ? AND "commentables"."object_type" = ? LIMIT ?[0m  [["object_id", 4], ["object_type", "Article"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ?[0m  [["commentable_id", 7]]
+  [1m[36mCommentable Load (0.1ms)[0m  [1m[34mSELECT  "commentables".* FROM "commentables" WHERE "commentables"."object_id" = ? AND "commentables"."object_type" = ? LIMIT ?[0m  [["object_id", 3], ["object_type", "Article"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ?[0m  [["commentable_id", 6]]
+  [1m[36mCommentable Load (0.1ms)[0m  [1m[34mSELECT  "commentables".* FROM "commentables" WHERE "commentables"."object_id" = ? AND "commentables"."object_type" = ? LIMIT ?[0m  [["object_id", 2], ["object_type", "Article"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ?[0m  [["commentable_id", 5]]
+  Rendered blog/articles/_articles.html.erb (50.6ms)
+  Rendered pages/home.html.erb within layouts/application (53.1ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 1085ms (Views: 1054.6ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/" for 68.197.253.161 at 2020-04-18 20:44:08 +0000
+Cannot render console from 68.197.253.161! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL ORDER BY created_at ASC LIMIT ?[0m  [["published", "t"], ["LIMIT", 10]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at ASC LIMIT ?[0m  [["LIMIT", 5]]
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mCommentable Load (0.1ms)[0m  [1m[34mSELECT  "commentables".* FROM "commentables" WHERE "commentables"."object_id" = ? AND "commentables"."object_type" = ? LIMIT ?[0m  [["object_id", 11], ["object_type", "Article"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ?[0m  [["commentable_id", 14]]
+  [1m[36mCommentable Load (0.1ms)[0m  [1m[34mSELECT  "commentables".* FROM "commentables" WHERE "commentables"."object_id" = ? AND "commentables"."object_type" = ? LIMIT ?[0m  [["object_id", 9], ["object_type", "Article"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ?[0m  [["commentable_id", 3]]
+  [1m[36mCommentable Load (0.1ms)[0m  [1m[34mSELECT  "commentables".* FROM "commentables" WHERE "commentables"."object_id" = ? AND "commentables"."object_type" = ? LIMIT ?[0m  [["object_id", 8], ["object_type", "Article"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ?[0m  [["commentable_id", 11]]
+  [1m[36mCommentable Load (0.1ms)[0m  [1m[34mSELECT  "commentables".* FROM "commentables" WHERE "commentables"."object_id" = ? AND "commentables"."object_type" = ? LIMIT ?[0m  [["object_id", 7], ["object_type", "Article"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ?[0m  [["commentable_id", 10]]
+  [1m[36mCommentable Load (0.1ms)[0m  [1m[34mSELECT  "commentables".* FROM "commentables" WHERE "commentables"."object_id" = ? AND "commentables"."object_type" = ? LIMIT ?[0m  [["object_id", 6], ["object_type", "Article"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ?[0m  [["commentable_id", 9]]
+  [1m[36mCommentable Load (0.1ms)[0m  [1m[34mSELECT  "commentables".* FROM "commentables" WHERE "commentables"."object_id" = ? AND "commentables"."object_type" = ? LIMIT ?[0m  [["object_id", 4], ["object_type", "Article"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ?[0m  [["commentable_id", 7]]
+  [1m[36mCommentable Load (0.1ms)[0m  [1m[34mSELECT  "commentables".* FROM "commentables" WHERE "commentables"."object_id" = ? AND "commentables"."object_type" = ? LIMIT ?[0m  [["object_id", 3], ["object_type", "Article"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ?[0m  [["commentable_id", 6]]
+  [1m[36mCommentable Load (0.1ms)[0m  [1m[34mSELECT  "commentables".* FROM "commentables" WHERE "commentables"."object_id" = ? AND "commentables"."object_type" = ? LIMIT ?[0m  [["object_id", 2], ["object_type", "Article"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ?[0m  [["commentable_id", 5]]
+  Rendered blog/articles/_articles.html.erb (19.9ms)
+  Rendered pages/home.html.erb within layouts/application (21.2ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_body.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 175ms (Views: 169.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/a/8" for 68.197.253.161 at 2020-04-18 20:44:39 +0000
+Cannot render console from 68.197.253.161! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (uninitialized constant ArticlesController):
+  
+activesupport (5.0.7.2) lib/active_support/inflector/methods.rb:268:in `const_get'
+activesupport (5.0.7.2) lib/active_support/inflector/methods.rb:268:in `block in constantize'
+activesupport (5.0.7.2) lib/active_support/inflector/methods.rb:266:in `each'
+activesupport (5.0.7.2) lib/active_support/inflector/methods.rb:266:in `inject'
+activesupport (5.0.7.2) lib/active_support/inflector/methods.rb:266:in `constantize'
+actionpack (5.0.7.2) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.0.7.2) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (5.0.7.2) lib/action_dispatch/routing/route_set.rb:30:in `serve'
+actionpack (5.0.7.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.7.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.7.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.7.2) lib/action_dispatch/routing/route_set.rb:727:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.7.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered collection of /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [65 times] (22.0ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (19.8ms)
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (65.6ms)
+Started GET "/a/8" for 68.197.253.161 at 2020-04-18 20:44:55 +0000
+Cannot render console from 68.197.253.161! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCommentable Load (0.1ms)[0m  [1m[34mSELECT  "commentables".* FROM "commentables" WHERE "commentables"."object_id" = ? AND 1=0 LIMIT ?[0m  [["object_id", 8], ["LIMIT", 1]]
+  Rendering blog/articles/show.html.erb within layouts/application
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered shared/_share_buttons.html.erb (1062.2ms)
+  [1m[36mCommentable Load (0.2ms)[0m  [1m[34mSELECT  "commentables".* FROM "commentables" WHERE "commentables"."object_id" = ? AND "commentables"."object_type" = ? LIMIT ?[0m  [["object_id", 8], ["object_type", "Article"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ?[0m  [["commentable_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "commentables".* FROM "commentables" WHERE "commentables"."object_id" = ? AND "commentables"."object_type" = ? LIMIT ?[0m  [["object_id", 8], ["object_type", "Article"], ["LIMIT", 1]]
+  Rendered comments/_form.html.erb (3.8ms)
+  Rendered comments/_comments.html.erb (5.2ms)
+  Rendered blog/articles/_article_layout.html.erb (1097.6ms)
+  Rendered blog/articles/show.html.erb within layouts/application (1098.8ms)
+Completed 500 Internal Server Error in 1130ms (ActiveRecord: 3.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    16:     </div>
+    17:     
+    18:     <div class="field">
+    19:         <%= f.hidden_field :commentable_id, value: "#{@commentable.id}" %>
+    20:     </div>
+    21:     
+    22:     <div>
+  
+app/views/comments/_form.html.erb:19:in `block in _app_views_comments__form_html_erb___3034230036507893443_70115510107860'
+app/views/comments/_form.html.erb:1:in `_app_views_comments__form_html_erb___3034230036507893443_70115510107860'
+app/views/comments/_comments.html.erb:13:in `_app_views_comments__comments_html_erb__994359994329597806_70115510036980'
+app/views/blog/articles/_article_layout.html.erb:69:in `_app_views_blog_articles__article_layout_html_erb___890284834497415375_70115444124260'
+app/views/blog/articles/show.html.erb:1:in `_app_views_blog_articles_show_html_erb___3063591752793792434_70115444092600'
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.9ms)
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.6ms)
+Started GET "/a/8" for 68.197.253.161 at 2020-04-18 20:47:42 +0000
+Cannot render console from 68.197.253.161! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#article_redirect_from_short_url as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 131ms (ActiveRecord: 0.9ms)
+
+
+  
+NoMethodError (undefined method `show_article_path' for #<Blog::ArticlesController:0x00007f8a198ff4a8>
+Did you mean?  blog_article_path
+               blog_articles_path):
+  
+app/controllers/blog/articles_controller.rb:12:in `article_redirect_from_short_url'
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.8ms)
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (93.0ms)
+Started GET "/a/8" for 68.197.253.161 at 2020-04-18 20:48:10 +0000
+Cannot render console from 68.197.253.161! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#article_redirect_from_short_url as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"blog/articles", :id=>8} missing required keys: [:slug]):
+  
+app/controllers/blog/articles_controller.rb:12:in `article_redirect_from_short_url'
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.2ms)
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.5ms)
+Started GET "/a/8" for 68.197.253.161 at 2020-04-18 20:48:33 +0000
+Cannot render console from 68.197.253.161! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#article_redirect_from_short_url as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Redirected to https://017d2f10ab2d466196bd86ca4f00b302.vfs.cloud9.us-east-2.amazonaws.com/blog/article/Eum-nobis-culpo-strues-caste-reiciendis-pax-carpo-cometes-vitium/8
+Completed 302 Found in 20ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/blog/article/Eum-nobis-culpo-strues-caste-reiciendis-pax-carpo-cometes-vitium/8" for 68.197.253.161 at 2020-04-18 20:48:33 +0000
+Cannot render console from 68.197.253.161! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#show as HTML
+  Parameters: {"slug"=>"Eum-nobis-culpo-strues-caste-reiciendis-pax-carpo-cometes-vitium", "id"=>"8"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCommentable Load (0.1ms)[0m  [1m[34mSELECT  "commentables".* FROM "commentables" WHERE "commentables"."object_id" = ? AND "commentables"."object_type" = ? LIMIT ?[0m  [["object_id", 8], ["object_type", "Article"], ["LIMIT", 1]]
+  Rendering blog/articles/show.html.erb within layouts/application
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered shared/_share_buttons.html.erb (1.1ms)
+  [1m[36mCommentable Load (0.1ms)[0m  [1m[34mSELECT  "commentables".* FROM "commentables" WHERE "commentables"."object_id" = ? AND "commentables"."object_type" = ? LIMIT ?[0m  [["object_id", 8], ["object_type", "Article"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ?[0m  [["commentable_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "commentables".* FROM "commentables" WHERE "commentables"."object_id" = ? AND "commentables"."object_type" = ? LIMIT ?[0m  [["object_id", 8], ["object_type", "Article"], ["LIMIT", 1]]
+  Rendered comments/_form.html.erb (3.5ms)
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."commentable_id" = ?[0m  [["commentable_id", 11]]
+  Rendered comments/_comments.html.erb (6.6ms)
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL AND (category_name LIKE '%%') AND ("articles"."id" != ?)[0m  [["published", "t"], ["id", 8]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL AND (category_name LIKE '%%') AND ("articles"."id" != ?)[0m  [["published", "t"], ["id", 8]]
+  [1m[36mCommentable Load (0.1ms)[0m  [1m[34mSELECT  "commentables".* FROM "commentables" WHERE "commentables"."object_id" = ? AND "commentables"."object_type" = ? LIMIT ?[0m  [["object_id", 9], ["object_type", "Article"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ?[0m  [["commentable_id", 3]]
+  [1m[36mCommentable Load (0.1ms)[0m  [1m[34mSELECT  "commentables".* FROM "commentables" WHERE "commentables"."object_id" = ? AND "commentables"."object_type" = ? LIMIT ?[0m  [["object_id", 11], ["object_type", "Article"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ?[0m  [["commentable_id", 14]]
+  Rendered blog/articles/_articles.html.erb (8.0ms)
+  Rendered blog/articles/_article_layout.html.erb (83.7ms)
+  Rendered blog/articles/show.html.erb within layouts/application (84.7ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 163ms (Views: 127.8ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/a/8" for 68.197.253.161 at 2020-04-18 20:48:44 +0000
+Cannot render console from 68.197.253.161! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#article_redirect_from_short_url as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Redirected to https://017d2f10ab2d466196bd86ca4f00b302.vfs.cloud9.us-east-2.amazonaws.com/blog/article/Eum-nobis-culpo-strues-caste-reiciendis-pax-carpo-cometes-vitium/8
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/blog/article/Eum-nobis-culpo-strues-caste-reiciendis-pax-carpo-cometes-vitium/8" for 68.197.253.161 at 2020-04-18 20:48:44 +0000
+Cannot render console from 68.197.253.161! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#show as HTML
+  Parameters: {"slug"=>"Eum-nobis-culpo-strues-caste-reiciendis-pax-carpo-cometes-vitium", "id"=>"8"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCommentable Load (0.1ms)[0m  [1m[34mSELECT  "commentables".* FROM "commentables" WHERE "commentables"."object_id" = ? AND "commentables"."object_type" = ? LIMIT ?[0m  [["object_id", 8], ["object_type", "Article"], ["LIMIT", 1]]
+  Rendering blog/articles/show.html.erb within layouts/application
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered shared/_share_buttons.html.erb (0.8ms)
+  [1m[36mCommentable Load (0.2ms)[0m  [1m[34mSELECT  "commentables".* FROM "commentables" WHERE "commentables"."object_id" = ? AND "commentables"."object_type" = ? LIMIT ?[0m  [["object_id", 8], ["object_type", "Article"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ?[0m  [["commentable_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "commentables".* FROM "commentables" WHERE "commentables"."object_id" = ? AND "commentables"."object_type" = ? LIMIT ?[0m  [["object_id", 8], ["object_type", "Article"], ["LIMIT", 1]]
+  Rendered comments/_form.html.erb (1.3ms)
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."commentable_id" = ?[0m  [["commentable_id", 11]]
+  Rendered comments/_comments.html.erb (3.9ms)
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL AND (category_name LIKE '%%') AND ("articles"."id" != ?)[0m  [["published", "t"], ["id", 8]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL AND (category_name LIKE '%%') AND ("articles"."id" != ?)[0m  [["published", "t"], ["id", 8]]
+  [1m[36mCommentable Load (0.1ms)[0m  [1m[34mSELECT  "commentables".* FROM "commentables" WHERE "commentables"."object_id" = ? AND "commentables"."object_type" = ? LIMIT ?[0m  [["object_id", 9], ["object_type", "Article"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ?[0m  [["commentable_id", 3]]
+  [1m[36mCommentable Load (0.1ms)[0m  [1m[34mSELECT  "commentables".* FROM "commentables" WHERE "commentables"."object_id" = ? AND "commentables"."object_type" = ? LIMIT ?[0m  [["object_id", 11], ["object_type", "Article"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ?[0m  [["commentable_id", 14]]
+  Rendered blog/articles/_articles.html.erb (7.9ms)
+  Rendered blog/articles/_article_layout.html.erb (23.1ms)
+  Rendered blog/articles/show.html.erb within layouts/application (24.5ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 78ms (Views: 72.6ms | ActiveRecord: 1.7ms)
+
+
