@@ -16,6 +16,12 @@
     <title><%= page_title(request.env["REQUEST_PATH"]) %></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@darealdemdestin">
+    <meta name="twitter:creator" content="@darealdemdestin">
+    <meta name="twitter:title" content="<%= @article.title if @article %>">
+    <meta name="twitter:description" content="<%= truncate(@article.content, length: 40) %>">
+    <meta name="twitter:image" content="http://graphics8.nytimes.com/images/2012/02/19/us/19whitney-span/19whitney-span-articleLarge.jpg">
     <%= csrf_meta_tags %>
     
     <link href="https://fonts.googleapis.com/css?family=Mandali&display=swap" rel="stylesheet">
