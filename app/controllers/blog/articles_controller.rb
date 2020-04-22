@@ -101,6 +101,7 @@ class Blog::ArticlesController < ApplicationController
         .permit(
             :title,
             :content,
+            :description,
             :tags,
             :category_name,
             :project_id,

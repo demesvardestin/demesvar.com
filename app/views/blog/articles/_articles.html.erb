@@ -4,17 +4,13 @@
     </p>
     <% posts.each do |poste| %>
         <div style="margin-bottom: 20px;">
-            <h5>
+            <h5 style="margin-bottom: 5px;">
                 <%= link_to poste.title, blog_show_article_path(:slug => poste.slug, :id => poste.id), class:"" %>
             </h5>
             
-            <p>
+            <p style="margin-bottom: 0;">
                 <%= poste.description %>
             </p>
-            
-            <div style="font-size: 15px;">
-                <%= pluralize(poste.comments.count, "comment") %>
-            </div>
             
             <% if current_admin && poste.admin == current_admin %>
                 [<%= link_to "edit", "/blog/article/#{poste.id}/edit", class:"btn btn-link",

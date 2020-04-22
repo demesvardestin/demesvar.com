@@ -36,14 +36,14 @@ ActiveRecord::Schema.define(version: 20200422012650) do
   create_table "articles", force: :cascade do |t|
     t.text     "content"
     t.string   "title"
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
+    t.datetime "created_at",                                         null: false
+    t.datetime "updated_at",                                         null: false
     t.string   "tags",          default: ""
     t.integer  "project_id"
     t.integer  "admin_id"
     t.string   "category_name"
     t.boolean  "published",     default: true
-    t.text     "description"
+    t.text     "description",   default: "No description available"
   end
 
   create_table "categories", force: :cascade do |t|
