@@ -13,6 +13,18 @@
     <div class="field">
         <div class="row">
             <div class="col-md-2">
+                <h5><%= f.label :description %></h5>
+            </div>
+            <div class="col-md-10">
+                <%= f.text_area :description, id:"article-description", class:"form-control",
+                    placeholder: "article description", style: "height: 100px !important;" %>
+            </div>
+        </div>
+    </div>
+    
+    <div class="field">
+        <div class="row">
+            <div class="col-md-2">
                 <h5><%= f.label :content %></h5>
             </div>
             <div class="col-md-10">

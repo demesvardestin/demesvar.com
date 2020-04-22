@@ -7,6 +7,11 @@
             <h5>
                 <%= link_to poste.title, blog_show_article_path(:slug => poste.slug, :id => poste.id), class:"" %>
             </h5>
+            
+            <p>
+                <%= poste.description %>
+            </p>
+            
             <div style="font-size: 15px;">
                 <%= pluralize(poste.comments.count, "comment") %>
             </div>
