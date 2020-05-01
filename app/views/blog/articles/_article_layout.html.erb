@@ -18,20 +18,27 @@
                             <% end %>
                         </h5>
                         
-                        <h5>
+                        <h4>
                             <%= @article.title %>
-                        </h5>
+                        </h4>
                         
                         <hr>
                         
                         <section class="article-metadata">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <p>
-                                        <span style="float: left;">
+                                    <p style="margin-bottom: 0;">
+                                        <span>
                                             <%= @article.admin.full_name %> -
-                                            <%= @article.created_at.strftime('%-m/%d/%Y') %>
+                                            <%= @article.created_at.strftime('%-m/%-d/%y') %>
                                         </span>
+                                        
+                                        <% if @article.created_at != @article.updated_at %>
+                                            <span style="margin-left: 15px;">
+                                                <b>updated</b>:
+                                                <%= @article.updated_at.strftime('%-m/%-d/%y') %>
+                                            </span>
+                                        <% end %>
                                     </p>
                                 </div>
                             </div>
