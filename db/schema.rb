@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200422012650) do
+ActiveRecord::Schema.define(version: 20200501170500) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "first_name"
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 20200422012650) do
     t.string   "category_name"
     t.boolean  "published",     default: true
     t.text     "description",   default: "No description available"
+    t.string   "image_link"
   end
 
   create_table "categories", force: :cascade do |t|

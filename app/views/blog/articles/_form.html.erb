@@ -13,6 +13,17 @@
     <div class="field">
         <div class="row">
             <div class="col-md-2">
+                <h5><%= f.label :image_link %></h5>
+            </div>
+            <div class="col-md-10">
+                <%= f.text_field :image_link, id:"article-image_link", class:"form-control", placeholder: "article image link" %>
+            </div>
+        </div>
+    </div>
+    
+    <div class="field">
+        <div class="row">
+            <div class="col-md-2">
                 <h5><%= f.label :description %></h5>
             </div>
             <div class="col-md-10">

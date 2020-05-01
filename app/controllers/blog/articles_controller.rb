@@ -102,6 +102,7 @@ class Blog::ArticlesController < ApplicationController
             :title,
             :content,
             :description,
+            :image_link,
             :tags,
             :category_name,
             :project_id,
