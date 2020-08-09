@@ -34,6 +34,10 @@
         </p>
         <hr>
     <% end %>
+    
+    <div class="digg_pagination_custom">
+        <%= will_paginate comments %>
+    </div>
 <% else %>
     <p id="no-comments-notice">
         <em>

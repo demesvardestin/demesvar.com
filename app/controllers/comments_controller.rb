@@ -4,7 +4,7 @@ class CommentsController < ApplicationController
     @comment.commentable = Commentable.find(params[:comment][:commentable_id])
     @comment.save!
     
-    redirect_to :back, notice: "thanks for commenting!"
+    redirect_to :back, notice: "thanks for participating in the conversation!"
   end
   
   private

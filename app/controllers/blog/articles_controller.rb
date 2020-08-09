@@ -20,9 +20,13 @@ class Blog::ArticlesController < ApplicationController
                 return
             end
         end
+        
+        @comments = @article.comments.paginate(page: params[:page], per_page: 1)
         @related = Article.published.not_associated_with_project
                             .categorized_by(@article.category_name)
                             .where.not(id: @article.id)
+                            
+        
         @commentable = Commentable.find_by(
             object_id: params[:id],
             object_type: Comment.get_model(request.env["REQUEST_PATH"])
