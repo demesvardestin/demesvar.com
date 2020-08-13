@@ -21,7 +21,7 @@ class Blog::ArticlesController < ApplicationController
             end
         end
         
-        @comments = @article.comments.paginate(page: params[:page], per_page: 1)
+        @comments = @article.comments.paginate(page: params[:page], per_page: 30)
         @related = Article.published.not_associated_with_project
                             .categorized_by(@article.category_name)
                             .where.not(id: @article.id)

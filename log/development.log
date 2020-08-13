@@ -39784,3 +39784,32 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 55ms (Views: 42.4ms | ActiveRecord: 1.3ms)
 
 
+Started GET "/" for 74.117.136.100 at 2020-08-13 15:24:01 +0000
+Cannot render console from 74.117.136.100! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+  [1m[36mArticle Load (1.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL ORDER BY created_at ASC LIMIT ?[0m  [["published", "t"], ["LIMIT", 10]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at ASC LIMIT ?[0m  [["LIMIT", 5]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered blog/articles/_articles.html.erb (4.7ms)
+  Rendered pages/home.html.erb within layouts/application (7.6ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+  Rendered layouts/_body.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 792ms (Views: 766.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 74.117.136.100 at 2020-08-13 15:24:03 +0000
+Cannot render console from 74.117.136.100! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL ORDER BY created_at ASC LIMIT ?[0m  [["published", "t"], ["LIMIT", 10]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at ASC LIMIT ?[0m  [["LIMIT", 5]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered blog/articles/_articles.html.erb (1.9ms)
+  Rendered pages/home.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 61ms (Views: 57.3ms | ActiveRecord: 0.5ms)
+
+
