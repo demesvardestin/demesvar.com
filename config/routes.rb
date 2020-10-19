@@ -45,6 +45,7 @@ Rails.application.routes.draw do
     get '/preview_post', to: 'blog/articles#preview_post'
     get '/about', to: 'pages#about'
     get '/home', to: 'pages#home'
+    get '/latest', to: 'pages#latest'
     
     root "pages#home"
 end
