@@ -39,7 +39,11 @@ class SeriesController < ApplicationController
   private
   
   def set_series
-    @series = Series.find(params[:id]) || Series.find_by(slug: params[:slug].upcase)
+    @series = Series.find_by(id: params[:id]) || Series.find_by(slug: params[:slug].upcase)
+    
+    if @series.nil?
+      redirect_to "/404"
+    end
   end
   
   def series_params

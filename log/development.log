@@ -43706,3 +43706,280 @@ Processing by PagesController#about as HTML
 Completed 200 OK in 58ms (Views: 56.8ms | ActiveRecord: 0.2ms)
 
 
+  [1m[36mSeries Load (5.0ms)[0m  [1m[34mSELECT "series".* FROM "series"[0m
+  [1m[35mSQL (8.5ms)[0m  [1m[31mDELETE FROM "series" WHERE "series"."id" = ?[0m  [["id", 13]]
+Started GET "/" for 74.117.136.50 at 2020-10-22 18:43:11 +0000
+Cannot render console from 74.117.136.50! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Processing by AdminsController#dashboard as HTML
+  Rendering admins/dashboard.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."admin_id" = ?[0m  [["admin_id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles" WHERE "articles"."admin_id" = ?[0m  [["admin_id", 2]]
+  Rendered blog/articles/_articles.html.erb (15.6ms)
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."admin_id" = ?[0m  [["admin_id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects" WHERE "projects"."admin_id" = ?[0m  [["admin_id", 2]]
+  Rendered project/projects/_projects.html.erb (10.7ms)
+  [1m[36mSeries Load (0.1ms)[0m  [1m[34mSELECT "series".* FROM "series" WHERE "series"."admin_id" = ?[0m  [["admin_id", 2]]
+  Rendered series/_series.html.erb (2.9ms)
+  Rendered admins/_form.html.erb (4.1ms)
+  Rendered admins/dashboard.html.erb within layouts/application (50.2ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 109ms (Views: 107.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/new-series" for 74.117.136.50 at 2020-10-22 18:43:14 +0000
+Cannot render console from 74.117.136.50! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeriesController#new as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering series/new.html.erb within layouts/application
+  Rendered series/_form.html.erb (2.1ms)
+  Rendered series/new.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 95ms (Views: 85.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/series" for 74.117.136.50 at 2020-10-22 18:43:17 +0000
+Cannot render console from 74.117.136.50! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WzhnJQKYX7jqJP9MRu/jRSKJ6PIDWgct1HLc4Jv9S2xccYrFqzUprJv5w4ZWrRwKR+r0vV4lFhklYl9He7XCHQ==", "series"=>{"name"=>"The New Social Justice", "description"=>"<p><span style=\"color: #737374; font-family: 'Noto Sans', sans-serif; font-size: 16px; background-color: #ffffff;\">A series of interviews with current and aspiring medical professionals on what social justice looks like in healthcare, and the steps that can be taken to improve our current healthcare delivery infrastructure.</span></p>"}, "commit"=>"create series"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "series" ("name", "description", "slug", "created_at", "updated_at", "admin_id", "live") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "The New Social Justice"], ["description", "<p><span style=\"color: #737374; font-family: 'Noto Sans', sans-serif; font-size: 16px; background-color: #ffffff;\">A series of interviews with current and aspiring medical professionals on what social justice looks like in healthcare, and the steps that can be taken to improve our current healthcare delivery infrastructure.</span></p>"], ["slug", "TNSJ"], ["created_at", "2020-10-22 18:43:18.006729"], ["updated_at", "2020-10-22 18:43:18.006729"], ["admin_id", 2], ["live", "t"]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://ec5d367bf3ce453f9276b6d7d46bc3e9.vfs.cloud9.us-east-2.amazonaws.com/series/14
+Completed 302 Found in 13ms (ActiveRecord: 5.4ms)
+
+
+Started GET "/series/14" for 74.117.136.50 at 2020-10-22 18:43:18 +0000
+Cannot render console from 74.117.136.50! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeriesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mSeries Load (0.2ms)[0m  [1m[34mSELECT  "series".* FROM "series" WHERE "series"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering series/show.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."series_id" = ?[0m  [["series_id", 14]]
+  Rendered blog/articles/_articles.html.erb (5.4ms)
+  Rendered series/show.html.erb within layouts/application (6.9ms)
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (2.3ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 80ms (Views: 76.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/images/tnsj_banner.png" for 74.117.136.50 at 2020-10-22 18:43:18 +0000
+Cannot render console from 74.117.136.50! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/images/tnsj_banner.png"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered collection of /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [75 times] (21.0ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (43.8ms)
+Started GET "/s/SJIH" for 74.117.136.50 at 2020-10-22 18:43:26 +0000
+Cannot render console from 74.117.136.50! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeriesController#show as HTML
+  Parameters: {"slug"=>"SJIH"}
+  [1m[36mSeries Load (0.8ms)[0m  [1m[34mSELECT  "series".* FROM "series" WHERE "series"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Series with 'id'=):
+  
+app/controllers/series_controller.rb:42:in `set_series'
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.5ms)
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.3ms)
+Started GET "/s/SJIH" for 74.117.136.50 at 2020-10-22 18:43:59 +0000
+Cannot render console from 74.117.136.50! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeriesController#show as HTML
+  Parameters: {"slug"=>"SJIH"}
+  [1m[36mSeries Load (0.3ms)[0m  [1m[34mSELECT  "series".* FROM "series" WHERE "series"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mSeries Load (0.1ms)[0m  [1m[34mSELECT  "series".* FROM "series" WHERE "series"."slug" = ? LIMIT ?[0m  [["slug", "SJIH"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 2.7ms)
+
+
+  
+NoMethodError (undefined method `articles' for nil:NilClass):
+  
+app/controllers/series_controller.rb:15:in `show'
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.4ms)
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.5ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "series"[0m
+Started GET "/s/SJIH" for 74.117.136.50 at 2020-10-22 18:44:44 +0000
+Cannot render console from 74.117.136.50! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeriesController#show as HTML
+  Parameters: {"slug"=>"SJIH"}
+  [1m[36mSeries Load (0.3ms)[0m  [1m[34mSELECT  "series".* FROM "series" WHERE "series"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mSeries Load (0.1ms)[0m  [1m[34mSELECT  "series".* FROM "series" WHERE "series"."slug" = ? LIMIT ?[0m  [["slug", "SJIH"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `articles' for nil:NilClass):
+  
+app/controllers/series_controller.rb:15:in `show'
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.5ms)
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (15.7ms)
+Started GET "/s/SJIH" for 74.117.136.50 at 2020-10-22 18:45:07 +0000
+Cannot render console from 74.117.136.50! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeriesController#show as HTML
+  Parameters: {"slug"=>"SJIH"}
+  [1m[36mSeries Load (0.3ms)[0m  [1m[34mSELECT  "series".* FROM "series" WHERE "series"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mSeries Load (0.1ms)[0m  [1m[34mSELECT  "series".* FROM "series" WHERE "series"."slug" = ? LIMIT ?[0m  [["slug", "SJIH"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `articles' for nil:NilClass):
+  
+app/controllers/series_controller.rb:15:in `show'
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.6ms)
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (15.6ms)
+Started GET "/s/SJIH" for 74.117.136.50 at 2020-10-22 18:45:50 +0000
+Cannot render console from 74.117.136.50! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeriesController#show as HTML
+  Parameters: {"slug"=>"SJIH"}
+  [1m[36mSeries Load (0.3ms)[0m  [1m[34mSELECT  "series".* FROM "series" WHERE "series"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mSeries Load (0.1ms)[0m  [1m[34mSELECT  "series".* FROM "series" WHERE "series"."slug" = ? LIMIT ?[0m  [["slug", "SJIH"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `articles' for nil:NilClass):
+  
+app/controllers/series_controller.rb:15:in `show'
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.4ms)
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (15.4ms)
+  [1m[36mSeries Load (0.1ms)[0m  [1m[34mSELECT  "series".* FROM "series" ORDER BY "series"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/s/SJIH" for 74.117.136.50 at 2020-10-22 18:46:41 +0000
+Cannot render console from 74.117.136.50! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeriesController#show as HTML
+  Parameters: {"slug"=>"SJIH"}
+  [1m[36mSeries Load (0.3ms)[0m  [1m[34mSELECT  "series".* FROM "series" WHERE "series"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mSeries Load (0.1ms)[0m  [1m[34mSELECT  "series".* FROM "series" WHERE "series"."slug" = ? LIMIT ?[0m  [["slug", "SJIH"], ["LIMIT", 1]]
+Redirected to https://ec5d367bf3ce453f9276b6d7d46bc3e9.vfs.cloud9.us-east-2.amazonaws.com/404
+Filter chain halted as :set_series rendered or redirected
+Completed 302 Found in 7ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 74.117.136.50 at 2020-10-22 18:46:43 +0000
+Cannot render console from 74.117.136.50! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Processing by AdminsController#dashboard as HTML
+  Rendering admins/dashboard.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."admin_id" = ?[0m  [["admin_id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles" WHERE "articles"."admin_id" = ?[0m  [["admin_id", 2]]
+  Rendered blog/articles/_articles.html.erb (14.4ms)
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."admin_id" = ?[0m  [["admin_id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects" WHERE "projects"."admin_id" = ?[0m  [["admin_id", 2]]
+  Rendered project/projects/_projects.html.erb (10.5ms)
+  [1m[36mSeries Load (0.1ms)[0m  [1m[34mSELECT "series".* FROM "series" WHERE "series"."admin_id" = ?[0m  [["admin_id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "series" WHERE "series"."admin_id" = ?[0m  [["admin_id", 2]]
+  Rendered series/_series.html.erb (8.5ms)
+  Rendered admins/_form.html.erb (4.0ms)
+  Rendered admins/dashboard.html.erb within layouts/application (47.4ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 134ms (Views: 131.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 74.117.136.50 at 2020-10-22 18:47:11 +0000
+Cannot render console from 74.117.136.50! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Processing by AdminsController#dashboard as HTML
+  Rendering admins/dashboard.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."admin_id" = ?[0m  [["admin_id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles" WHERE "articles"."admin_id" = ?[0m  [["admin_id", 2]]
+  Rendered blog/articles/_articles.html.erb (16.7ms)
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."admin_id" = ?[0m  [["admin_id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects" WHERE "projects"."admin_id" = ?[0m  [["admin_id", 2]]
+  Rendered project/projects/_projects.html.erb (10.8ms)
+  [1m[36mSeries Load (0.1ms)[0m  [1m[34mSELECT "series".* FROM "series" WHERE "series"."admin_id" = ?[0m  [["admin_id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "series" WHERE "series"."admin_id" = ?[0m  [["admin_id", 2]]
+  Rendered series/_series.html.erb (9.5ms)
+  Rendered admins/_form.html.erb (4.2ms)
+  Rendered admins/dashboard.html.erb within layouts/application (53.3ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 107ms (Views: 103.2ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/new-series" for 74.117.136.50 at 2020-10-22 18:47:18 +0000
+Cannot render console from 74.117.136.50! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeriesController#new as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering series/new.html.erb within layouts/application
+  Rendered series/_form.html.erb (2.1ms)
+  Rendered series/new.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 93ms (Views: 88.5ms | ActiveRecord: 0.2ms)
+
+
