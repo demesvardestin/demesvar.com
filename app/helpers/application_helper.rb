@@ -12,14 +12,20 @@ module ApplicationHelper
         Project.all
     end
     
+    def all_series
+        Series.all
+    end
+    
     def page_title(path)
         path_map = if path.length < 2 || path.nil?
             [""]
         elsif path.include?("article")
-            [] << path.split("blog/article/")[1].split("-").join(" ") <<  " - "
+            [] << path.split("blog/article/")[1].split("-").join(" ")
+        elsif path.include?("/s/")
+            [] << "Series: #{Series.find_by(slug: path.split("s/")[1].upcase).name}"
         else
             path.split("/") << " - "
-        end.map(&:downcase).join(" ") << "demesvar.com"
+        end.map(&:downcase).join(" ") << " - demesvar.com"
         
         return path_map
     end

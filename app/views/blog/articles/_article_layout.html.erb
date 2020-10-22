@@ -11,6 +11,14 @@
                                 </span>
                             </a>
                             
+                            <% if !@article.series.nil? %>
+                                <a href="/s/<%= @article.series.slug %>">
+                                    <span class="badge badge-info">
+                                        Series: <%= @article.series.name %>
+                                    </span>
+                                </a>
+                            <% end %>
+                            
                             <% if !@article.published %>
                                 <span class="badge badge-warning">
                                     unpublished

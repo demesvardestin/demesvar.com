@@ -1,0 +1,25 @@
+<% if series.present? %>
+    <p style="margin-bottom: 0; color: green;">
+        <%= pluralize(series.count, "series") %>
+    </p>
+    <% series.each do |s| %>
+        <div style="margin-bottom: 20px;">
+            <h5 style="margin-bottom: 5px;">
+                <%= link_to s.name, show_series_path(:slug => s.slug), class:"" %>
+            </h5>
+            
+            <p style="margin-bottom: 0;">
+                <%= s.description %>
+            </p>
+            
+            <% if current_admin && s.admin == current_admin %>
+                [<%= link_to "edit", "/blog/article/#{s.id}/edit", class:"btn btn-link",
+                    style: "color: #007bff !important;" %>] |
+                [<%= link_to "delete", blog_article_path(s), class:"btn btn-link",
+                    method: :delete, data: { alert: "are you sure?" }, style: "color: #007bff !important;" %>]
+            <% end %>
+        </div>
+    <% end %>
+<% else %>
+    <h6>no results found</h6>
+<% end %>

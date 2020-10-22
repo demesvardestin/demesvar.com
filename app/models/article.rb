@@ -1,5 +1,6 @@
 class Article < ApplicationRecord
     belongs_to :admin
+    belongs_to :series
     validates_uniqueness_of :title
     scope :published, -> { where(published: true) }
     scope :unpublished, -> { where.not(published: true) }

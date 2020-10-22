@@ -1,0 +1,39 @@
+<%= form_for(@series, :html => { :id => "series-form", :multipart => true }) do |f| %>
+    <div class="field">
+        <div class="row">
+            <div class="col-md-2">
+                <h5><%= f.label :name %></h5>
+            </div>
+            <div class="col-md-10">
+                <%= f.text_field :name, id:"series-name", class:"form-control", placeholder: "series name" %>
+            </div>
+        </div>
+    </div>
+    
+    <div class="field">
+        <div class="row">
+            <div class="col-md-2">
+                <h5><%= f.label :series_description %></h5>
+            </div>
+            <div class="col-md-10">
+                <%= f.text_area :series_description, id:"series-description", class:"form-control tinymce", placeholder: "what is this series about" %>
+            </div>
+        </div>
+    </div>
+    
+    <hr>
+    
+    <div class="actions">
+        <div class="row">
+            <div class="col-md-4">
+                <a class="btn btn-secondary btn-block" href="/blog">
+                    cancel
+                </a>
+            </div>
+            <div class="col-md-4">
+                <%= f.submit "create series", class:"btn btn-success btn-block", data: { :disable_with => "creating..." }  %>
+            </div>
+        </div>
+    </div>
+<% end %>
+<%= tinymce %>

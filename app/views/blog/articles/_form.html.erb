@@ -59,7 +59,7 @@
         <div class="row">
             <div class="col-md-5 offset-md-2">
                 <div class="dropdown">
-                    <button class="btn btn-secondary btn-transparent btn-block" type="button"
+                    <button class="btn btn-secondary btn-block" type="button"
                         id="category-button" data-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">
                         <% if @article.category_name %>
@@ -82,7 +82,7 @@
             
             <div class="col-md-5">
                 <div class="dropdown">
-                    <button class="btn btn-secondary btn-transparent btn-block" type="button"
+                    <button class="btn btn-secondary btn-block" type="button"
                         id="project-button" data-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">
                         <% if @article.project %>
@@ -102,8 +102,32 @@
                     </div>
                 </div>
             </div>
+            
+            <div class="col-md-5">
+                <div class="dropdown">
+                    <button class="btn btn-secondary btn-block" type="button"
+                        id="series-button" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        <% if @article.series %>
+                            <%= @article.series.name %> <i class="fas fa-angle-down"></i>
+                        <% else %>
+                            select a series <i class="fas fa-angle-down"></i>
+                        <% end %>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="project-button">
+                        <% all_series.each do |s| %>
+                            <a class="dropdown-item"
+                                onclick="$('#series-button').text('<%= s.name %>');
+                                        document.querySelector('#series-id').value = '<%= s.id %>';">
+                                <%= s.name %>
+                            </a>
+                        <% end %>
+                    </div>
+                </div>
+            </div>
         </div>
         <%= f.hidden_field :project_id, value: "#{@article.project_id}", id: "project-id" %>
+        <%= f.hidden_field :series_id, value: "#{@article.series_id}", id: "series-id" %>
         <%= f.hidden_field :category_name, value: "#{@article.category_name}", id: "category-name" %>
         <%= f.hidden_field :published, id: "published", value: true %>
     </div>

@@ -1,0 +1,73 @@
+<style type="text/css">
+    .series-banner {
+        min-height: 40vh;
+        height: auto;
+        width: 100vw !important;
+        background-image: url("/images/<%= @series.slug.downcase %>_banner.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        filter: brightness(30%);
+        position: relative;
+    }
+    
+    main {
+        margin-top: 60px !important;
+    }
+    
+    .series-title {
+        margin-top: calc(-48px - 20vh);
+        margin-bottom: calc(20vh);
+        position: relative;
+    }
+    
+    .series-title > .header {
+        color: #fff;
+        font-weight: bold;
+        text-align: center;
+        align-content: justify;
+    }
+    
+    .series-articles > h4 {
+        color: #007bff;
+    }
+    
+    .series-page {
+        height: auto;
+    }
+</style>
+
+<section class="series-page">
+    <section class="series-banner"></section>
+    
+    <section class="series-title">
+        <h1 class="header">
+            Social Justice in Healthcare
+        </h1>
+    </section>
+    
+    <section class="series-articles">
+        <div class="container">
+            <div>
+                <%= render partial: "blog/articles/articles",
+                    locals: { posts: @series.articles } %>
+            </div>
+            
+            <hr>
+            
+            <div class="call-to-action">
+                <p class="text-muted">
+                    if you or someone you know would like to get profiled
+                    as part of this series, feel free to shoot me an
+                    email at
+                    <a href="mailto:me@demesvar.com" target="_blank">
+                        me@demesvar.com</a>!
+                </p>
+            </div>
+        </div>
+    </section>
+</section>
+
+<script type="text/javascript">
+    document.querySelector("main").classList.remove("container");
+</script>

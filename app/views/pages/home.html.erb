@@ -1,13 +1,24 @@
 <section id="articles" style="padding-top: 15px;">
     <div class="row">
-        <div class="col-lg-12">
+        <div class="col-lg-8">
             <h6>
-                <strong>latest posts</strong>
+                <strong>recent posts</strong>
             </h6>
             
             <div id="latest-posts">
                 <%= render partial: "blog/articles/articles",
                     locals: { posts: @latest_posts } %>
+            </div>
+        </div>
+        
+        <div class="col-lg-4">
+            <h6>
+                <strong>series</strong>
+            </h6>
+            
+            <div id="latest-series">
+                <%= render partial: "series/series",
+                    locals: { series: @latest_series } %>
             </div>
         </div>
     </div>

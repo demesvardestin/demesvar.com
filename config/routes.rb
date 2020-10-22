@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
     devise_for :admins, :controllers => { :registrations => "authentication/admins/registrations" }
     devise_scope :admin do
         get '/login', to: 'devise/sessions#new'
@@ -40,12 +41,16 @@ Rails.application.routes.draw do
     
     resources :comments, except: [:show, :index, :edit]
     resources :admins, only: [:create, :update]
+    resources :series, only: [:create, :update, :destroy]
     
     get '/a/:id', to: 'blog/articles#article_redirect_from_short_url'
     get '/preview_post', to: 'blog/articles#preview_post'
     get '/about', to: 'pages#about'
     get '/home', to: 'pages#home'
     get '/latest', to: 'pages#latest'
+    get '/series', to: 'series#index'
+    get '/new-series', to: 'series#new'
+    get '/s/:slug', to: 'series#show', as: 'show_series'
     
     root "pages#home"
 end

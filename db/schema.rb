@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200501170500) do
+ActiveRecord::Schema.define(version: 20201022155550) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "first_name"
@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 20200501170500) do
     t.boolean  "published",     default: true
     t.text     "description",   default: "No description available"
     t.string   "image_link"
+    t.integer  "series_id"
   end
 
   create_table "categories", force: :cascade do |t|
@@ -81,6 +82,16 @@ ActiveRecord::Schema.define(version: 20200501170500) do
     t.string   "website"
     t.integer  "admin_id"
     t.text     "summary",    default: ""
+  end
+
+  create_table "series", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "slug"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "admin_id"
+    t.boolean  "live"
   end
 
 end
