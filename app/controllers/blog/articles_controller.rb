@@ -110,6 +110,7 @@ class Blog::ArticlesController < ApplicationController
             :tags,
             :category_name,
             :project_id,
+            :series_id,
             :published)
     end
 end
