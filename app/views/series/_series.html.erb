@@ -9,7 +9,7 @@
             </h5>
             
             <p style="margin-bottom: 0;">
-                <%= s.description %>
+                <%= sanitize s.description %>
             </p>
             
             <% if current_admin && s.admin == current_admin %>

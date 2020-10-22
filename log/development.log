@@ -43983,3 +43983,190 @@ Processing by SeriesController#new as HTML
 Completed 200 OK in 93ms (Views: 88.5ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/" for 74.117.136.50 at 2020-10-22 18:51:54 +0000
+Cannot render console from 74.117.136.50! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Processing by AdminsController#dashboard as HTML
+  Rendering admins/dashboard.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."admin_id" = ?[0m  [["admin_id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles" WHERE "articles"."admin_id" = ?[0m  [["admin_id", 2]]
+  Rendered blog/articles/_articles.html.erb (24.9ms)
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."admin_id" = ?[0m  [["admin_id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects" WHERE "projects"."admin_id" = ?[0m  [["admin_id", 2]]
+  Rendered project/projects/_projects.html.erb (11.4ms)
+  [1m[36mSeries Load (0.1ms)[0m  [1m[34mSELECT "series".* FROM "series" WHERE "series"."admin_id" = ?[0m  [["admin_id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "series" WHERE "series"."admin_id" = ?[0m  [["admin_id", 2]]
+  Rendered series/_series.html.erb (9.6ms)
+  Rendered admins/_form.html.erb (4.0ms)
+  Rendered admins/dashboard.html.erb within layouts/application (62.4ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 118ms (Views: 115.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/blog" for 74.117.136.50 at 2020-10-22 18:51:57 +0000
+Cannot render console from 74.117.136.50! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#index as HTML
+  Rendering blog/articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL ORDER BY created_at DESC[0m  [["published", "t"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL[0m  [["published", "t"]]
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered blog/articles/_articles.html.erb (16.7ms)
+  Rendered blog/articles/index.html.erb within layouts/application (18.2ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 107ms (Views: 104.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 74.117.136.50 at 2020-10-22 18:52:02 +0000
+Cannot render console from 74.117.136.50! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Processing by AdminsController#dashboard as HTML
+  Rendering admins/dashboard.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."admin_id" = ?[0m  [["admin_id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles" WHERE "articles"."admin_id" = ?[0m  [["admin_id", 2]]
+  Rendered blog/articles/_articles.html.erb (5.7ms)
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."admin_id" = ?[0m  [["admin_id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects" WHERE "projects"."admin_id" = ?[0m  [["admin_id", 2]]
+  Rendered project/projects/_projects.html.erb (3.3ms)
+  [1m[36mSeries Load (0.1ms)[0m  [1m[34mSELECT "series".* FROM "series" WHERE "series"."admin_id" = ?[0m  [["admin_id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "series" WHERE "series"."admin_id" = ?[0m  [["admin_id", 2]]
+  Rendered series/_series.html.erb (3.2ms)
+  Rendered admins/_form.html.erb (3.9ms)
+  Rendered admins/dashboard.html.erb within layouts/application (20.8ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 77ms (Views: 75.9ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/admins/sign_out" for 74.117.136.50 at 2020-10-22 18:52:03 +0000
+Cannot render console from 74.117.136.50! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"jGdiuEPebo0pbRiA5oX3hoVmYj32qvqgQ43Zqd+VEyIsatWBDOTyoM9SnbhLM5i1muh++1XLvtPru9ba7PYRXA=="}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://ec5d367bf3ce453f9276b6d7d46bc3e9.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 10ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 74.117.136.50 at 2020-10-22 18:52:03 +0000
+Cannot render console from 74.117.136.50! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at ASC LIMIT ?[0m  [["LIMIT", 5]]
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL ORDER BY created_at DESC LIMIT ?[0m  [["published", "t"], ["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL LIMIT ?) subquery_for_count[0m  [["published", "t"], ["LIMIT", 10]]
+  Rendered blog/articles/_articles.html.erb (4.7ms)
+  [1m[36mSeries Load (0.1ms)[0m  [1m[34mSELECT  "series".* FROM "series" WHERE "series"."live" = ? LIMIT ?[0m  [["live", "t"], ["LIMIT", 5]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "series" WHERE "series"."live" = ? LIMIT ?) subquery_for_count[0m  [["live", "t"], ["LIMIT", 5]]
+  Rendered series/_series.html.erb (2.9ms)
+  Rendered pages/home.html.erb within layouts/application (9.9ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_body.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 69ms (Views: 65.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 74.117.136.50 at 2020-10-22 18:52:32 +0000
+Cannot render console from 74.117.136.50! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at ASC LIMIT ?[0m  [["LIMIT", 5]]
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL ORDER BY created_at DESC LIMIT ?[0m  [["published", "t"], ["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL LIMIT ?) subquery_for_count[0m  [["published", "t"], ["LIMIT", 10]]
+  Rendered blog/articles/_articles.html.erb (4.4ms)
+  [1m[36mSeries Load (0.1ms)[0m  [1m[34mSELECT  "series".* FROM "series" WHERE "series"."live" = ? LIMIT ?[0m  [["live", "t"], ["LIMIT", 5]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "series" WHERE "series"."live" = ? LIMIT ?) subquery_for_count[0m  [["live", "t"], ["LIMIT", 5]]
+  Rendered series/_series.html.erb (9.7ms)
+  Rendered pages/home.html.erb within layouts/application (16.4ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_body.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 103ms (Views: 100.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/s/TNSJ" for 74.117.136.50 at 2020-10-22 18:52:50 +0000
+Cannot render console from 74.117.136.50! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeriesController#show as HTML
+  Parameters: {"slug"=>"TNSJ"}
+  [1m[36mSeries Load (0.2ms)[0m  [1m[34mSELECT  "series".* FROM "series" WHERE "series"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mSeries Load (0.1ms)[0m  [1m[34mSELECT  "series".* FROM "series" WHERE "series"."slug" = ? LIMIT ?[0m  [["slug", "TNSJ"], ["LIMIT", 1]]
+  Rendering series/show.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."series_id" = ?[0m  [["series_id", 14]]
+  Rendered blog/articles/_articles.html.erb (2.5ms)
+  Rendered series/show.html.erb within layouts/application (4.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "series".* FROM "series" WHERE "series"."slug" = ? LIMIT ?[0m  [["slug", "TNSJ"], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (0.9ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 66ms (Views: 61.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/images/tnsj_banner.png" for 74.117.136.50 at 2020-10-22 18:52:50 +0000
+Cannot render console from 74.117.136.50! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/images/tnsj_banner.png"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered collection of /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [75 times] (14.8ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (31.4ms)
+Started GET "/s/TNSJ" for 74.117.136.50 at 2020-10-22 18:52:53 +0000
+Cannot render console from 74.117.136.50! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeriesController#show as HTML
+  Parameters: {"slug"=>"TNSJ"}
+  [1m[36mSeries Load (0.2ms)[0m  [1m[34mSELECT  "series".* FROM "series" WHERE "series"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mSeries Load (0.1ms)[0m  [1m[34mSELECT  "series".* FROM "series" WHERE "series"."slug" = ? LIMIT ?[0m  [["slug", "TNSJ"], ["LIMIT", 1]]
+  Rendering series/show.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."series_id" = ?[0m  [["series_id", 14]]
+  Rendered blog/articles/_articles.html.erb (2.0ms)
+  Rendered series/show.html.erb within layouts/application (3.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "series".* FROM "series" WHERE "series"."slug" = ? LIMIT ?[0m  [["slug", "TNSJ"], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (0.8ms)
+  Rendered layouts/_body.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 104ms (Views: 100.3ms | ActiveRecord: 0.3ms)
+
+
