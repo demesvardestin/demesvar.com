@@ -22,6 +22,15 @@
                 </li>
                 <li class="nav-item">
                     <a class="dashboard-nav-link nav-link cursor-pointer"
+                        id="nav-link-series" onclick="showContent(this)">
+                        <span style="float: left;">my series</span>
+                        <span style="float: right;">
+                            <i class="fas fa-angle-right"></i>
+                        </span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="dashboard-nav-link nav-link cursor-pointer"
                         id="nav-link-profile" onclick="showContent(this)">
                         <span style="float: left;">my profile</span>
                         <span style="float: right;">
@@ -41,6 +50,7 @@
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <a class="dropdown-item" href="/blog/create">article</a>
                             <a class="dropdown-item" href="/project/new">project</a>
+                            <a class="dropdown-item" href="/new-series">series</a>
                         </div>
                     </div>
                 </li>
@@ -68,6 +78,11 @@
             <section id="projects-tab" class="content-tab">
                 <%= render partial: "/project/projects/projects",
                     locals: { projects: current_admin.projects } %>
+            </section>
+            
+            <section id="series-tab" class="content-tab">
+                <%= render partial: "/series/series",
+                    locals: { series: current_admin.series } %>
             </section>
             
             <section id="profile-tab" class="content-tab">

@@ -13,9 +13,9 @@
             </p>
             
             <% if current_admin && s.admin == current_admin %>
-                [<%= link_to "edit", "/blog/article/#{s.id}/edit", class:"btn btn-link",
+                [<%= link_to "edit", "/s/#{s.slug}/edit", class:"btn btn-link",
                     style: "color: #007bff !important;" %>] |
-                [<%= link_to "delete", blog_article_path(s), class:"btn btn-link",
+                [<%= link_to "delete", series_path(s), class:"btn btn-link",
                     method: :delete, data: { alert: "are you sure?" }, style: "color: #007bff !important;" %>]
             <% end %>
         </div>

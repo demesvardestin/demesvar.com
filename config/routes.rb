@@ -51,6 +51,7 @@ Rails.application.routes.draw do
     get '/series', to: 'series#index'
     get '/new-series', to: 'series#new'
     get '/s/:slug', to: 'series#show', as: 'show_series'
+    get '/s/:slug/edit', to: 'series#edit'
     
     root "pages#home"
 end

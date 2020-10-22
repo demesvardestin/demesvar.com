@@ -12,7 +12,7 @@ class Series < ApplicationRecord
         end.join
     end
     
-    private
+    protected
     
     def generate_slug
         slug = _slug

@@ -1,6 +1,7 @@
 class SeriesController < ApplicationController
   before_action :authenticate_admin!, only: [:new, :create, :destroy]
   before_action :set_article, only: [:update, :destroy]
+  before_action :set_series, only: [:edit, :show, :update]
   
   def new
     @series = Series.new
@@ -11,7 +12,6 @@ class SeriesController < ApplicationController
   end
   
   def show
-    @series = Series.find_by(slug: params[:slug].upcase)
     @articles = @series.articles
   end
 
@@ -21,7 +21,20 @@ class SeriesController < ApplicationController
     
     redirect_to @series, notice: "Series created!"
   end
+  
+  def update
+    @series.update(series_params)
+    @series.save!
+    
+    redirect_to @series, notice: "Series updated!"
+  end
 
   def destroy
+  end
+  
+  private
+  
+  def set_series
+    @series = Series.find_by(slug: params[:slug].upcase)
   end
 end
