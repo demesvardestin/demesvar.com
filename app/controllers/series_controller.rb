@@ -17,16 +17,20 @@ class SeriesController < ApplicationController
 
   def create
     @series = Series.new(series_params)
-    @series.save!
+    @series.admin = current_admin
     
-    redirect_to @series, notice: "Series created!"
+    if @series.save
+      redirect_to series_path(@series), notice: "Series created!"
+    else
+      redirect_to :back, notice: "An error occurred, please try again"
+    end
   end
   
   def update
     @series.update(series_params)
     @series.save!
     
-    redirect_to @series, notice: "Series updated!"
+    redirect_to show_series_path(:slug => @series.slug), notice: "Series updated!"
   end
 
   def destroy
@@ -35,6 +39,15 @@ class SeriesController < ApplicationController
   private
   
   def set_series
-    @series = Series.find_by(slug: params[:slug].upcase)
+    @series = Series.find(params[:id]) || Series.find_by(slug: params[:slug].upcase)
+  end
+  
+  def series_params
+    params
+    .require(:series)
+    .permit(
+      :name,
+      :description
+      )
   end
 end

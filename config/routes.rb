@@ -41,7 +41,7 @@ Rails.application.routes.draw do
     
     resources :comments, except: [:show, :index, :edit]
     resources :admins, only: [:create, :update]
-    resources :series, only: [:create, :update, :destroy]
+    resources :series, only: [:create, :update, :destroy, :show]
     
     get '/a/:id', to: 'blog/articles#article_redirect_from_short_url'
     get '/preview_post', to: 'blog/articles#preview_post'

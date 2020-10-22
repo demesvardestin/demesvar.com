@@ -15,10 +15,10 @@ class Series < ApplicationRecord
     protected
     
     def generate_slug
-        slug = _slug
+        self.slug = _slug
     end
     
     def set_live
-        live = true
+        self.live = true
     end
 end
