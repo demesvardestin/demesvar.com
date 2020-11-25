@@ -12,6 +12,10 @@ class Series < ApplicationRecord
         end.join
     end
     
+    def articles
+        Article.where(series_id: id)
+    end
+    
     protected
     
     def generate_slug

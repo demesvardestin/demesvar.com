@@ -1,6 +1,5 @@
 class Article < ApplicationRecord
     belongs_to :admin
-    belongs_to :series
     validates_uniqueness_of :title
     scope :published, -> { where(published: true) }
     scope :unpublished, -> { where.not(published: true) }
@@ -15,6 +14,10 @@ class Article < ApplicationRecord
             _title_ = _title_[0..-2]
         end
         _title_.split(' ').join('-')
+    end
+    
+    def series
+        Series.find_by(id: series_id)
     end
     
     def fake_title

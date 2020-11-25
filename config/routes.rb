@@ -49,6 +49,7 @@ Rails.application.routes.draw do
     get '/home', to: 'pages#home'
     get '/latest', to: 'pages#latest'
     get '/series', to: 'series#index'
+    get '/fitness', to: 'fitness#index'
     get '/new-series', to: 'series#new'
     get '/s/:slug', to: 'series#show', as: 'show_series'
     get '/s/:slug/edit', to: 'series#edit'
