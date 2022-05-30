@@ -24,6 +24,7 @@ gem 'tinymce-rails'
 gem 'devise'
 gem 'social-share-button'
 gem 'will_paginate', '~> 3.1.0'
+gem 'pdfjs_viewer-rails'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password

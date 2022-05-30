@@ -20,6 +20,9 @@
             }
         }
     },
+    "launchconfigurations": {
+        "@currentconfig": ""
+    },
     "preview": {
         "@url": ""
     },

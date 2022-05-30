@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-
+    
+    mount PdfjsViewer::Rails::Engine => "/pdfjs", as: 'pdfjs'
     devise_for :admins, :controllers => { :registrations => "authentication/admins/registrations" }
     devise_scope :admin do
         get '/login', to: 'devise/sessions#new'
@@ -53,6 +54,8 @@ Rails.application.routes.draw do
     get '/new-series', to: 'series#new'
     get '/s/:slug', to: 'series#show', as: 'show_series'
     get '/s/:slug/edit', to: 'series#edit'
+    get '/photography', to: 'pages#photography'
+    # get '/thesis', to: ''
     
     root "pages#home"
 end

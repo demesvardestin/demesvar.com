@@ -1,25 +1,26 @@
 <% if posts.present? %>
-    <p style="margin-bottom: 0; color: green;">
-        <%= pluralize(posts.count, "post") %>
-    </p>
-    <% posts.each do |poste| %>
-        <div style="margin-bottom: 20px;">
-            <h5 style="margin-bottom: 5px;">
-                <%= link_to poste.title, blog_show_article_path(:slug => poste.slug, :id => poste.id), class:"" %>
-            </h5>
-            
-            <p style="margin-bottom: 0;">
-                <%= poste.description %>
-            </p>
-            
-            <% if current_admin && poste.admin == current_admin %>
-                [<%= link_to "edit", "/blog/article/#{poste.id}/edit", class:"btn btn-link",
-                    style: "color: #007bff !important;" %>] |
-                [<%= link_to "delete", blog_article_path(poste), class:"btn btn-link",
-                    method: :delete, data: { alert: "are you sure?" }, style: "color: #007bff !important;" %>]
-            <% end %>
-        </div>
-    <% end %>
+    <ul style="padding-inline-start: 15px;">
+        <% posts.each do |poste| %>
+            <li>
+                <div style="margin-bottom: 20px;">
+                    <h6 style="margin-bottom: 5px;">
+                        <%= link_to poste.title, blog_show_article_path(:slug => poste.slug, :id => poste.id), class:"" %>
+                    </h6>
+                    
+                    <p style="margin-bottom: 0;">
+                        <%= poste.description %>
+                    </p>
+                    
+                    <% if current_admin && poste.admin == current_admin %>
+                        [<%= link_to "edit", "/blog/article/#{poste.id}/edit", class:"btn btn-link",
+                            style: "color: #007bff !important;" %>] |
+                        [<%= link_to "delete", blog_article_path(poste), class:"btn btn-link",
+                            method: :delete, data: { alert: "are you sure?" }, style: "color: #007bff !important;" %>]
+                    <% end %>
+                </div>
+            </li>
+        <% end %>
+    </ul>
 <% else %>
-    <h6>no results found</h6>
+    <h6>no posts yet</h6>
 <% end %>
