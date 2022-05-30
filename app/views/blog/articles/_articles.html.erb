@@ -4,7 +4,11 @@
             <li>
                 <div style="margin-bottom: 20px;">
                     <h6 style="margin-bottom: 5px;">
-                        <%= link_to poste.title, blog_show_article_path(:slug => poste.slug, :id => poste.id), class:"" %>
+                        <% if poste.is_pdf? %>
+                            <%= link_to poste.title, pdfjs.full_path(file: "/pdfs/#{poste.file_name}.pdf") %>
+                        <% else %>
+                            <%= link_to poste.title, blog_show_article_path(:slug => poste.slug, :id => poste.id), class:"" %>
+                        <% end %>
                     </h6>
                     
                     <p style="margin-bottom: 0;">

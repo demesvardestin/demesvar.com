@@ -45315,3 +45315,1622 @@ Processing by PdfjsViewer::ViewerController#full as HTML
 Completed 200 OK in 23ms (Views: 22.1ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/pdfjs/full?file=%2Fpdfs%2Fthesis.pdf" for 69.116.19.79 at 2022-05-30 05:34:05 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PdfjsViewer::ViewerController#full as HTML
+  Parameters: {"file"=>"/pdfs/thesis.pdf"}
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/full.html.erb
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_head.html.erb (58.5ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_extra_head.html.erb (0.3ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_printcontainer.html.erb (0.2ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_viewer.html.erb (66.6ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/full.html.erb (71.7ms)
+Completed 200 OK in 80ms (Views: 72.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 69.116.19.79 at 2022-05-30 14:49:27 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at ASC LIMIT ?[0m  [["LIMIT", 5]]
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mArticle Load (1.5ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL ORDER BY created_at DESC LIMIT ?[0m  [["published", "t"], ["LIMIT", 10]]
+  Rendered blog/articles/_articles.html.erb (18.3ms)
+  Rendered pages/home.html.erb within layouts/application (24.6ms)
+Started GET "/" for 69.116.19.79 at 2022-05-30 14:49:29 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at ASC LIMIT ?[0m  [["LIMIT", 5]]
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL ORDER BY created_at DESC LIMIT ?[0m  [["published", "t"], ["LIMIT", 10]]
+  Rendered blog/articles/_articles.html.erb (12.1ms)
+  Rendered pages/home.html.erb within layouts/application (19.4ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_body.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 1808ms (Views: 1780.7ms | ActiveRecord: 3.0ms)
+
+
+  Rendered layouts/_navbar.html.erb (1.5ms)
+  Rendered layouts/_body.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 216ms (Views: 211.0ms | ActiveRecord: 0.8ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddViewingFormatToArticles (20220530145407)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (3.6ms)[0m  [1m[35mALTER TABLE "articles" ADD "viewing_format" varchar[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220530145407"]]
+  [1m[35m (20.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_email' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddViewingFormatToArticles (20220530145407)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aarticles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "title" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "tags" varchar DEFAULT '', "project_id" integer, "admin_id" integer, "category_name" varchar, "published" boolean DEFAULT 't', "description" text DEFAULT 'No description available', "image_link" varchar, "series_id" integer, "viewing_format" varchar)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "aarticles" ("id","content","title","created_at","updated_at","tags","project_id","admin_id","category_name","published","description","image_link","series_id","viewing_format")
+                     SELECT "id","content","title","created_at","updated_at","tags","project_id","admin_id","category_name","published","description","image_link","series_id","viewing_format" FROM "articles"[0m
+  [1m[35m (3.3ms)[0m  [1m[35mDROP TABLE "articles"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "title" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "tags" varchar DEFAULT '', "project_id" integer, "admin_id" integer, "category_name" varchar, "published" boolean DEFAULT 't', "description" text DEFAULT 'No description available', "image_link" varchar, "series_id" integer)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "articles" ("id","content","title","created_at","updated_at","tags","project_id","admin_id","category_name","published","description","image_link","series_id")
+                     SELECT "id","content","title","created_at","updated_at","tags","project_id","admin_id","category_name","published","description","image_link","series_id" FROM "aarticles"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aarticles"[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20220530145407"]]
+  [1m[35m (23.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_email' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddViewingFormatToArticles (20220530145407)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (4.8ms)[0m  [1m[35mALTER TABLE "articles" ADD "viewing_format" varchar DEFAULT 'html'[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220530145407"]]
+  [1m[35m (13.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_email' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddViewingFormatToArticles (20220530145407)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aarticles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "title" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "tags" varchar DEFAULT '', "project_id" integer, "admin_id" integer, "category_name" varchar, "published" boolean DEFAULT 't', "description" text DEFAULT 'No description available', "image_link" varchar, "series_id" integer, "viewing_format" varchar DEFAULT 'html')[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "aarticles" ("id","content","title","created_at","updated_at","tags","project_id","admin_id","category_name","published","description","image_link","series_id","viewing_format")
+                     SELECT "id","content","title","created_at","updated_at","tags","project_id","admin_id","category_name","published","description","image_link","series_id","viewing_format" FROM "articles"[0m
+  [1m[35m (2.1ms)[0m  [1m[35mDROP TABLE "articles"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "title" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "tags" varchar DEFAULT '', "project_id" integer, "admin_id" integer, "category_name" varchar, "published" boolean DEFAULT 't', "description" text DEFAULT 'No description available', "image_link" varchar, "series_id" integer)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "articles" ("id","content","title","created_at","updated_at","tags","project_id","admin_id","category_name","published","description","image_link","series_id")
+                     SELECT "id","content","title","created_at","updated_at","tags","project_id","admin_id","category_name","published","description","image_link","series_id" FROM "aarticles"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aarticles"[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20220530145407"]]
+  [1m[35m (18.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_email' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddAdminIdToSeries (20201022155550)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aseries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "slug" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "admin_id" integer, "live" boolean)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aseries" ("id","name","description","slug","created_at","updated_at","admin_id","live")
+                     SELECT "id","name","description","slug","created_at","updated_at","admin_id","live" FROM "series"[0m
+  [1m[35m (3.0ms)[0m  [1m[35mDROP TABLE "series"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "series" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "slug" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "admin_id" integer)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "series" ("id","name","description","slug","created_at","updated_at","admin_id")
+                     SELECT "id","name","description","slug","created_at","updated_at","admin_id" FROM "aseries"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aseries"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aseries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "slug" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "admin_id" integer)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aseries" ("id","name","description","slug","created_at","updated_at","admin_id")
+                     SELECT "id","name","description","slug","created_at","updated_at","admin_id" FROM "series"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "series"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "series" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "slug" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "series" ("id","name","description","slug","created_at","updated_at")
+                     SELECT "id","name","description","slug","created_at","updated_at" FROM "aseries"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aseries"[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20201022155550"]]
+  [1m[35m (16.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_email' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddAdminIdToSeries (20201022155550)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (8.3ms)[0m  [1m[35mALTER TABLE "series" ADD "admin_id" integer[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "series" ADD "live" boolean[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201022155550"]]
+  [1m[35m (13.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddViewingFormatToArticles (20220530145407)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "articles" ADD "viewing_format" varchar DEFAULT 'html'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "articless" ADD "file_name" varchar DEFAULT ''[0m
+  [1m[35m (1.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddViewingFormatToArticles (20220530145407)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (3.8ms)[0m  [1m[35mALTER TABLE "articles" ADD "viewing_format" varchar DEFAULT 'html'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "articles" ADD "file_name" varchar DEFAULT ''[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220530145407"]]
+  [1m[35m (13.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.5ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_email' AND type='index'
+[0m
+Started GET "/" for 69.116.19.79 at 2022-05-30 15:34:33 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at ASC LIMIT ?[0m  [["LIMIT", 5]]
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL ORDER BY created_at DESC LIMIT ?[0m  [["published", "t"], ["LIMIT", 10]]
+  Rendered blog/articles/_articles.html.erb (14.9ms)
+  Rendered pages/home.html.erb within layouts/application (17.8ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 179ms (Views: 159.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 69.116.19.79 at 2022-05-30 15:35:04 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at ASC LIMIT ?[0m  [["LIMIT", 5]]
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL ORDER BY created_at DESC LIMIT ?[0m  [["published", "t"], ["LIMIT", 10]]
+  Rendered blog/articles/_articles.html.erb (5.3ms)
+  Rendered pages/home.html.erb within layouts/application (9.3ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_body.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 119ms (Views: 115.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/login" for 69.116.19.79 at 2022-05-30 15:35:08 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1171.9ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 1339ms (Views: 1306.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/admins/sign_in" for 69.116.19.79 at 2022-05-30 15:35:26 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n1llHOtonX3JwELqLVAkouqh8UOVVc7k4A+mL+YlU4NSjVlMlKG/tLGOC6EpDUutBGJofCDJcDymhfi8iZ2BEw==", "admin"=>{"email"=>"dddemesvar07@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"log in"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "dddemesvar07@gmail.com"], ["LIMIT", 1]]
+Redirected to https://b6d90eadcf8c46a1b2244b5fbdef8312.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 191ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 69.116.19.79 at 2022-05-30 15:35:26 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Processing by AdminsController#dashboard as HTML
+  Rendering admins/dashboard.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."admin_id" = ?[0m  [["admin_id", 2]]
+  Rendered blog/articles/_articles.html.erb (19.8ms)
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."admin_id" = ?[0m  [["admin_id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects" WHERE "projects"."admin_id" = ?[0m  [["admin_id", 2]]
+  Rendered project/projects/_projects.html.erb (6.3ms)
+  [1m[36mSeries Load (0.1ms)[0m  [1m[34mSELECT "series".* FROM "series" WHERE "series"."admin_id" = ?[0m  [["admin_id", 2]]
+  Rendered series/_series.html.erb (2.9ms)
+  Rendered admins/_form.html.erb (6.4ms)
+  Rendered admins/dashboard.html.erb within layouts/application (57.1ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 160ms (Views: 159.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/blog/create" for 69.116.19.79 at 2022-05-30 15:35:51 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#new as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering blog/articles/new.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mSeries Load (0.1ms)[0m  [1m[34mSELECT  "series".* FROM "series" WHERE "series"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mSeries Load (0.1ms)[0m  [1m[34mSELECT "series".* FROM "series"[0m
+  Rendered blog/articles/_form.html.erb (19.4ms)
+  Rendered blog/articles/new.html.erb within layouts/application (22.1ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_body.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 135ms (Views: 129.4ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/blog/articles" for 69.116.19.79 at 2022-05-30 15:38:56 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vc30xdPthSACayXvBxLnbkpLUggmNVQ9Bs/7tRdjsKeXowJ5tMG6FaOpayEUOcZWPiONk3X9Pjbwfwpb8d2gVw==", "article"=>{"title"=>"Demographic Predictors of Gas Leak Reporting", "image_link"=>"", "description"=>"Data from a nationally representative sample (N=598) was analyzed, and responses to questions probing respondents’ specific actions upon suspecting a leak were extracted from a larger survey  (N=1060). Variables corresponding to respondents’ demographics and gas consumption patterns were cleaned, re-coded, and fed into a Poisson regression model. Incident risk ratios were reported for variables associated with an increased number of actions taken upon suspecting a gas leak.", "content"=>"<p>Click here for article pdf.</p>", "tags"=>"Gas Leak,Health Belief Model,Reporting,Poisson Regression", "project_id"=>"", "series_id"=>"", "category_name"=>"all", "published"=>"true"}, "commit"=>"publish article"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mArticle Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Demographic Predictors of Gas Leak Reporting"], ["LIMIT", 1]]
+  [1m[35mSQL (4.7ms)[0m  [1m[32mINSERT INTO "articles" ("content", "title", "created_at", "updated_at", "tags", "admin_id", "category_name", "description", "image_link") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["content", "<p>Click here for article pdf.</p>"], ["title", "Demographic Predictors of Gas Leak Reporting"], ["created_at", "2022-05-30 15:38:56.288027"], ["updated_at", "2022-05-30 15:38:56.288027"], ["tags", "Gas Leak,Health Belief Model,Reporting,Poisson Regression"], ["admin_id", 2], ["category_name", "all"], ["description", "Data from a nationally representative sample (N=598) was analyzed, and responses to questions probing respondents’ specific actions upon suspecting a leak were extracted from a larger survey  (N=1060). Variables corresponding to respondents’ demographics and gas consumption patterns were cleaned, re-coded, and fed into a Poisson regression model. Incident risk ratios were reported for variables associated with an increased number of actions taken upon suspecting a gas leak."], ["image_link", ""]]
+  [1m[35mSQL (3.3ms)[0m  [1m[32mINSERT INTO "commentables" ("object_id", "created_at", "updated_at", "object_type") VALUES (?, ?, ?, ?)[0m  [["object_id", 14], ["created_at", "2022-05-30 15:38:56.304043"], ["updated_at", "2022-05-30 15:38:56.304043"], ["object_type", "Article"]]
+  [1m[35m (12.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://b6d90eadcf8c46a1b2244b5fbdef8312.vfs.cloud9.us-east-1.amazonaws.com/blog/articles/14
+Completed 302 Found in 51ms (ActiveRecord: 21.4ms)
+
+
+Started GET "/blog/articles/14" for 69.116.19.79 at 2022-05-30 15:38:56 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mCommentable Load (0.2ms)[0m  [1m[34mSELECT  "commentables".* FROM "commentables" WHERE "commentables"."object_id" = ? AND "commentables"."object_type" = ? LIMIT ?[0m  [["object_id", 14], ["object_type", "Article"], ["LIMIT", 1]]
+  [1m[36mCommentable Load (0.1ms)[0m  [1m[34mSELECT  "commentables".* FROM "commentables" WHERE "commentables"."object_id" = ? AND "commentables"."object_type" = ? LIMIT ?[0m  [["object_id", 14], ["object_type", "Article"], ["LIMIT", 1]]
+  Rendering blog/articles/show.html.erb within layouts/application
+  [1m[36mSeries Load (0.1ms)[0m  [1m[34mSELECT  "series".* FROM "series" WHERE "series"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered shared/_share_buttons.html.erb (0.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "commentables".* FROM "commentables" WHERE "commentables"."object_id" = ? AND "commentables"."object_type" = ? LIMIT ?[0m  [["object_id", 14], ["object_type", "Article"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ?[0m  [["commentable_id", 17]]
+  Rendered comments/_form.html.erb (1.4ms)
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."commentable_id" = ? LIMIT ? OFFSET ?[0m  [["commentable_id", 17], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered comments/_comments.html.erb (5.6ms)
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL AND (category_name LIKE '%all%') AND ("articles"."id" != ?)[0m  [["published", "t"], ["id", 14]]
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered blog/articles/_articles.html.erb (14.7ms)
+  Rendered blog/articles/_article_layout.html.erb (52.4ms)
+  Rendered blog/articles/show.html.erb within layouts/application (54.3ms)
+Completed 500 Internal Server Error in 78ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `split' for nil:NilClass):
+    13:       </script>
+    14:     <% end %>
+    15:     
+    16:     <title><%= page_title(request.env["REQUEST_PATH"]) %></title>
+    17:     <meta charset="utf-8">
+    18:     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    19:     <meta name="twitter:card" content="summary_large_image">
+  
+app/helpers/application_helper.rb:23:in `page_title'
+app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__2615470778574230654_70130544537720'
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.5ms)
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.2ms)
+Started GET "/blog/article/demographic-predictors-of-gas-leak-reporting/14" for 69.116.19.79 at 2022-05-30 15:41:44 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#show as HTML
+  Parameters: {"slug"=>"demographic-predictors-of-gas-leak-reporting", "id"=>"14"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mCommentable Load (0.1ms)[0m  [1m[34mSELECT  "commentables".* FROM "commentables" WHERE "commentables"."object_id" = ? AND "commentables"."object_type" = ? LIMIT ?[0m  [["object_id", 14], ["object_type", "Article"], ["LIMIT", 1]]
+  [1m[36mCommentable Load (0.1ms)[0m  [1m[34mSELECT  "commentables".* FROM "commentables" WHERE "commentables"."object_id" = ? AND "commentables"."object_type" = ? LIMIT ?[0m  [["object_id", 14], ["object_type", "Article"], ["LIMIT", 1]]
+  Rendering blog/articles/show.html.erb within layouts/application
+  [1m[36mSeries Load (0.1ms)[0m  [1m[34mSELECT  "series".* FROM "series" WHERE "series"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered shared/_share_buttons.html.erb (0.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "commentables".* FROM "commentables" WHERE "commentables"."object_id" = ? AND "commentables"."object_type" = ? LIMIT ?[0m  [["object_id", 14], ["object_type", "Article"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ?[0m  [["commentable_id", 17]]
+  Rendered comments/_form.html.erb (1.4ms)
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."commentable_id" = ? LIMIT ? OFFSET ?[0m  [["commentable_id", 17], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered comments/_comments.html.erb (5.3ms)
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL AND (category_name LIKE '%all%') AND ("articles"."id" != ?)[0m  [["published", "t"], ["id", 14]]
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered blog/articles/_articles.html.erb (7.2ms)
+  Rendered blog/articles/_article_layout.html.erb (45.1ms)
+  Rendered blog/articles/show.html.erb within layouts/application (47.5ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 187ms (Views: 147.5ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/blog/article/demographic-predictors-of-gas-leak-reporting/14" for 69.116.19.79 at 2022-05-30 15:42:38 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#show as HTML
+  Parameters: {"slug"=>"demographic-predictors-of-gas-leak-reporting", "id"=>"14"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mCommentable Load (0.1ms)[0m  [1m[34mSELECT  "commentables".* FROM "commentables" WHERE "commentables"."object_id" = ? AND "commentables"."object_type" = ? LIMIT ?[0m  [["object_id", 14], ["object_type", "Article"], ["LIMIT", 1]]
+  [1m[36mCommentable Load (0.1ms)[0m  [1m[34mSELECT  "commentables".* FROM "commentables" WHERE "commentables"."object_id" = ? AND "commentables"."object_type" = ? LIMIT ?[0m  [["object_id", 14], ["object_type", "Article"], ["LIMIT", 1]]
+  Rendering blog/articles/show.html.erb within layouts/application
+  [1m[36mSeries Load (0.2ms)[0m  [1m[34mSELECT  "series".* FROM "series" WHERE "series"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered shared/_share_buttons.html.erb (0.8ms)
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL AND (category_name LIKE '%all%') AND ("articles"."id" != ?)[0m  [["published", "t"], ["id", 14]]
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered blog/articles/_articles.html.erb (7.6ms)
+  Rendered blog/articles/_article_layout.html.erb (18.9ms)
+  Rendered blog/articles/show.html.erb within layouts/application (20.5ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_body.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 124ms (Views: 116.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 69.116.19.79 at 2022-05-30 15:42:44 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Processing by AdminsController#dashboard as HTML
+  Rendering admins/dashboard.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."admin_id" = ?[0m  [["admin_id", 2]]
+  Rendered blog/articles/_articles.html.erb (6.6ms)
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."admin_id" = ?[0m  [["admin_id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects" WHERE "projects"."admin_id" = ?[0m  [["admin_id", 2]]
+  Rendered project/projects/_projects.html.erb (14.6ms)
+  [1m[36mSeries Load (0.1ms)[0m  [1m[34mSELECT "series".* FROM "series" WHERE "series"."admin_id" = ?[0m  [["admin_id", 2]]
+  Rendered series/_series.html.erb (3.0ms)
+  Rendered admins/_form.html.erb (4.3ms)
+  Rendered admins/dashboard.html.erb within layouts/application (40.7ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_body.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 144ms (Views: 142.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blog/article/14/edit" for 69.116.19.79 at 2022-05-30 16:00:54 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering blog/articles/edit.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mSeries Load (0.1ms)[0m  [1m[34mSELECT  "series".* FROM "series" WHERE "series"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mSeries Load (0.1ms)[0m  [1m[34mSELECT "series".* FROM "series"[0m
+  Rendered blog/articles/_form.html.erb (27.8ms)
+  Rendered blog/articles/edit.html.erb within layouts/application (29.9ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (1.2ms)
+Completed 200 OK in 174ms (Views: 135.5ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/blog/article/14/edit" for 69.116.19.79 at 2022-05-30 16:08:39 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering blog/articles/edit.html.erb within layouts/application
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mSeries Load (0.1ms)[0m  [1m[34mSELECT  "series".* FROM "series" WHERE "series"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mSeries Load (0.1ms)[0m  [1m[34mSELECT "series".* FROM "series"[0m
+  Rendered blog/articles/_form.html.erb (55.0ms)
+  Rendered blog/articles/edit.html.erb within layouts/application (56.0ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 238ms (Views: 232.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/blog/article/14/edit" for 69.116.19.79 at 2022-05-30 16:10:17 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArticle Load (1.0ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering blog/articles/edit.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mSeries Load (0.1ms)[0m  [1m[34mSELECT  "series".* FROM "series" WHERE "series"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mSeries Load (0.1ms)[0m  [1m[34mSELECT "series".* FROM "series"[0m
+  Rendered blog/articles/_form.html.erb (15.1ms)
+  Rendered blog/articles/edit.html.erb within layouts/application (17.1ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 152ms (Views: 146.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/blog/article/14/edit" for 69.116.19.79 at 2022-05-30 16:10:51 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering blog/articles/edit.html.erb within layouts/application
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mSeries Load (0.1ms)[0m  [1m[34mSELECT  "series".* FROM "series" WHERE "series"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mSeries Load (0.1ms)[0m  [1m[34mSELECT "series".* FROM "series"[0m
+  Rendered blog/articles/_form.html.erb (12.7ms)
+  Rendered blog/articles/edit.html.erb within layouts/application (17.4ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_body.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 135ms (Views: 129.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/blog/article/14/edit" for 69.116.19.79 at 2022-05-30 16:11:07 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering blog/articles/edit.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mSeries Load (0.1ms)[0m  [1m[34mSELECT  "series".* FROM "series" WHERE "series"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mSeries Load (0.1ms)[0m  [1m[34mSELECT "series".* FROM "series"[0m
+  Rendered blog/articles/_form.html.erb (12.0ms)
+  Rendered blog/articles/edit.html.erb within layouts/application (15.0ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 179ms (Views: 173.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/blog/article/14/edit" for 69.116.19.79 at 2022-05-30 16:11:46 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering blog/articles/edit.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mSeries Load (0.1ms)[0m  [1m[34mSELECT  "series".* FROM "series" WHERE "series"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mSeries Load (0.1ms)[0m  [1m[34mSELECT "series".* FROM "series"[0m
+  Rendered blog/articles/_form.html.erb (12.2ms)
+  Rendered blog/articles/edit.html.erb within layouts/application (14.1ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 118ms (Views: 113.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/blog/article/14/edit" for 69.116.19.79 at 2022-05-30 16:26:30 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering blog/articles/edit.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mSeries Load (0.1ms)[0m  [1m[34mSELECT  "series".* FROM "series" WHERE "series"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mSeries Load (0.1ms)[0m  [1m[34mSELECT "series".* FROM "series"[0m
+  Rendered blog/articles/_form.html.erb (16.8ms)
+  Rendered blog/articles/edit.html.erb within layouts/application (18.9ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 131ms (Views: 121.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/blog/article/14/edit" for 69.116.19.79 at 2022-05-30 16:27:01 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering blog/articles/edit.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mSeries Load (0.1ms)[0m  [1m[34mSELECT  "series".* FROM "series" WHERE "series"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mSeries Load (0.1ms)[0m  [1m[34mSELECT "series".* FROM "series"[0m
+  Rendered blog/articles/_form.html.erb (12.6ms)
+  Rendered blog/articles/edit.html.erb within layouts/application (14.9ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 121ms (Views: 115.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/blog/article/14/edit" for 69.116.19.79 at 2022-05-30 16:28:01 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering blog/articles/edit.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mSeries Load (0.2ms)[0m  [1m[34mSELECT  "series".* FROM "series" WHERE "series"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mSeries Load (0.1ms)[0m  [1m[34mSELECT "series".* FROM "series"[0m
+  Rendered blog/articles/_form.html.erb (14.9ms)
+  Rendered blog/articles/edit.html.erb within layouts/application (17.2ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_body.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 256ms (Views: 246.5ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/blog/articles/14" for 69.116.19.79 at 2022-05-30 16:28:41 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tzSQ2seKSiFbVi1n5lwrajo6MgJ1owhk1c5bqCsdoN9sdBg+qiHBYfUQ9CWW4gKwcSWc54w8G91nGodfnlZeAg==", "article"=>{"title"=>"Demographic Predictors of Gas Leak Reporting", "image_link"=>"", "description"=>"Data from a nationally representative sample (N=598) was analyzed, and responses to questions probing respondents’ specific actions upon suspecting a leak were extracted from a larger survey  (N=1060). Variables corresponding to respondents’ demographics and gas consumption patterns were cleaned, re-coded, and fed into a Poisson regression model. Incident risk ratios were reported for variables associated with an increased number of actions taken upon suspecting a gas leak.", "content"=>"<p>Click here for article pdf.</p>", "tags"=>"Gas Leak,Health Belief Model,Reporting,Poisson Regression", "file_name"=>"thesis", "viewing_format"=>"pdf", "project_id"=>"", "series_id"=>"", "category_name"=>"all", "published"=>"true"}, "commit"=>"publish article", "id"=>"14"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArticle Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "articles" WHERE "articles"."title" = ? AND ("articles"."id" != ?) LIMIT ?[0m  [["title", "Demographic Predictors of Gas Leak Reporting"], ["id", 14], ["LIMIT", 1]]
+  [1m[35mSQL (2.1ms)[0m  [1m[33mUPDATE "articles" SET "viewing_format" = ?, "file_name" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["viewing_format", "pdf"], ["file_name", "thesis"], ["updated_at", "2022-05-30 16:28:41.949285"], ["id", 14]]
+  [1m[35m (13.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mArticle Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "articles" WHERE "articles"."title" = ? AND ("articles"."id" != ?) LIMIT ?[0m  [["title", "Demographic Predictors of Gas Leak Reporting"], ["id", 14], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://b6d90eadcf8c46a1b2244b5fbdef8312.vfs.cloud9.us-east-1.amazonaws.com/blog/article/Demographic-Predictors-of-Gas-Leak-Reporting/14
+Completed 302 Found in 34ms (ActiveRecord: 16.0ms)
+
+
+Started GET "/blog/article/Demographic-Predictors-of-Gas-Leak-Reporting/14" for 69.116.19.79 at 2022-05-30 16:28:42 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#show as HTML
+  Parameters: {"slug"=>"Demographic-Predictors-of-Gas-Leak-Reporting", "id"=>"14"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mCommentable Load (0.1ms)[0m  [1m[34mSELECT  "commentables".* FROM "commentables" WHERE "commentables"."object_id" = ? AND "commentables"."object_type" = ? LIMIT ?[0m  [["object_id", 14], ["object_type", "Article"], ["LIMIT", 1]]
+  [1m[36mCommentable Load (0.1ms)[0m  [1m[34mSELECT  "commentables".* FROM "commentables" WHERE "commentables"."object_id" = ? AND "commentables"."object_type" = ? LIMIT ?[0m  [["object_id", 14], ["object_type", "Article"], ["LIMIT", 1]]
+  Rendering blog/articles/show.html.erb within layouts/application
+  [1m[36mSeries Load (0.1ms)[0m  [1m[34mSELECT  "series".* FROM "series" WHERE "series"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered shared/_share_buttons.html.erb (0.8ms)
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL AND (category_name LIKE '%all%') AND ("articles"."id" != ?)[0m  [["published", "t"], ["id", 14]]
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered blog/articles/_articles.html.erb (7.0ms)
+  Rendered blog/articles/_article_layout.html.erb (19.1ms)
+  Rendered blog/articles/show.html.erb within layouts/application (20.5ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 157ms (Views: 132.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/blog" for 69.116.19.79 at 2022-05-30 16:28:51 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#index as HTML
+  Rendering blog/articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL ORDER BY created_at DESC[0m  [["published", "t"]]
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered blog/articles/_articles.html.erb (28.3ms)
+  Rendered blog/articles/index.html.erb within layouts/application (30.6ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 131ms (Views: 128.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pdfjs/full?file=%2Fpdfs%2Fthesis.pdf" for 69.116.19.79 at 2022-05-30 16:28:58 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PdfjsViewer::ViewerController#full as HTML
+  Parameters: {"file"=>"/pdfs/thesis.pdf"}
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/full.html.erb
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_head.html.erb (112.1ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_extra_head.html.erb (0.4ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_printcontainer.html.erb (0.3ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_viewer.html.erb (120.0ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/full.html.erb (124.6ms)
+Completed 200 OK in 130ms (Views: 127.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pdfjs/full?file=%2Fpdfs%2Fthesis.pdf" for 69.116.19.79 at 2022-05-30 16:28:58 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PdfjsViewer::ViewerController#full as HTML
+  Parameters: {"file"=>"/pdfs/thesis.pdf"}
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/full.html.erb
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_head.html.erb (32.7ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_extra_head.html.erb (0.4ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_printcontainer.html.erb (0.3ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_viewer.html.erb (40.2ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/full.html.erb (41.8ms)
+Completed 200 OK in 47ms (Views: 46.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog" for 69.116.19.79 at 2022-05-30 16:34:49 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#index as HTML
+  Rendering blog/articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL ORDER BY created_at DESC[0m  [["published", "t"]]
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered blog/articles/_articles.html.erb (32.9ms)
+  Rendered blog/articles/index.html.erb within layouts/application (34.5ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 143ms (Views: 141.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pdfjs/full?file=%2Fpdfs%2Fthesis.pdf" for 69.116.19.79 at 2022-05-30 16:34:57 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PdfjsViewer::ViewerController#full as HTML
+  Parameters: {"file"=>"/pdfs/thesis.pdf"}
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/full.html.erb
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_head.html.erb (30.8ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_extra_head.html.erb (0.4ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_printcontainer.html.erb (0.3ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_viewer.html.erb (39.6ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/full.html.erb (41.3ms)
+Completed 200 OK in 46ms (Views: 44.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pdfjs/full?file=%2Fpdfs%2Fthesis.pdf" for 69.116.19.79 at 2022-05-30 16:34:57 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PdfjsViewer::ViewerController#full as HTML
+  Parameters: {"file"=>"/pdfs/thesis.pdf"}
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/full.html.erb
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_head.html.erb (31.7ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_extra_head.html.erb (0.4ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_printcontainer.html.erb (0.3ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_viewer.html.erb (39.5ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/full.html.erb (43.0ms)
+Completed 200 OK in 46ms (Views: 45.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog" for 69.116.19.79 at 2022-05-30 16:35:15 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#index as HTML
+  Rendering blog/articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL ORDER BY created_at DESC[0m  [["published", "t"]]
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered blog/articles/_articles.html.erb (32.4ms)
+  Rendered blog/articles/index.html.erb within layouts/application (35.3ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_body.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 141ms (Views: 138.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/blog" for 69.116.19.79 at 2022-05-30 16:35:18 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#index as HTML
+  Rendering blog/articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL ORDER BY created_at DESC[0m  [["published", "t"]]
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered blog/articles/_articles.html.erb (29.2ms)
+  Rendered blog/articles/index.html.erb within layouts/application (31.1ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_body.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 149ms (Views: 147.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pdfjs/full?file=%2Fpdfs%2Fthesis.pdf" for 69.116.19.79 at 2022-05-30 16:35:21 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PdfjsViewer::ViewerController#full as HTML
+  Parameters: {"file"=>"/pdfs/thesis.pdf"}
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/full.html.erb
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_head.html.erb (32.1ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_extra_head.html.erb (1.1ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_printcontainer.html.erb (0.3ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_viewer.html.erb (38.6ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/full.html.erb (40.9ms)
+Completed 200 OK in 45ms (Views: 43.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pdfjs/full?file=%2Fpdfs%2Fthesis.pdf" for 69.116.19.79 at 2022-05-30 16:35:21 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PdfjsViewer::ViewerController#full as HTML
+  Parameters: {"file"=>"/pdfs/thesis.pdf"}
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/full.html.erb
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_head.html.erb (49.5ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_extra_head.html.erb (0.6ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_printcontainer.html.erb (0.4ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_viewer.html.erb (56.9ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/full.html.erb (60.9ms)
+Completed 200 OK in 64ms (Views: 63.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pdfjs/full?file=%2Fpdfs%2Fthesis.pdf" for 69.116.19.79 at 2022-05-30 16:35:44 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PdfjsViewer::ViewerController#full as HTML
+  Parameters: {"file"=>"/pdfs/thesis.pdf"}
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/full.html.erb
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_head.html.erb (1248.3ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_extra_head.html.erb (0.3ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_printcontainer.html.erb (0.2ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_viewer.html.erb (1251.9ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/full.html.erb (1254.0ms)
+Completed 200 OK in 1269ms (Views: 1262.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog" for 69.116.19.79 at 2022-05-30 16:35:57 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#index as HTML
+  Rendering blog/articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL ORDER BY created_at DESC[0m  [["published", "t"]]
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered blog/articles/_articles.html.erb (92.7ms)
+  Rendered blog/articles/index.html.erb within layouts/application (96.8ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 400ms (Views: 386.8ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/pdfjs/full?file=%2Fpdfs%2Fthesis.pdf" for 69.116.19.79 at 2022-05-30 16:36:42 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PdfjsViewer::ViewerController#full as HTML
+  Parameters: {"file"=>"/pdfs/thesis.pdf"}
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/full.html.erb
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_head.html.erb (30.8ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_extra_head.html.erb (0.3ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_printcontainer.html.erb (0.3ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_viewer.html.erb (40.3ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/full.html.erb (41.6ms)
+Completed 200 OK in 45ms (Views: 44.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pdfjs/full?file=%2Fpdfs%2Fthesis.pdf" for 69.116.19.79 at 2022-05-30 16:36:42 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PdfjsViewer::ViewerController#full as HTML
+  Parameters: {"file"=>"/pdfs/thesis.pdf"}
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/full.html.erb
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_head.html.erb (41.8ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_extra_head.html.erb (0.3ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_printcontainer.html.erb (0.3ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_viewer.html.erb (52.1ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/full.html.erb (53.8ms)
+Completed 200 OK in 58ms (Views: 56.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog" for 69.116.19.79 at 2022-05-30 16:36:47 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#index as HTML
+  Rendering blog/articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL ORDER BY created_at DESC[0m  [["published", "t"]]
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered blog/articles/_articles.html.erb (28.8ms)
+  Rendered blog/articles/index.html.erb within layouts/application (30.9ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 143ms (Views: 141.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/blog" for 69.116.19.79 at 2022-05-30 16:37:13 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#index as HTML
+  Rendering blog/articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL ORDER BY created_at DESC[0m  [["published", "t"]]
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered blog/articles/_articles.html.erb (28.8ms)
+  Rendered blog/articles/index.html.erb within layouts/application (30.8ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 142ms (Views: 139.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pdfjs/full?file=%2Fpdfs%2Fthesis.pdf" for 69.116.19.79 at 2022-05-30 16:37:16 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PdfjsViewer::ViewerController#full as HTML
+  Parameters: {"file"=>"/pdfs/thesis.pdf"}
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/full.html.erb
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_head.html.erb (30.7ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_extra_head.html.erb (0.3ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_printcontainer.html.erb (0.3ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_viewer.html.erb (38.1ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/full.html.erb (39.8ms)
+Completed 200 OK in 44ms (Views: 43.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pdfjs/full?file=%2Fpdfs%2Fthesis.pdf" for 69.116.19.79 at 2022-05-30 16:37:16 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PdfjsViewer::ViewerController#full as HTML
+  Parameters: {"file"=>"/pdfs/thesis.pdf"}
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/full.html.erb
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_head.html.erb (49.0ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_extra_head.html.erb (0.3ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_printcontainer.html.erb (0.3ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_viewer.html.erb (55.9ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/full.html.erb (58.7ms)
+Completed 200 OK in 61ms (Views: 60.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog" for 69.116.19.79 at 2022-05-30 16:37:46 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#index as HTML
+  Rendering blog/articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL ORDER BY created_at DESC[0m  [["published", "t"]]
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered blog/articles/_articles.html.erb (30.4ms)
+  Rendered blog/articles/index.html.erb within layouts/application (32.7ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 145ms (Views: 142.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/blog/article/14/edit" for 69.116.19.79 at 2022-05-30 16:37:47 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering blog/articles/edit.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mSeries Load (0.1ms)[0m  [1m[34mSELECT  "series".* FROM "series" WHERE "series"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mSeries Load (0.1ms)[0m  [1m[34mSELECT "series".* FROM "series"[0m
+  Rendered blog/articles/_form.html.erb (1157.7ms)
+  Rendered blog/articles/edit.html.erb within layouts/application (1159.7ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 1273ms (Views: 1255.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/blog/article/14/edit" for 69.116.19.79 at 2022-05-30 16:39:28 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering blog/articles/edit.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mSeries Load (0.1ms)[0m  [1m[34mSELECT  "series".* FROM "series" WHERE "series"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mSeries Load (0.1ms)[0m  [1m[34mSELECT "series".* FROM "series"[0m
+  Rendered blog/articles/_form.html.erb (51.3ms)
+  Rendered blog/articles/edit.html.erb within layouts/application (63.4ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_body.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 233ms (Views: 225.0ms | ActiveRecord: 1.4ms)
+
+
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" ORDER BY "articles"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/blog/article/14/edit" for 69.116.19.79 at 2022-05-30 16:40:01 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering blog/articles/edit.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mSeries Load (0.1ms)[0m  [1m[34mSELECT  "series".* FROM "series" WHERE "series"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mSeries Load (0.1ms)[0m  [1m[34mSELECT "series".* FROM "series"[0m
+  Rendered blog/articles/_form.html.erb (15.6ms)
+  Rendered blog/articles/edit.html.erb within layouts/application (17.8ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_body.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 151ms (Views: 145.9ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/blog/articles/14" for 69.116.19.79 at 2022-05-30 16:40:09 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"it4dEYEKa3Jzxu58NsjzZBqNEykkchnAXCgY2wPV6YFRnpX17KHgMt2ANz5Gdtq+UZK9zN3tCnnu/MQstp4XXA==", "article"=>{"title"=>"Demographic Predictors of Gas Leak Reporting", "image_link"=>"", "description"=>"Data from a nationally representative sample (N=598) was analyzed, and responses to questions probing respondents’ specific actions upon suspecting a leak were extracted from a larger survey  (N=1060). Variables corresponding to respondents’ demographics and gas consumption patterns were cleaned, re-coded, and fed into a Poisson regression model. Incident risk ratios were reported for variables associated with an increased number of actions taken upon suspecting a gas leak.", "content"=>"<p>Click here for article pdf.</p>", "tags"=>"Gas Leak,Health Belief Model,Reporting,Poisson Regression", "file_name"=>"masters_thesis", "viewing_format"=>"pdf", "project_id"=>"", "series_id"=>"", "category_name"=>"all", "published"=>"true"}, "commit"=>"publish article", "id"=>"14"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArticle Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "articles" WHERE "articles"."title" = ? AND ("articles"."id" != ?) LIMIT ?[0m  [["title", "Demographic Predictors of Gas Leak Reporting"], ["id", 14], ["LIMIT", 1]]
+  [1m[35mSQL (4.8ms)[0m  [1m[33mUPDATE "articles" SET "file_name" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["file_name", "masters_thesis"], ["updated_at", "2022-05-30 16:40:09.162566"], ["id", 14]]
+  [1m[35m (12.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mArticle Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "articles" WHERE "articles"."title" = ? AND ("articles"."id" != ?) LIMIT ?[0m  [["title", "Demographic Predictors of Gas Leak Reporting"], ["id", 14], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://b6d90eadcf8c46a1b2244b5fbdef8312.vfs.cloud9.us-east-1.amazonaws.com/blog/article/Demographic-Predictors-of-Gas-Leak-Reporting/14
+Completed 302 Found in 55ms (ActiveRecord: 17.8ms)
+
+
+Started GET "/blog/article/Demographic-Predictors-of-Gas-Leak-Reporting/14" for 69.116.19.79 at 2022-05-30 16:40:09 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#show as HTML
+  Parameters: {"slug"=>"Demographic-Predictors-of-Gas-Leak-Reporting", "id"=>"14"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mCommentable Load (0.1ms)[0m  [1m[34mSELECT  "commentables".* FROM "commentables" WHERE "commentables"."object_id" = ? AND "commentables"."object_type" = ? LIMIT ?[0m  [["object_id", 14], ["object_type", "Article"], ["LIMIT", 1]]
+  [1m[36mCommentable Load (0.1ms)[0m  [1m[34mSELECT  "commentables".* FROM "commentables" WHERE "commentables"."object_id" = ? AND "commentables"."object_type" = ? LIMIT ?[0m  [["object_id", 14], ["object_type", "Article"], ["LIMIT", 1]]
+  Rendering blog/articles/show.html.erb within layouts/application
+  [1m[36mSeries Load (0.1ms)[0m  [1m[34mSELECT  "series".* FROM "series" WHERE "series"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered shared/_share_buttons.html.erb (0.9ms)
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL AND (category_name LIKE '%all%') AND ("articles"."id" != ?)[0m  [["published", "t"], ["id", 14]]
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered blog/articles/_articles.html.erb (7.4ms)
+  Rendered blog/articles/_article_layout.html.erb (19.5ms)
+  Rendered blog/articles/show.html.erb within layouts/application (22.0ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_body.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 194ms (Views: 162.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 69.116.19.79 at 2022-05-30 16:40:12 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Processing by AdminsController#dashboard as HTML
+  Rendering admins/dashboard.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."admin_id" = ?[0m  [["admin_id", 2]]
+  Rendered blog/articles/_articles.html.erb (7.0ms)
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."admin_id" = ?[0m  [["admin_id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects" WHERE "projects"."admin_id" = ?[0m  [["admin_id", 2]]
+  Rendered project/projects/_projects.html.erb (7.6ms)
+  [1m[36mSeries Load (0.1ms)[0m  [1m[34mSELECT "series".* FROM "series" WHERE "series"."admin_id" = ?[0m  [["admin_id", 2]]
+  Rendered series/_series.html.erb (3.2ms)
+  Rendered admins/_form.html.erb (4.5ms)
+  Rendered admins/dashboard.html.erb within layouts/application (32.9ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 142ms (Views: 140.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/blog" for 69.116.19.79 at 2022-05-30 16:40:17 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#index as HTML
+  Rendering blog/articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL ORDER BY created_at DESC[0m  [["published", "t"]]
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered blog/articles/_articles.html.erb (30.5ms)
+  Rendered blog/articles/index.html.erb within layouts/application (32.3ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_body.html.erb (4.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 143ms (Views: 140.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pdfjs/full?file=%2Fpdfs%2Fmasters_thesis.pdf" for 69.116.19.79 at 2022-05-30 16:40:23 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PdfjsViewer::ViewerController#full as HTML
+  Parameters: {"file"=>"/pdfs/masters_thesis.pdf"}
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/full.html.erb
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_head.html.erb (30.8ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_extra_head.html.erb (0.3ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_printcontainer.html.erb (0.3ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_viewer.html.erb (40.0ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/full.html.erb (43.2ms)
+Completed 200 OK in 49ms (Views: 45.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pdfjs/full?file=%2Fpdfs%2Fmasters_thesis.pdf" for 69.116.19.79 at 2022-05-30 16:40:23 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PdfjsViewer::ViewerController#full as HTML
+  Parameters: {"file"=>"/pdfs/masters_thesis.pdf"}
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/full.html.erb
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_head.html.erb (39.3ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_extra_head.html.erb (0.3ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_printcontainer.html.erb (0.3ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_viewer.html.erb (50.4ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/full.html.erb (51.7ms)
+Completed 200 OK in 54ms (Views: 53.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog" for 69.116.19.79 at 2022-05-30 16:40:46 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#index as HTML
+  Rendering blog/articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL ORDER BY created_at DESC[0m  [["published", "t"]]
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered blog/articles/_articles.html.erb (29.3ms)
+  Rendered blog/articles/index.html.erb within layouts/application (30.8ms)
+  Rendered layouts/_navbar.html.erb (5.1ms)
+  Rendered layouts/_body.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 148ms (Views: 146.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 69.116.19.79 at 2022-05-30 16:41:06 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Processing by AdminsController#dashboard as HTML
+  Rendering admins/dashboard.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."admin_id" = ?[0m  [["admin_id", 2]]
+  Rendered blog/articles/_articles.html.erb (8.0ms)
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."admin_id" = ?[0m  [["admin_id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects" WHERE "projects"."admin_id" = ?[0m  [["admin_id", 2]]
+  Rendered project/projects/_projects.html.erb (5.1ms)
+  [1m[36mSeries Load (0.1ms)[0m  [1m[34mSELECT "series".* FROM "series" WHERE "series"."admin_id" = ?[0m  [["admin_id", 2]]
+  Rendered series/_series.html.erb (2.7ms)
+  Rendered admins/_form.html.erb (4.0ms)
+  Rendered admins/dashboard.html.erb within layouts/application (31.8ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 136ms (Views: 135.5ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/admins/sign_out" for 69.116.19.79 at 2022-05-30 16:41:08 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"GVlKKLKTRzrmeN3MvBgqIY9P7z7rvNhjDcZEVt1FHULCGcLM3zjMekg+BI7MpgP7xFBB2xIjy9q/EpihaA7jnw=="}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://b6d90eadcf8c46a1b2244b5fbdef8312.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 12ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 69.116.19.79 at 2022-05-30 16:41:08 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at ASC LIMIT ?[0m  [["LIMIT", 5]]
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL ORDER BY created_at DESC LIMIT ?[0m  [["published", "t"], ["LIMIT", 10]]
+  Rendered blog/articles/_articles.html.erb (4.9ms)
+  Rendered pages/home.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_body.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 122ms (Views: 116.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/about" for 69.116.19.79 at 2022-05-30 16:41:29 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 107ms (Views: 106.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 69.116.19.79 at 2022-05-30 16:49:04 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 110ms (Views: 109.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 69.116.19.79 at 2022-05-30 16:49:07 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 108ms (Views: 107.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 69.116.19.79 at 2022-05-30 16:49:09 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_body.html.erb (3.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 107ms (Views: 105.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 69.116.19.79 at 2022-05-30 16:49:18 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navbar.html.erb (1.2ms)
+  Rendered layouts/_body.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 144ms (Views: 143.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 69.116.19.79 at 2022-05-30 16:49:23 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (2.1ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 108ms (Views: 107.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 69.116.19.79 at 2022-05-30 16:49:51 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 106ms (Views: 104.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 69.116.19.79 at 2022-05-30 16:50:10 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 107ms (Views: 106.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 69.116.19.79 at 2022-05-30 16:50:17 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (5.5ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 120ms (Views: 119.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 69.116.19.79 at 2022-05-30 16:50:56 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 134ms (Views: 133.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 69.116.19.79 at 2022-05-30 16:51:31 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (1.4ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 102ms (Views: 101.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 69.116.19.79 at 2022-05-30 16:52:20 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (2.3ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 108ms (Views: 106.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 69.116.19.79 at 2022-05-30 16:52:30 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navbar.html.erb (1.4ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 113ms (Views: 112.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 69.116.19.79 at 2022-05-30 16:52:53 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 126ms (Views: 124.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 69.116.19.79 at 2022-05-30 16:53:10 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 138ms (Views: 137.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 69.116.19.79 at 2022-05-30 16:53:35 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 114ms (Views: 113.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 69.116.19.79 at 2022-05-30 16:58:40 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_body.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 232ms (Views: 231.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog" for 69.116.19.79 at 2022-05-30 16:58:49 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#index as HTML
+  Rendering blog/articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL ORDER BY created_at DESC[0m  [["published", "t"]]
+  Rendered blog/articles/_articles.html.erb (5.7ms)
+  Rendered blog/articles/index.html.erb within layouts/application (8.2ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 112ms (Views: 110.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/blog" for 69.116.19.79 at 2022-05-30 16:59:28 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#index as HTML
+  Rendering blog/articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL ORDER BY created_at DESC[0m  [["published", "t"]]
+  Rendered blog/articles/_articles.html.erb (5.5ms)
+  Rendered blog/articles/index.html.erb within layouts/application (7.9ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 122ms (Views: 120.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/blog" for 69.116.19.79 at 2022-05-30 17:22:37 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#index as HTML
+  Rendering blog/articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL ORDER BY created_at DESC[0m  [["published", "t"]]
+  Rendered blog/articles/_articles.html.erb (5.5ms)
+  Rendered blog/articles/index.html.erb within layouts/application (7.9ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 150ms (Views: 148.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/blog" for 69.116.19.79 at 2022-05-30 17:23:09 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#index as HTML
+  Rendering blog/articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL ORDER BY created_at DESC[0m  [["published", "t"]]
+  Rendered blog/articles/_articles.html.erb (7.0ms)
+  Rendered blog/articles/index.html.erb within layouts/application (9.2ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 109ms (Views: 108.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/blog" for 69.116.19.79 at 2022-05-30 17:23:27 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#index as HTML
+  Rendering blog/articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL ORDER BY created_at DESC[0m  [["published", "t"]]
+  Rendered blog/articles/_articles.html.erb (5.6ms)
+  Rendered blog/articles/index.html.erb within layouts/application (8.0ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 112ms (Views: 111.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/blog" for 69.116.19.79 at 2022-05-30 17:24:13 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#index as HTML
+  Rendering blog/articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL ORDER BY created_at DESC[0m  [["published", "t"]]
+  Rendered blog/articles/_articles.html.erb (5.5ms)
+  Rendered blog/articles/index.html.erb within layouts/application (7.8ms)
+  Rendered layouts/_navbar.html.erb (2.1ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 114ms (Views: 112.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/blog" for 69.116.19.79 at 2022-05-30 17:24:36 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#index as HTML
+  Rendering blog/articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL ORDER BY created_at DESC[0m  [["published", "t"]]
+  Rendered blog/articles/_articles.html.erb (4.9ms)
+  Rendered blog/articles/index.html.erb within layouts/application (8.0ms)
+  Rendered layouts/_navbar.html.erb (1.7ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 111ms (Views: 109.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/blog" for 69.116.19.79 at 2022-05-30 17:26:13 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#index as HTML
+  Rendering blog/articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL ORDER BY created_at DESC[0m  [["published", "t"]]
+  Rendered blog/articles/_articles.html.erb (6.6ms)
+  Rendered blog/articles/index.html.erb within layouts/application (9.0ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 115ms (Views: 113.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/blog" for 69.116.19.79 at 2022-05-30 17:26:18 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#index as HTML
+  Rendering blog/articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL ORDER BY created_at DESC[0m  [["published", "t"]]
+  Rendered blog/articles/_articles.html.erb (12.6ms)
+  Rendered blog/articles/index.html.erb within layouts/application (15.5ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 119ms (Views: 116.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/about" for 69.116.19.79 at 2022-05-30 17:26:20 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 106ms (Views: 104.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 69.116.19.79 at 2022-05-30 17:30:35 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 107ms (Views: 105.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 69.116.19.79 at 2022-05-30 17:30:54 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 134ms (Views: 132.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 69.116.19.79 at 2022-05-30 17:31:53 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 103ms (Views: 102.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 69.116.19.79 at 2022-05-30 17:32:35 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 110ms (Views: 109.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 69.116.19.79 at 2022-05-30 17:33:08 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 129ms (Views: 128.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog" for 69.116.19.79 at 2022-05-30 17:33:15 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#index as HTML
+  Rendering blog/articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL ORDER BY created_at DESC[0m  [["published", "t"]]
+  Rendered blog/articles/_articles.html.erb (4.8ms)
+  Rendered blog/articles/index.html.erb within layouts/application (8.9ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_body.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 116ms (Views: 114.8ms | ActiveRecord: 0.3ms)
+
+

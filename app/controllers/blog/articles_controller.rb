@@ -78,7 +78,7 @@ class Blog::ArticlesController < ApplicationController
         @article.project_id = params[:project_id] if params[:project_id]
         @article.save!
         
-        redirect_to blog_article_path(@article), notice: "Article saved!"
+        redirect_to "blog/article/#{@article.slug}/#{@article.id}", notice: "Article saved!"
     end
     
     def filter_by_category
@@ -109,6 +109,8 @@ class Blog::ArticlesController < ApplicationController
             :image_link,
             :tags,
             :category_name,
+            :viewing_format,
+            :file_name,
             :project_id,
             :series_id,
             :published)

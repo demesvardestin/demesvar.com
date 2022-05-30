@@ -55,9 +55,20 @@
         </div>
     </div>
     
+    <div class="field" id="file-name-field" style="display: <%= @article.viewing_format == "pdf" ? "block" : "none" %>;">
+        <div class="row">
+            <div class="col-md-2">
+                <h5><%= f.label :file_name %></h5>
+            </div>
+            <div class="col-md-10">
+                <%= f.text_field :file_name, id:"file-name", class:"form-control", placeholder: "filename.pdf" %>
+            </div>
+        </div>
+    </div>
+    
     <div class="field">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="dropdown">
                     <button class="btn btn-secondary btn-block" type="button"
                         id="category-button" data-toggle="dropdown" aria-haspopup="true"
@@ -80,7 +91,31 @@
                 </div>
             </div>
             
-            <div class="col-md-4">
+            <div class="col-md-3">
+                <div class="dropdown">
+                    <button class="btn btn-secondary btn-block" type="button"
+                        id="viewing-format-button" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        <% if @article.viewing_format %>
+                            <%= @article.viewing_format %> <i class="fas fa-angle-down"></i>
+                        <% else %>
+                            viewing format <i class="fas fa-angle-down"></i>
+                        <% end %>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="viewing-format-button">
+                        <% ["html", "pdf"].each do |vf| %>
+                            <a class="dropdown-item"
+                                onclick="$('#viewing-format-button').text('<%= vf %>');
+                                        document.querySelector('#viewing-format').value = '<%= vf %>';
+                                        showFileNameField()">
+                                <%= vf %>
+                            </a>
+                        <% end %>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-3">
                 <div class="dropdown">
                     <button class="btn btn-secondary btn-block" type="button"
                         id="project-button" data-toggle="dropdown" aria-haspopup="true"
@@ -103,7 +138,7 @@
                 </div>
             </div>
             
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="dropdown">
                     <button class="btn btn-secondary btn-block" type="button"
                         id="series-button" data-toggle="dropdown" aria-haspopup="true"
@@ -126,6 +161,8 @@
                 </div>
             </div>
         </div>
+        
+        <%= f.hidden_field :viewing_format, value: "#{@article.viewing_format}", id: "viewing-format" %>
         <%= f.hidden_field :project_id, value: "#{@article.project_id}", id: "project-id" %>
         <%= f.hidden_field :series_id, value: "#{@article.series_id}", id: "series-id" %>
         <%= f.hidden_field :category_name, value: "#{@article.category_name}", id: "category-name" %>
@@ -160,4 +197,15 @@
         let form = document.querySelector("#article-form");
         form.submit();
     }
+    
+    showFileNameField = () => {
+        if (format.value == "pdf") {
+            fileNameField.style.display = "block"
+        } else {
+            fileNameField.style.display = "none"
+        }
+    }
+    
+    let format = document.querySelector("#viewing-format")
+    let fileNameField = document.querySelector("#file-name-field")
 </script>

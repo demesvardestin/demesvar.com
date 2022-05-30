@@ -16,6 +16,10 @@ class Article < ApplicationRecord
         _title_.split(' ').join('-')
     end
     
+    def is_pdf?
+        viewing_format == "pdf"
+    end
+    
     def series
         Series.find_by(id: series_id)
     end

@@ -1,33 +1,37 @@
 <section id="articles-section">
-    <div class="row">
-        <div class="col-lg-3">
-            <div class="dropdown">
-                <button class="btn btn-outline-primary btn-block" type="button"
-                    id="categoryMenuButton" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    categories <i class="fas fa-angle-down"></i>
-                </button>
-                <div class="dropdown-menu" aria-labelledby="categoryMenuButton">
-                    <% all_categories.each do |cat| %>
-                    <a class="dropdown-item" style="cursor: pointer;"
-                        onclick="loadCategory(this, '<%= cat %>');">
-                        <%= cat %>
-                    </a>
-                    <% end %>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!--<div class="row">-->
+    <!--    <div class="col-lg-3">-->
+    <!--        <div class="dropdown">-->
+    <!--            <button class="btn btn-outline-primary btn-block" type="button"-->
+    <!--                id="categoryMenuButton" data-toggle="dropdown"-->
+    <!--                aria-haspopup="true" aria-expanded="false">-->
+    <!--                categories <i class="fas fa-angle-down"></i>-->
+    <!--            </button>-->
+    <!--            <div class="dropdown-menu" aria-labelledby="categoryMenuButton">-->
+    <!--                <% all_categories.each do |cat| %>-->
+    <!--                <a class="dropdown-item" style="cursor: pointer;"-->
+    <!--                    onclick="loadCategory(this, '<%= cat %>');">-->
+    <!--                    <%= cat %>-->
+    <!--                </a>-->
+    <!--                <% end %>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--</div>-->
     
-    <div class="row">
-        <div class="col-lg-8">
-            <hr>
-        </div>
-    </div>
+    <!--<div class="row">-->
+    <!--    <div class="col-lg-8">-->
+    <!--        <hr>-->
+    <!--    </div>-->
+    <!--</div>-->
     
     <div class="row">
         <div class="col-lg-8">
             <section id="articles">
+                <h6>
+                    <strong>recent posts</strong>
+                </h6>
+                
                 <%= render partial: "blog/articles/articles", locals: { posts: @articles } %>
             </section>
         </div>

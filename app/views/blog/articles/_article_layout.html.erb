@@ -76,15 +76,6 @@
                     </article>
                 </div>
             </div>
-            
-            <div class="row">
-                <div class="col-md-12">
-                    <h5>thoughts on this (<%= @article.comments.count %>)</h5>
-                    <section id="comments">
-                        <%= render partial: "comments/comments", locals: { comments: @comments } %>
-                    </section>
-                </div>
-            </div>
         </div>
         
         <div class="col-md-4 related-posts-col">
