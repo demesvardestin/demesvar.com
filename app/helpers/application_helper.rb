@@ -1,7 +1,7 @@
 module ApplicationHelper
     def all_categories
         ["sports", "religion", "politics", "philosophy", "technology",
-            "economics", "all"].sort
+            "economics", "all", "public health", "science", "medicine", "policy", "research"].sort
     end
     
     def project_categories
