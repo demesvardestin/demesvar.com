@@ -15,7 +15,6 @@
 //= require turbolinks
 //= require social-share-button
 //= require tinymce
-//= require tinymce-jquery
 //= require_tree .
 
 $(document).ready(function() {

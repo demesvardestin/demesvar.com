@@ -47031,3 +47031,329 @@ Processing by Blog::ArticlesController#index as HTML
 Completed 200 OK in 128ms (Views: 120.0ms | ActiveRecord: 4.8ms)
 
 
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ubuntu/environment/app/models/application_record.rb:1)
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ubuntu/environment/app/models/application_record.rb:1)
+Started GET "/blog" for 69.116.19.79 at 2022-05-31 01:29:48 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by Blog::ArticlesController#index as HTML
+  Rendering blog/articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (3.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL ORDER BY created_at DESC[0m  [["published", "t"]]
+  ↳ app/views/blog/articles/_articles.html.erb:1
+  Rendered blog/articles/_articles.html.erb (27.7ms)
+  Rendered blog/articles/index.html.erb within layouts/application (35.5ms)
+Completed 500 Internal Server Error in 311ms (ActiveRecord: 4.4ms)
+
+
+  
+LoadError (cannot load such file -- sass):
+  
+app/views/layouts/application.html.erb:35:in `_app_views_layouts_application_html_erb__3010965371127301577_70129605740100'
+Started GET "/blog" for 69.116.19.79 at 2022-05-31 01:30:10 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#index as HTML
+  Rendering blog/articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL ORDER BY created_at DESC[0m  [["published", "t"]]
+  ↳ app/views/blog/articles/_articles.html.erb:1
+  Rendered blog/articles/_articles.html.erb (7.5ms)
+  Rendered blog/articles/index.html.erb within layouts/application (9.8ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.4ms)
+
+
+  
+LoadError (cannot load such file -- sass):
+  
+app/views/layouts/application.html.erb:35:in `_app_views_layouts_application_html_erb__3010965371127301577_70129617567860'
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ubuntu/environment/app/models/application_record.rb:1)
+Started GET "/blog" for 69.116.19.79 at 2022-05-31 01:30:29 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by Blog::ArticlesController#index as HTML
+  Rendering blog/articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL ORDER BY created_at DESC[0m  [["published", "t"]]
+  ↳ app/views/blog/articles/_articles.html.erb:1
+  Rendered blog/articles/_articles.html.erb (24.5ms)
+  Rendered blog/articles/index.html.erb within layouts/application (27.6ms)
+Completed 500 Internal Server Error in 1805ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'tinymce-jquery' with type 'application/javascript'
+Checked in these paths: 
+  /home/ubuntu/environment/app/assets/config
+  /home/ubuntu/environment/app/assets/images
+  /home/ubuntu/environment/app/assets/javascripts
+  /home/ubuntu/environment/app/assets/stylesheets
+  /home/ubuntu/environment/vendor/assets/javascripts
+  /home/ubuntu/environment/vendor/assets/stylesheets
+  /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/assets/javascripts
+  /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/assets/stylesheets
+  /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/social-share-button-1.2.4/app/assets/images
+  /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/social-share-button-1.2.4/app/assets/javascripts
+  /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/social-share-button-1.2.4/app/assets/stylesheets
+  /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/tinymce-rails-6.0.3/app/assets/javascripts
+  /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/tinymce-rails-6.0.3/app/assets/source
+  /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/tinymce-rails-6.0.3/vendor/assets/javascripts
+  /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/jquery-rails-4.5.0/vendor/assets/javascripts
+  /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actioncable-5.2.8/lib/assets/compiled
+  /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/activestorage-5.2.8/app/assets/javascripts
+  /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionview-5.2.8/lib/assets/compiled
+  /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/ubuntu/environment/node_modules):
+    32:     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    33:     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    34:     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/default.min.css">
+    35:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    36:     
+    37:     <script src="https://js.pusher.com/4.4/pusher.min.js"></script>
+    38:     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  
+app/assets/javascripts/application.js:18
+app/views/layouts/application.html.erb:35:in `_app_views_layouts_application_html_erb__3859600176746562602_70159299463180'
+Started GET "/blog" for 69.116.19.79 at 2022-05-31 01:31:29 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#index as HTML
+  Rendering blog/articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL ORDER BY created_at DESC[0m  [["published", "t"]]
+  ↳ app/views/blog/articles/_articles.html.erb:1
+  Rendered blog/articles/_articles.html.erb (9.5ms)
+  Rendered blog/articles/index.html.erb within layouts/application (11.5ms)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'tinymce-jquery' with type 'application/javascript'
+Checked in these paths: 
+  /home/ubuntu/environment/app/assets/config
+  /home/ubuntu/environment/app/assets/images
+  /home/ubuntu/environment/app/assets/javascripts
+  /home/ubuntu/environment/app/assets/stylesheets
+  /home/ubuntu/environment/vendor/assets/javascripts
+  /home/ubuntu/environment/vendor/assets/stylesheets
+  /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/assets/javascripts
+  /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/assets/stylesheets
+  /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/social-share-button-1.2.4/app/assets/images
+  /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/social-share-button-1.2.4/app/assets/javascripts
+  /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/social-share-button-1.2.4/app/assets/stylesheets
+  /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/tinymce-rails-6.0.3/app/assets/javascripts
+  /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/tinymce-rails-6.0.3/app/assets/source
+  /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/tinymce-rails-6.0.3/vendor/assets/javascripts
+  /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/jquery-rails-4.5.0/vendor/assets/javascripts
+  /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actioncable-5.2.8/lib/assets/compiled
+  /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/activestorage-5.2.8/app/assets/javascripts
+  /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionview-5.2.8/lib/assets/compiled
+  /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/ubuntu/environment/node_modules):
+    32:     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    33:     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    34:     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/default.min.css">
+    35:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    36:     
+    37:     <script src="https://js.pusher.com/4.4/pusher.min.js"></script>
+    38:     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  
+app/assets/javascripts/application.js:18
+app/views/layouts/application.html.erb:35:in `_app_views_layouts_application_html_erb__3859600176746562602_70159472945800'
+Started GET "/blog" for 69.116.19.79 at 2022-05-31 01:31:59 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#index as HTML
+  Rendering blog/articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL ORDER BY created_at DESC[0m  [["published", "t"]]
+  ↳ app/views/blog/articles/_articles.html.erb:1
+  Rendered blog/articles/_articles.html.erb (7.7ms)
+  Rendered blog/articles/index.html.erb within layouts/application (11.4ms)
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'tinymce-jquery' with type 'application/javascript'
+Checked in these paths: 
+  /home/ubuntu/environment/app/assets/config
+  /home/ubuntu/environment/app/assets/images
+  /home/ubuntu/environment/app/assets/javascripts
+  /home/ubuntu/environment/app/assets/stylesheets
+  /home/ubuntu/environment/vendor/assets/javascripts
+  /home/ubuntu/environment/vendor/assets/stylesheets
+  /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/assets/javascripts
+  /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/assets/stylesheets
+  /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/social-share-button-1.2.4/app/assets/images
+  /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/social-share-button-1.2.4/app/assets/javascripts
+  /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/social-share-button-1.2.4/app/assets/stylesheets
+  /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/tinymce-rails-6.0.3/app/assets/javascripts
+  /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/tinymce-rails-6.0.3/app/assets/source
+  /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/tinymce-rails-6.0.3/vendor/assets/javascripts
+  /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/jquery-rails-4.5.0/vendor/assets/javascripts
+  /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actioncable-5.2.8/lib/assets/compiled
+  /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/activestorage-5.2.8/app/assets/javascripts
+  /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionview-5.2.8/lib/assets/compiled
+  /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/ubuntu/environment/node_modules):
+    32:     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    33:     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    34:     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/default.min.css">
+    35:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    36:     
+    37:     <script src="https://js.pusher.com/4.4/pusher.min.js"></script>
+    38:     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  
+app/assets/javascripts/application.js:18
+app/views/layouts/application.html.erb:35:in `_app_views_layouts_application_html_erb__3859600176746562602_70159482079820'
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ubuntu/environment/app/models/application_record.rb:1)
+Started GET "/blog" for 69.116.19.79 at 2022-06-03 12:57:03 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by Blog::ArticlesController#index as HTML
+  Rendering blog/articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (6.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL ORDER BY created_at DESC[0m  [["published", "t"]]
+  ↳ app/views/blog/articles/_articles.html.erb:1
+  Rendered blog/articles/_articles.html.erb (51.3ms)
+  Rendered blog/articles/index.html.erb within layouts/application (60.2ms)
+Completed 500 Internal Server Error in 877ms (ActiveRecord: 7.3ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'tinymce-jquery' with type 'application/javascript'
+Checked in these paths: 
+  /home/ubuntu/environment/app/assets/config
+  /home/ubuntu/environment/app/assets/images
+  /home/ubuntu/environment/app/assets/javascripts
+  /home/ubuntu/environment/app/assets/stylesheets
+  /home/ubuntu/environment/vendor/assets/javascripts
+  /home/ubuntu/environment/vendor/assets/stylesheets
+  /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/assets/javascripts
+  /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/assets/stylesheets
+  /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/social-share-button-1.2.4/app/assets/images
+  /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/social-share-button-1.2.4/app/assets/javascripts
+  /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/social-share-button-1.2.4/app/assets/stylesheets
+  /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/tinymce-rails-6.0.3/app/assets/javascripts
+  /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/tinymce-rails-6.0.3/app/assets/source
+  /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/tinymce-rails-6.0.3/vendor/assets/javascripts
+  /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/jquery-rails-4.5.0/vendor/assets/javascripts
+  /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actioncable-5.2.8/lib/assets/compiled
+  /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/activestorage-5.2.8/app/assets/javascripts
+  /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/actionview-5.2.8/lib/assets/compiled
+  /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/ubuntu/environment/node_modules):
+    32:     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    33:     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    34:     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/default.min.css">
+    35:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    36:     
+    37:     <script src="https://js.pusher.com/4.4/pusher.min.js"></script>
+    38:     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  
+app/assets/javascripts/application.js:18
+app/views/layouts/application.html.erb:35:in `_app_views_layouts_application_html_erb___1793257165505547463_70211846825260'
+Started GET "/blog" for 69.116.19.79 at 2022-06-03 12:59:58 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#index as HTML
+  Rendering blog/articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (15.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL ORDER BY created_at DESC[0m  [["published", "t"]]
+  ↳ app/views/blog/articles/_articles.html.erb:1
+  Rendered blog/articles/_articles.html.erb (23.3ms)
+  Rendered blog/articles/index.html.erb within layouts/application (31.7ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_body.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 12808ms (Views: 12776.1ms | ActiveRecord: 15.5ms)
+
+
+Started GET "/pdfjs/full?file=%2Fpdfs%2Fmasters_thesis.pdf" for 69.116.19.79 at 2022-06-03 13:07:23 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PdfjsViewer::ViewerController#full as HTML
+  Parameters: {"file"=>"/pdfs/masters_thesis.pdf"}
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/full.html.erb
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_head.html.erb (220.4ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_extra_head.html.erb (0.3ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_printcontainer.html.erb (0.3ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_viewer.html.erb (230.5ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/full.html.erb (235.2ms)
+Completed 200 OK in 242ms (Views: 237.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pdfjs/full?file=%2Fpdfs%2Fmasters_thesis.pdf" for 69.116.19.79 at 2022-06-03 13:07:24 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PdfjsViewer::ViewerController#full as HTML
+  Parameters: {"file"=>"/pdfs/masters_thesis.pdf"}
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/full.html.erb
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_head.html.erb (29.0ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_extra_head.html.erb (0.4ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_printcontainer.html.erb (0.3ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_viewer.html.erb (36.2ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/full.html.erb (38.2ms)
+Completed 200 OK in 43ms (Views: 41.4ms | ActiveRecord: 0.0ms)
+
+
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ubuntu/environment/app/models/application_record.rb:1)
