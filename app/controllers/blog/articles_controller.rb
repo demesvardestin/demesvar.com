@@ -12,6 +12,10 @@ class Blog::ArticlesController < ApplicationController
         redirect_to blog_show_article_path(:id => @article.id, :slug => @article.slug)
     end
     
+    def show_pdf
+        redirect_to "/pdfjs/full?file=%2Fpdfs%2F#{params[:file_name]}.pdf"
+    end
+    
     def show
         @article = Article.find_by(id: params[:id])
         if !@article.published

@@ -45,6 +45,7 @@ Rails.application.routes.draw do
     resources :admins, only: [:create, :update]
     resources :series, only: [:create, :update, :destroy, :show]
     
+    get '/pdf/:file_name', to: 'blog/articles#show_pdf'
     get '/a/:id', to: 'blog/articles#article_redirect_from_short_url'
     get '/preview_post', to: 'blog/articles#preview_post'
     get '/about', to: 'pages#about'

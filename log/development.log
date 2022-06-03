@@ -47613,3 +47613,80 @@ true by adding the following to your application.rb file:
 
   Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
  (called from <top (required)> at /home/ubuntu/environment/app/models/application_record.rb:1)
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ubuntu/environment/app/models/application_record.rb:1)
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ubuntu/environment/app/models/application_record.rb:1)
+Started GET "/pdf/thesis" for 69.116.19.79 at 2022-06-03 16:48:17 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.7.6/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by Blog::ArticlesController#show_pdf as HTML
+  Parameters: {"file_name"=>"thesis"}
+Completed 500 Internal Server Error in 113ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `to' for #<Blog::ArticlesController:0x00007f0fd05530e8>
+Did you mean?  t):
+  
+app/controllers/blog/articles_controller.rb:16:in `show_pdf'
+Started GET "/pdf/thesis" for 69.116.19.79 at 2022-06-03 16:48:32 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Blog::ArticlesController#show_pdf as HTML
+  Parameters: {"file_name"=>"thesis"}
+Redirected to https://b6d90eadcf8c46a1b2244b5fbdef8312.vfs.cloud9.us-east-1.amazonaws.com/pdfjs/full?file=%2Fpdfs%2Fthesis.pdf
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/pdfjs/full?file=%2Fpdfs%2Fthesis.pdf" for 69.116.19.79 at 2022-06-03 16:48:32 +0000
+Cannot render console from 69.116.19.79! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PdfjsViewer::ViewerController#full as HTML
+  Parameters: {"file"=>"/pdfs/thesis.pdf"}
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.7.6/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/full.html.erb
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.7.6/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_head.html.erb (668.6ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.7.6/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_extra_head.html.erb (0.3ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.7.6/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_printcontainer.html.erb (0.3ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.7.6/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/_viewer.html.erb (676.4ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.7.6/gems/pdfjs_viewer-rails-0.3.2/app/views/pdfjs_viewer/viewer/full.html.erb (681.5ms)
+Completed 200 OK in 687ms (Views: 683.6ms | ActiveRecord: 0.0ms)
+
+
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ubuntu/environment/app/models/application_record.rb:1)
