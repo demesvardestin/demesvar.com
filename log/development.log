@@ -4004,7 +4004,7 @@ Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
 
   
 ActionView::Template::Error (undefined method `name' for nil:NilClass):
-     5:                 <div class="col-md-12">
+     5:                 <div class="col-lg-12">
      6:                     <article>
      7:                         <h5>
      8:                             <a href="/category/<%= @article.category.name %>">
@@ -4060,7 +4060,7 @@ Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.0ms)
 
   
 ActionView::Template::Error (undefined method `name' for nil:NilClass):
-     5:                 <div class="col-md-12">
+     5:                 <div class="col-lg-12">
      6:                     <article>
      7:                         <h5>
      8:                             <a href="/category/<%= @article.category.name %>">
@@ -4104,7 +4104,7 @@ Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.3ms)
 
   
 ActionView::Template::Error (undefined method `name' for nil:NilClass):
-     5:                 <div class="col-md-12">
+     5:                 <div class="col-lg-12">
      6:                     <article>
      7:                         <h5>
      8:                             <a href="/category/<%= @article.category.name %>">
@@ -4153,7 +4153,7 @@ ActionView::Template::Error (First argument in form cannot contain nil or be emp
     1: <%= form_for @comment do |f| %>
     2:     <div class="field">
     3:         <div class="row">
-    4:             <div class="col-md-6">
+    4:             <div class="col-lg-6">
   
 app/views/comments/_form.html.erb:1:in `_app_views_comments__form_html_erb___2453421290486919546_70029079737440'
 app/views/comments/_comments.html.erb:16:in `_app_views_comments__comments_html_erb___3786692978236618902_70029081450600'
@@ -4602,7 +4602,7 @@ Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.1ms)
 
   
 ActionView::Template::Error (undefined method `name' for nil:NilClass):
-     5:                 <div class="col-md-12">
+     5:                 <div class="col-lg-12">
      6:                     <article>
      7:                         <h5>
      8:                             <a href="/category/<%= @article.category.name %>">
@@ -4660,7 +4660,7 @@ Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.1ms)
 
   
 ActionView::Template::Error (undefined method `name' for nil:NilClass):
-     5:                 <div class="col-md-12">
+     5:                 <div class="col-lg-12">
      6:                     <article>
      7:                         <h5>
      8:                             <a href="/category/<%= @article.category.name %>">
@@ -4744,7 +4744,7 @@ Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.1ms)
 
   
 ActionView::Template::Error (undefined method `name' for nil:NilClass):
-     5:                 <div class="col-md-12">
+     5:                 <div class="col-lg-12">
      6:                     <article>
      7:                         <h5>
      8:                             <a href="/category/<%= @article.category.name %>">
@@ -6231,7 +6231,7 @@ Completed 500 Internal Server Error in 61ms (ActiveRecord: 0.5ms)
 
   
 ActionView::Template::Error (undefined method `category' for nil:NilClass):
-     5:                 <div class="col-md-12">
+     5:                 <div class="col-lg-12">
      6:                     <article>
      7:                         <h5>
      8:                             <a href="/category/<%= @article.category.name %>">
@@ -6436,7 +6436,7 @@ Completed 500 Internal Server Error in 17ms (ActiveRecord: 1.0ms)
 
   
 ActionView::Template::Error (undefined method `category' for nil:NilClass):
-     5:                 <div class="col-md-12">
+     5:                 <div class="col-lg-12">
      6:                     <article>
      7:                         <h5>
      8:                             <a href="/category/<%= @article.category.name %>">
@@ -7010,7 +7010,7 @@ Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.7ms)
 ActionView::Template::Error (Missing partial comments/_comments with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
   * "/home/ubuntu/environment/app/views"
 ):
-    34:                 <div class="col-md-12">
+    34:                 <div class="col-lg-12">
     35:                     <h4>conversation</h4>
     36:                     <section id="comments">
     37:                         <%= render partial: "comments/comments", locals: { comments: @article.comments } %>
@@ -7086,7 +7086,7 @@ Did you mean?  font_path):
     1: <%= form_for @comment do |f| %>
     2:     <div class="field">
     3:         <div class="row">
-    4:             <div class="col-md-6">
+    4:             <div class="col-lg-6">
   
 app/views/blog/comments/_form.html.erb:1:in `_app_views_blog_comments__form_html_erb___213350658807797747_70203945841780'
 app/views/blog/comments/_comments.html.erb:16:in `_app_views_blog_comments__comments_html_erb___4466737141428726641_70204130940160'
@@ -7121,7 +7121,7 @@ Did you mean?  font_path):
     1: <%= form_for @comment do |f| %>
     2:     <div class="field">
     3:         <div class="row">
-    4:             <div class="col-md-6">
+    4:             <div class="col-lg-6">
   
 app/views/blog/comments/_form.html.erb:1:in `_app_views_blog_comments__form_html_erb___213350658807797747_70203932033260'
 app/views/blog/comments/_comments.html.erb:16:in `_app_views_blog_comments__comments_html_erb___4466737141428726641_70203931908060'
@@ -7156,7 +7156,7 @@ Did you mean?  font_path):
     1: <%= form_for(@comment, :html => { :action => blog_comments_path }) do |f| %>
     2:     <div class="field">
     3:         <div class="row">
-    4:             <div class="col-md-6">
+    4:             <div class="col-lg-6">
   
 app/views/blog/comments/_form.html.erb:1:in `_app_views_blog_comments__form_html_erb___213350658807797747_70204131810660'
 app/views/blog/comments/_comments.html.erb:16:in `_app_views_blog_comments__comments_html_erb___4466737141428726641_70203951341180'
@@ -7875,7 +7875,7 @@ Did you mean?  asset_path):
     1: <%= form_for(@article, :html => { :id => "article-form", :multipart => true }) do |f| %>
     2:     <div class="field">
     3:         <div class="row">
-    4:             <div class="col-md-2">
+    4:             <div class="col-lg-2">
   
 app/views/blog/articles/_form.html.erb:1:in `_app_views_blog_articles__form_html_erb___3180769006025490247_70151922325980'
 app/views/blog/articles/new.html.erb:22:in `_app_views_blog_articles_new_html_erb___3892968746443969341_70151922271040'
@@ -7924,7 +7924,7 @@ Did you mean?  asset_path):
     1: <%= form_for(@article, :html => { :id => "article-form", :multipart => true }) do |f| %>
     2:     <div class="field">
     3:         <div class="row">
-    4:             <div class="col-md-2">
+    4:             <div class="col-lg-2">
   
 app/views/blog/articles/_form.html.erb:1:in `_app_views_blog_articles__form_html_erb___3180769006025490247_47291588882100'
 app/views/blog/articles/new.html.erb:22:in `_app_views_blog_articles_new_html_erb___3892968746443969341_47291582650620'
@@ -12686,7 +12686,7 @@ Completed 500 Internal Server Error in 34ms (ActiveRecord: 2.7ms)
 
   
 ActionView::Template::Error (undefined method `related_posts' for #<Project:0x00007f02f0cab490>):
-    27:         <div class="col-md-4">
+    27:         <div class="col-lg-4">
     28:             <h5>other posts for this project</h5>
     29:             <hr>
     30:             <% @project.related_posts.each do |poste| %>
@@ -12719,7 +12719,7 @@ Completed 500 Internal Server Error in 47ms (ActiveRecord: 1.7ms)
 
   
 ActionView::Template::Error (can't convert Article to Array (Article#to_ary gives NilClass)):
-    27:         <div class="col-md-4">
+    27:         <div class="col-lg-4">
     28:             <h5>other posts for this project</h5>
     29:             <hr>
     30:             <% @project.related_posts.each do |poste| %>
@@ -13204,7 +13204,7 @@ Did you mean?  font_path):
     1: <%= form_for(@comment) do |f| %>
     2:     <div class="field">
     3:         <div class="row">
-    4:             <div class="col-md-6">
+    4:             <div class="col-lg-6">
   
 app/views/blog/comments/_form.html.erb:1:in `_app_views_blog_comments__form_html_erb__4435905568395139607_70209168324640'
 app/views/blog/comments/_comments.html.erb:16:in `_app_views_blog_comments__comments_html_erb__4113482054036600264_70209168034160'
@@ -13238,7 +13238,7 @@ ActionView::Template::Error (wrong number of arguments (given 0, expected 1..2))
     1: <%= form_for[:blog, @comment] do |f| %>
     2:     <div class="field">
     3:         <div class="row">
-    4:             <div class="col-md-6">
+    4:             <div class="col-lg-6">
   
 app/views/blog/comments/_form.html.erb:1:in `_app_views_blog_comments__form_html_erb__4435905568395139607_70209337231900'
 app/views/blog/comments/_comments.html.erb:16:in `_app_views_blog_comments__comments_html_erb__4113482054036600264_70209337031780'
@@ -15513,7 +15513,7 @@ Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms)
 
   
 ActionView::Template::Error (undefined method `full_name' for nil:NilClass):
-    23:                                 <div class="col-md-12">
+    23:                                 <div class="col-lg-12">
     24:                                     <p>
     25:                                         <span style="float: left;">
     26:                                             <%= @article.admin.full_name %>,
@@ -16846,7 +16846,7 @@ Completed 500 Internal Server Error in 38ms (ActiveRecord: 1.5ms)
 
   
 ActionView::Template::Error (undefined method `comments' for nil:NilClass):
-    66:                 <div class="col-md-12">
+    66:                 <div class="col-lg-12">
     67:                     <h4>conversation</h4>
     68:                     <section id="comments">
     69:                         <%= render partial: "blog/comments/comments", locals: { comments: @article.comments } %>
@@ -17978,7 +17978,7 @@ Did you mean?  blog_create_path):
     1: <%= form_for [:blog, @comment] do |f| %>
     2:     <div class="field">
     3:         <div class="row">
-    4:             <div class="col-md-6">
+    4:             <div class="col-lg-6">
   
 app/views/comments/_form.html.erb:1:in `_app_views_comments__form_html_erb___3150416937175172733_69892009674280'
 app/views/comments/_comments.html.erb:13:in `_app_views_comments__comments_html_erb__2492150309080038625_69892009660960'
@@ -18101,7 +18101,7 @@ ActionView::Template::Error (First argument in form cannot contain nil or be emp
     1: <%= form_for @comment do |f| %>
     2:     <div class="field">
     3:         <div class="row">
-    4:             <div class="col-md-6">
+    4:             <div class="col-lg-6">
   
 app/views/comments/_form.html.erb:1:in `_app_views_comments__form_html_erb___3150416937175172733_47036166659480'
 app/views/comments/_comments.html.erb:13:in `_app_views_comments__comments_html_erb__2492150309080038625_47036165743740'
@@ -18800,7 +18800,7 @@ Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.3ms)
 
   
 ActionView::Template::Error (undefined method `full_name' for nil:NilClass):
-    23:                                 <div class="col-md-12">
+    23:                                 <div class="col-lg-12">
     24:                                     <p>
     25:                                         <span style="float: left;">
     26:                                             <%= @article.admin.full_name %>,
@@ -18949,7 +18949,7 @@ Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.3ms)
 
   
 ActionView::Template::Error (undefined method `full_name' for nil:NilClass):
-    23:                                 <div class="col-md-12">
+    23:                                 <div class="col-lg-12">
     24:                                     <p>
     25:                                         <span style="float: left;">
     26:                                             <%= @article.admin.full_name %>,
@@ -19047,7 +19047,7 @@ Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.6ms)
 ActionView::Template::Error (undefined method `comments' for nil:NilClass):
     64:             
     65:             <div class="row">
-    66:                 <div class="col-md-12">
+    66:                 <div class="col-lg-12">
     67:                     <h4>thoughts on this (<%= @article.comments.count %>)</h4>
     68:                     <section id="comments">
     69:                         <%= render partial: "comments/comments", locals: { comments: @article.comments } %>
@@ -19097,7 +19097,7 @@ Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.4ms)
 ActionView::Template::Error (undefined method `comments' for nil:NilClass):
     64:             
     65:             <div class="row">
-    66:                 <div class="col-md-12">
+    66:                 <div class="col-lg-12">
     67:                     <h4>thoughts on this (<%= (@article.comments || []).count %>)</h4>
     68:                     <section id="comments">
     69:                         <%= render partial: "comments/comments", locals: { comments: @article.comments } %>
@@ -19750,7 +19750,7 @@ Did you mean?  audio_path):
     1: <%= form_for current_admin do |f| %>
     2:     <div class="field">
     3:         <div class="row">
-    4:             <div class="col-md-6">
+    4:             <div class="col-lg-6">
   
 app/views/admins/_form.html.erb:1:in `_app_views_admins__form_html_erb__976981067155971203_69891904923080'
 app/views/admins/dashboard.html.erb:76:in `_app_views_admins_dashboard_html_erb___4598065334434831553_69891856361600'
@@ -19784,7 +19784,7 @@ Did you mean?  audio_path):
     1: <%= form_for @admin do |f| %>
     2:     <div class="field">
     3:         <div class="row">
-    4:             <div class="col-md-6">
+    4:             <div class="col-lg-6">
   
 app/views/admins/_form.html.erb:1:in `_app_views_admins__form_html_erb__976981067155971203_69891804957680'
 app/views/admins/dashboard.html.erb:76:in `_app_views_admins_dashboard_html_erb___4598065334434831553_69891738252880'
@@ -19818,7 +19818,7 @@ Did you mean?  audio_path):
     1: <%= form_for @admin do |f| %>
     2:     <div class="field">
     3:         <div class="row">
-    4:             <div class="col-md-6">
+    4:             <div class="col-lg-6">
   
 app/views/admins/_form.html.erb:1:in `_app_views_admins__form_html_erb__976981067155971203_69891904638080'
 app/views/admins/dashboard.html.erb:76:in `_app_views_admins_dashboard_html_erb___4598065334434831553_69891850104520'
@@ -19889,7 +19889,7 @@ ActionView::Template::Error (First argument in form cannot contain nil or be emp
     1: <%= form_for @admin do |f| %>
     2:     <div class="field">
     3:         <div class="row">
-    4:             <div class="col-md-6">
+    4:             <div class="col-lg-6">
   
 app/views/admins/_form.html.erb:1:in `_app_views_admins__form_html_erb__976981067155971203_69891853802580'
 app/views/admins/dashboard.html.erb:76:in `_app_views_admins_dashboard_html_erb___4598065334434831553_69891871714940'
@@ -20903,7 +20903,7 @@ Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.7ms)
   
 ActionView::Template::Error (undefined method `category' for #<Article:0x00007ff8f8d43778>
 Did you mean?  category_name):
-     5:                 <div class="col-md-12">
+     5:                 <div class="col-lg-12">
      6:                     <article>
      7:                         <h5>
      8:                             <a href="/category/<%= @article.category.name %>">
@@ -20936,7 +20936,7 @@ Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.2ms)
   
 ActionView::Template::Error (undefined method `category' for #<Article:0x00007ff8de048858>
 Did you mean?  category_name):
-     5:                 <div class="col-md-12">
+     5:                 <div class="col-lg-12">
      6:                     <article>
      7:                         <h5>
      8:                             <a href="/category/<%= @article.category %>">
@@ -21118,7 +21118,7 @@ Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms)
 
   
 ActionView::Template::Error (undefined method `category_name' for nil:NilClass):
-     5:                 <div class="col-md-12">
+     5:                 <div class="col-lg-12">
      6:                     <article>
      7:                         <h5>
      8:                             <a href="/blog/category/<%= @article.category_name %>">
@@ -21150,7 +21150,7 @@ Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms)
 
   
 ActionView::Template::Error (undefined method `category_name' for nil:NilClass):
-     5:                 <div class="col-md-12">
+     5:                 <div class="col-lg-12">
      6:                     <article>
      7:                         <h5>
      8:                             <a href="/blog/category/<%= @article.category_name %>">
@@ -27785,7 +27785,7 @@ Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.5ms)
 
   
 ActionView::Template::Error (undefined method `full_name' for nil:NilClass):
-    29:                                 <div class="col-md-12">
+    29:                                 <div class="col-lg-12">
     30:                                     <p>
     31:                                         <span style="float: left;">
     32:                                             <%= @article.admin.full_name %>,
@@ -28701,7 +28701,7 @@ Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.9ms)
 
   
 ActionView::Template::Error (undefined method `full_name' for nil:NilClass):
-    29:                                 <div class="col-md-12">
+    29:                                 <div class="col-lg-12">
     30:                                     <p>
     31:                                         <span style="float: left;">
     32:                                             <%= @article.admin.full_name %>,
@@ -28786,7 +28786,7 @@ Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.5ms)
 
   
 ActionView::Template::Error (undefined method `full_name' for nil:NilClass):
-    29:                                 <div class="col-md-12">
+    29:                                 <div class="col-lg-12">
     30:                                     <p>
     31:                                         <span style="float: left;">
     32:                                             <%= @article.admin.full_name %>,
@@ -29067,7 +29067,7 @@ Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.4ms)
 
   
 ActionView::Template::Error (undefined method `full_name' for nil:NilClass):
-    29:                                 <div class="col-md-12">
+    29:                                 <div class="col-lg-12">
     30:                                     <p>
     31:                                         <span style="float: left;">
     32:                                             <%= @article.admin.full_name %>,
@@ -29124,7 +29124,7 @@ Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.3ms)
 
   
 ActionView::Template::Error (undefined method `full_name' for nil:NilClass):
-    29:                                 <div class="col-md-12">
+    29:                                 <div class="col-lg-12">
     30:                                     <p>
     31:                                         <span style="float: left;">
     32:                                             <%= @article.admin.full_name %>,
@@ -32393,7 +32393,7 @@ Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms)
 ActionView::Template::Error (undefined method `content' for nil:NilClass):
     14:     <section class="container">
     15:         <div class="row">
-    16:             <div class="col-md-8 offset-md-2">
+    16:             <div class="col-lg-8 offset-md-2">
     17:                 <%= sanitize @project_article.content %>
     18:             <div>
     19:         </div>
@@ -32559,9 +32559,9 @@ Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms)
 
   
 ActionView::Template::Error (undefined method `content' for nil:NilClass):
-    16:             <div class="col-md-8 offset-md-2">
+    16:             <div class="col-lg-8 offset-md-2">
     17:                 <div class="row">
-    18:                     <div class="col-md-12">
+    18:                     <div class="col-lg-12">
     19:                         <%= sanitize @project_article.content %>
     20:                     </div>
     21:                 </div>
@@ -32998,9 +32998,9 @@ Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms)
 
   
 ActionView::Template::Error (undefined method `content' for nil:NilClass):
-    19:             <div class="col-md-8 offset-md-2">
+    19:             <div class="col-lg-8 offset-md-2">
     20:                 <div class="row">
-    21:                     <div class="col-md-12">
+    21:                     <div class="col-lg-12">
     22:                         <%= sanitize @project_article.content %>
     23:                     </div>
     24:                 </div>
@@ -33038,9 +33038,9 @@ Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms)
 
   
 ActionView::Template::Error (undefined method `content' for nil:NilClass):
-    19:             <div class="col-md-8 offset-md-2">
+    19:             <div class="col-lg-8 offset-md-2">
     20:                 <div class="row">
-    21:                     <div class="col-md-12">
+    21:                     <div class="col-lg-12">
     22:                         <%= sanitize @project_article.content %>
     23:                     </div>
     24:                 </div>
@@ -42668,7 +42668,7 @@ Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.2ms)
 ActionView::Template::Error (undefined method `series_description' for #<Series:0x00007fa61b40dfd0>):
     16:                 <h5><%= f.label :series_description %></h5>
     17:             </div>
-    18:             <div class="col-md-10">
+    18:             <div class="col-lg-10">
     19:                 <%= f.text_area :series_description, id:"series-description", class:"form-control tinymce", placeholder: "what is this series about" %>
     20:             </div>
     21:         </div>
@@ -47813,3 +47813,245 @@ Change:
 To:
   >> Coffee::Rails::TemplateHandler.call(template, source)
  (called from <top (required)> at /home/ubuntu/environment/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/ubuntu/environment/config/environment.rb:5)
+Started GET "/" for 74.117.136.50 at 2023-04-05 17:16:18 +0000
+Cannot render console from 74.117.136.50! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY created_at ASC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/pages_controller.rb:5:in `home'
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mArticle Load (3.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL ORDER BY created_at DESC LIMIT ?[0m  [["published", 1], ["LIMIT", 10]]
+  ↳ app/views/blog/articles/_articles.html.erb:1
+  Rendered blog/articles/_articles.html.erb (Duration: 13.0ms | Allocations: 1758)
+  Rendered pages/home.html.erb within layouts/application (Duration: 17.1ms | Allocations: 2417)
+  Rendered layouts/_navbar.html.erb (Duration: 1.4ms | Allocations: 270)
+  Rendered layouts/_body.html.erb (Duration: 3.2ms | Allocations: 329)
+  Rendered layouts/_footer.html.erb (Duration: 2.1ms | Allocations: 116)
+Completed 200 OK in 958ms (Views: 898.4ms | ActiveRecord: 5.2ms | Allocations: 430095)
+
+
+Started GET "/about" for 74.117.136.50 at 2023-04-05 17:16:22 +0000
+Cannot render console from 74.117.136.50! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.8ms | Allocations: 149)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 90)
+  Rendered layouts/_body.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 93ms (Views: 91.0ms | ActiveRecord: 0.0ms | Allocations: 50697)
+
+
+Started GET "/about" for 74.117.136.50 at 2023-04-05 17:18:30 +0000
+Cannot render console from 74.117.136.50! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 1.2ms | Allocations: 148)
+  Rendered layouts/_navbar.html.erb (Duration: 0.7ms | Allocations: 287)
+  Rendered layouts/_body.html.erb (Duration: 0.4ms | Allocations: 299)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 114)
+Completed 200 OK in 99ms (Views: 97.6ms | ActiveRecord: 0.0ms | Allocations: 52715)
+
+
+Started GET "/about" for 74.117.136.50 at 2023-04-05 17:19:01 +0000
+Cannot render console from 74.117.136.50! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.4ms | Allocations: 147)
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 285)
+  Rendered layouts/_body.html.erb (Duration: 0.4ms | Allocations: 299)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 114)
+Completed 200 OK in 96ms (Views: 93.8ms | ActiveRecord: 0.0ms | Allocations: 53198)
+
+
+Started GET "/about" for 74.117.136.50 at 2023-04-05 17:19:32 +0000
+Cannot render console from 74.117.136.50! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.4ms | Allocations: 146)
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 285)
+  Rendered layouts/_body.html.erb (Duration: 0.4ms | Allocations: 299)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 114)
+Completed 200 OK in 103ms (Views: 101.3ms | ActiveRecord: 0.0ms | Allocations: 52931)
+
+
+Started GET "/about" for 74.117.136.50 at 2023-04-05 17:20:26 +0000
+Cannot render console from 74.117.136.50! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.4ms | Allocations: 148)
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 289)
+  Rendered layouts/_body.html.erb (Duration: 0.5ms | Allocations: 299)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 114)
+Completed 200 OK in 103ms (Views: 100.9ms | ActiveRecord: 0.0ms | Allocations: 53170)
+
+
+Started GET "/about" for 74.117.136.50 at 2023-04-05 17:20:47 +0000
+Cannot render console from 74.117.136.50! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.4ms | Allocations: 147)
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 285)
+  Rendered layouts/_body.html.erb (Duration: 0.4ms | Allocations: 299)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 114)
+Completed 200 OK in 101ms (Views: 99.0ms | ActiveRecord: 0.0ms | Allocations: 53048)
+
+
+Started GET "/blog" for 74.117.136.50 at 2023-04-05 17:21:19 +0000
+Cannot render console from 74.117.136.50! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Blog::ArticlesController#index as HTML
+  Rendering blog/articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL ORDER BY created_at DESC[0m  [["published", 1]]
+  ↳ app/views/blog/articles/_articles.html.erb:1
+  Rendered blog/articles/_articles.html.erb (Duration: 5.9ms | Allocations: 1241)
+  Rendered blog/articles/index.html.erb within layouts/application (Duration: 8.8ms | Allocations: 1747)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 95)
+  Rendered layouts/_body.html.erb (Duration: 0.2ms | Allocations: 54)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 110ms (Views: 108.1ms | ActiveRecord: 0.2ms | Allocations: 53804)
+
+
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/ubuntu/environment/config/environment.rb:5)
+Started GET "/blog" for 74.117.136.50 at 2023-04-05 17:26:03 +0000
+Cannot render console from 74.117.136.50! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Blog::ArticlesController#index as HTML
+  Rendering blog/articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL ORDER BY created_at DESC[0m  [["published", 1]]
+  ↳ app/views/blog/articles/_articles.html.erb:1
+  Rendered blog/articles/_articles.html.erb (Duration: 8.3ms | Allocations: 1791)
+  Rendered blog/articles/index.html.erb within layouts/application (Duration: 10.7ms | Allocations: 2589)
+  Rendered layouts/_navbar.html.erb (Duration: 6.2ms | Allocations: 405)
+  Rendered layouts/_body.html.erb (Duration: 0.7ms | Allocations: 329)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 112)
+Completed 200 OK in 741ms (Views: 723.9ms | ActiveRecord: 0.6ms | Allocations: 421609)
+
+
+Started GET "/blog" for 74.117.136.50 at 2023-04-05 17:27:24 +0000
+Cannot render console from 74.117.136.50! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Blog::ArticlesController#index as HTML
+  Rendering blog/articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL ORDER BY created_at DESC[0m  [["published", 1]]
+  ↳ app/views/blog/articles/_articles.html.erb:1
+  Rendered blog/articles/_articles.html.erb (Duration: 14.1ms | Allocations: 1227)
+  Rendered blog/articles/index.html.erb within layouts/application (Duration: 16.2ms | Allocations: 1706)
+  Rendered layouts/_navbar.html.erb (Duration: 0.7ms | Allocations: 284)
+  Rendered layouts/_body.html.erb (Duration: 0.7ms | Allocations: 300)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 111)
+Completed 200 OK in 203ms (Views: 194.6ms | ActiveRecord: 0.3ms | Allocations: 54864)
+
+
+Started GET "/about" for 74.117.136.50 at 2023-04-05 17:27:29 +0000
+Cannot render console from 74.117.136.50! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.3ms | Allocations: 151)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 98)
+  Rendered layouts/_body.html.erb (Duration: 0.1ms | Allocations: 54)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 84ms (Views: 82.4ms | ActiveRecord: 0.0ms | Allocations: 51799)
+
+
+Started GET "/about" for 74.117.136.50 at 2023-04-05 17:28:01 +0000
+Cannot render console from 74.117.136.50! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 67)
+  Rendered layouts/_body.html.erb (Duration: 0.2ms | Allocations: 44)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 401ms (Views: 400.3ms | ActiveRecord: 0.0ms | Allocations: 197737)
+
+
+Started GET "/about" for 74.117.136.50 at 2023-04-05 17:28:21 +0000
+Cannot render console from 74.117.136.50! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 67)
+  Rendered layouts/_body.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 288ms (Views: 284.9ms | ActiveRecord: 0.0ms | Allocations: 143349)
+
+
+Started GET "/about" for 74.117.136.50 at 2023-04-05 17:28:47 +0000
+Cannot render console from 74.117.136.50! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.3ms | Allocations: 152)
+  Rendered layouts/_navbar.html.erb (Duration: 4.9ms | Allocations: 284)
+  Rendered layouts/_body.html.erb (Duration: 0.5ms | Allocations: 299)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 110)
+Completed 200 OK in 148ms (Views: 147.1ms | ActiveRecord: 0.0ms | Allocations: 52806)
+
+
+Started GET "/about" for 74.117.136.50 at 2023-04-05 17:30:27 +0000
+Cannot render console from 74.117.136.50! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.4ms | Allocations: 145)
+  Rendered layouts/_navbar.html.erb (Duration: 4.8ms | Allocations: 284)
+  Rendered layouts/_body.html.erb (Duration: 0.5ms | Allocations: 299)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 110)
+Completed 200 OK in 142ms (Views: 140.2ms | ActiveRecord: 0.0ms | Allocations: 52417)
+
+
+Started GET "/about" for 74.117.136.50 at 2023-04-05 17:34:56 +0000
+Cannot render console from 74.117.136.50! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.3ms | Allocations: 146)
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 284)
+  Rendered layouts/_body.html.erb (Duration: 0.5ms | Allocations: 299)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 110)
+Completed 200 OK in 93ms (Views: 91.0ms | ActiveRecord: 0.0ms | Allocations: 52541)
+
+
+Started GET "/about" for 74.117.136.50 at 2023-04-05 17:36:20 +0000
+Cannot render console from 74.117.136.50! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.3ms | Allocations: 145)
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 284)
+  Rendered layouts/_body.html.erb (Duration: 0.5ms | Allocations: 299)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 110)
+Completed 200 OK in 105ms (Views: 103.7ms | ActiveRecord: 0.0ms | Allocations: 52619)
+
+
+Started GET "/about" for 74.117.136.50 at 2023-04-05 17:37:39 +0000
+Cannot render console from 74.117.136.50! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.4ms | Allocations: 145)
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 284)
+  Rendered layouts/_body.html.erb (Duration: 0.4ms | Allocations: 299)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 110)
+Completed 200 OK in 137ms (Views: 136.3ms | ActiveRecord: 0.0ms | Allocations: 52408)
+
+
+Started GET "/about" for 74.117.136.50 at 2023-04-05 17:44:55 +0000
+Cannot render console from 74.117.136.50! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.5ms | Allocations: 145)
+  Rendered layouts/_navbar.html.erb (Duration: 0.8ms | Allocations: 289)
+  Rendered layouts/_body.html.erb (Duration: 0.4ms | Allocations: 299)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 110)
+Completed 200 OK in 97ms (Views: 96.3ms | ActiveRecord: 0.0ms | Allocations: 52625)
+
+

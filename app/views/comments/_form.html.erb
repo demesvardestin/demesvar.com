@@ -1,11 +1,11 @@
 <%= form_for(@comment, :html => { :id => "comment-form" }) do |f| %>
     <div class="field">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-lg-6">
                 <%= f.text_field :commenter_name, class:"form-control", placeholder: "your name" %>
             </div>
             
-            <div class="col-md-6">
+            <div class="col-lg-6">
                 <%= f.text_field :commenter_email, class:"form-control", placeholder: "your email" %>
             </div>
         </div>

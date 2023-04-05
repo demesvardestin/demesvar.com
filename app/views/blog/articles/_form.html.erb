@@ -1,10 +1,10 @@
 <%= form_for([:blog, @article], :html => { :id => "article-form", :multipart => true }) do |f| %>
     <div class="field">
         <div class="row">
-            <div class="col-md-2">
+            <div class="col-lg-2">
                 <h5><%= f.label :title %></h5>
             </div>
-            <div class="col-md-10">
+            <div class="col-lg-10">
                 <%= f.text_field :title, id:"article-title", class:"form-control", placeholder: "article title" %>
             </div>
         </div>
@@ -12,10 +12,10 @@
     
     <div class="field">
         <div class="row">
-            <div class="col-md-2">
+            <div class="col-lg-2">
                 <h5><%= f.label :image_link %></h5>
             </div>
-            <div class="col-md-10">
+            <div class="col-lg-10">
                 <%= f.text_field :image_link, id:"article-image_link", class:"form-control", placeholder: "article image link" %>
             </div>
         </div>
@@ -23,10 +23,10 @@
     
     <div class="field">
         <div class="row">
-            <div class="col-md-2">
+            <div class="col-lg-2">
                 <h5><%= f.label :description %></h5>
             </div>
-            <div class="col-md-10">
+            <div class="col-lg-10">
                 <%= f.text_area :description, id:"article-description", class:"form-control",
                     placeholder: "article description", style: "height: 100px !important;" %>
             </div>
@@ -35,10 +35,10 @@
     
     <div class="field">
         <div class="row">
-            <div class="col-md-2">
+            <div class="col-lg-2">
                 <h5><%= f.label :content %></h5>
             </div>
-            <div class="col-md-10">
+            <div class="col-lg-10">
                 <%= f.text_area :content, id:"article-content", class:"form-control tinymce", placeholder: "article body" %>
             </div>
         </div>
@@ -46,10 +46,10 @@
     
     <div class="field">
         <div class="row">
-            <div class="col-md-2">
+            <div class="col-lg-2">
                 <h5><%= f.label :tags %></h5>
             </div>
-            <div class="col-md-10">
+            <div class="col-lg-10">
                 <%= f.text_field :tags, id:"article-tags", class:"form-control", placeholder: "add tags, separated by a comma" %>
             </div>
         </div>
@@ -57,10 +57,10 @@
     
     <div class="field" id="file-name-field" style="display: <%= @article.viewing_format == "pdf" ? "block" : "none" %>;">
         <div class="row">
-            <div class="col-md-2">
+            <div class="col-lg-2">
                 <h5><%= f.label :file_name %></h5>
             </div>
-            <div class="col-md-10">
+            <div class="col-lg-10">
                 <%= f.text_field :file_name, id:"file-name", class:"form-control", placeholder: "filename.pdf" %>
             </div>
         </div>
@@ -68,7 +68,7 @@
     
     <div class="field">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-lg-3">
                 <div class="dropdown">
                     <button class="btn btn-secondary btn-block" type="button"
                         id="category-button" data-toggle="dropdown" aria-haspopup="true"
@@ -91,7 +91,7 @@
                 </div>
             </div>
             
-            <div class="col-md-3">
+            <div class="col-lg-3">
                 <div class="dropdown">
                     <button class="btn btn-secondary btn-block" type="button"
                         id="viewing-format-button" data-toggle="dropdown" aria-haspopup="true"
@@ -115,7 +115,7 @@
                 </div>
             </div>
             
-            <div class="col-md-3">
+            <div class="col-lg-3">
                 <div class="dropdown">
                     <button class="btn btn-secondary btn-block" type="button"
                         id="project-button" data-toggle="dropdown" aria-haspopup="true"
@@ -138,7 +138,7 @@
                 </div>
             </div>
             
-            <div class="col-md-3">
+            <div class="col-lg-3">
                 <div class="dropdown">
                     <button class="btn btn-secondary btn-block" type="button"
                         id="series-button" data-toggle="dropdown" aria-haspopup="true"
@@ -173,17 +173,17 @@
     
     <div class="actions">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-lg-4">
                 <a class="btn btn-secondary btn-block" href="/blog">
                     cancel
                 </a>
             </div>
-            <div class="col-md-4">
+            <div class="col-lg-4">
                 <a class="btn btn-info btn-block" onclick="saveAsDraft()">
                     save as draft
                 </a>
             </div>
-            <div class="col-md-4">
+            <div class="col-lg-4">
                 <%= f.submit "publish article", class:"btn btn-success btn-block", data: { :disable_with => "publishing..." }  %>
             </div>
         </div>

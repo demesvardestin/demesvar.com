@@ -1,12 +1,12 @@
 <%= form_for @admin do |f| %>
     <div class="field">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-lg-6">
                 <%= f.label :first_name %>
                 <%= f.text_field :first_name, class:"form-control", placeholder: "first name",
                     value: "#{current_admin.first_name}" %>
             </div>
-            <div class="col-md-6">
+            <div class="col-lg-6">
                 <%= f.label :last_name %>
                 <%= f.text_field :last_name, class:"form-control", placeholder: "last name",
                     value: "#{current_admin.last_name}" %>

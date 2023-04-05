@@ -1,6 +1,6 @@
 <section id="<%= @project.slug %>" class="project-section">
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-lg-8">
             <h5>
                 <b><%= @project.name %></b>
                 <span class="badge badge-primary">
@@ -12,7 +12,7 @@
             
             <section class="project-metadata">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-lg-12">
                         <p>
                             <span style="float: left;">
                                 by <%= @project.admin.full_name %>
@@ -68,7 +68,7 @@
             <hr>
             
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-lg-12">
                     <h5>thoughts on this (<%= @project.comments.count %>)</h5>
                     <section id="comments">
                         <%= render partial: "comments/comments", locals: { comments: @project.comments } %>
@@ -77,7 +77,7 @@
             </div>
         </div>
         
-        <div class="col-md-4 related-posts-col">
+        <div class="col-lg-4 related-posts-col">
             <h5>related projects:</h5>
             <hr>
             <div>
