@@ -48055,3 +48055,10 @@ Processing by PagesController#about as HTML
 Completed 200 OK in 97ms (Views: 96.3ms | ActiveRecord: 0.0ms | Allocations: 52625)
 
 
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/ubuntu/environment/config/environment.rb:5)
