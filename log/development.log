@@ -48062,3 +48062,45 @@ Change:
 To:
   >> Coffee::Rails::TemplateHandler.call(template, source)
  (called from <top (required)> at /home/ubuntu/environment/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/ubuntu/environment/config/environment.rb:5)
+Started GET "/" for 74.117.136.50 at 2023-04-11 16:43:23 +0000
+Cannot render console from 74.117.136.50! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  [1m[36mProject Load (1.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY created_at ASC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/pages_controller.rb:5:in `home'
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mArticle Load (3.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL ORDER BY created_at DESC LIMIT ?[0m  [["published", 1], ["LIMIT", 10]]
+  ↳ app/views/blog/articles/_articles.html.erb:1
+  Rendered blog/articles/_articles.html.erb (Duration: 13.7ms | Allocations: 1758)
+  Rendered pages/home.html.erb within layouts/application (Duration: 20.1ms | Allocations: 2417)
+Started GET "/" for 74.117.136.50 at 2023-04-11 16:43:25 +0000
+Cannot render console from 74.117.136.50! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PagesController#home as HTML
+  [1m[36mProject Load (8.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY created_at ASC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/pages_controller.rb:5:in `home'
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."published" = ? AND "articles"."project_id" IS NULL ORDER BY created_at DESC LIMIT ?[0m  [["published", 1], ["LIMIT", 10]]
+  ↳ app/views/blog/articles/_articles.html.erb:1
+  Rendered blog/articles/_articles.html.erb (Duration: 7.0ms | Allocations: 846)
+  Rendered pages/home.html.erb within layouts/application (Duration: 9.4ms | Allocations: 1934)
+  Rendered layouts/_navbar.html.erb (Duration: 2.5ms | Allocations: 885)
+  Rendered layouts/_body.html.erb (Duration: 3.6ms | Allocations: 704)
+  Rendered layouts/_footer.html.erb (Duration: 9.0ms | Allocations: 6544)
+Completed 200 OK in 1862ms (Views: 1809.5ms | ActiveRecord: 6.0ms | Allocations: 528243)
+
+
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 28)
+  Rendered layouts/_body.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 183ms (Views: 151.4ms | ActiveRecord: 9.2ms | Allocations: 65225)
+
+
